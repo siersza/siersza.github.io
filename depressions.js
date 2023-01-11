@@ -1,7 +1,7 @@
 export const depressions = [
     {
-        name: 'Ta dziura nie ma jeszcze własnej nazwy',
-        description: 'Jest jednak najprawdopodobniej najsłynniejszą w Polsce dziurą cmentarną.',
+        name: 'Ta zapadlisko nie ma jeszcze własnej nazwy',
+        description: 'Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce.',
         date: '20.09.2022',
         query: 'cmentarz',
         imgSrc: './images/dziura-cmentarz.png',
@@ -18,8 +18,8 @@ export const depressions = [
         longitude: '19.441122600264464',
     },
     {
-        name: 'Ta dziura nie ma jeszcze własnej nazwy ani opisu',
-        description: '',
+        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        description: 'Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.',
         date: '10.01.2023',
         query: 'not',
         imgSrc: './images/not.jpg',
@@ -29,8 +29,8 @@ export const depressions = [
         longitude: '19.428742187346753',
     },
     {
-        name: 'Ta dziura nie ma jeszcze własnej nazwy ani opisu',
-        description: '',
+        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        description: 'Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza',
         date: '06.01.2023',
         query: 'stadion',
         imgSrc: './images/stadion.png',
@@ -40,8 +40,8 @@ export const depressions = [
         longitude: '19.43240149796994',
     },
     {
-        name: 'Ta dziura nie ma jeszcze własnej nazwy ani opisu',
-        description: '',
+        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        description: 'Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).',
         date: '25.12.2022',
         query: 'swieta',
         imgSrc: './images/swiateczna.png',
@@ -49,5 +49,18 @@ export const depressions = [
         media: [],
         latitude: '50.1959729958199',
         longitude: '19.429792459306146',
+    },
+    {
+        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        description: 'Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.',
+        date: '31.12.2022',
+        query: 'dzialki',
+        imgSrc: './images/dzialki.png',
+        images: [],
+        media: [
+            "https://fakty.tvn24.pl/fakty-po-poludniu,96/niespokojna-sylwestrowa-noc-w-trzebini-w-miescie-znow-zapadla-sie-ziemia,1131299.html?fbclid=IwAR0ETdNTGe9TPvFYE9bp5peUHTFyLNl6qD4z_CCTXmqiDSZq3CuhtZgOhxk"
+        ],
+        latitude: '50.195532485126364',
+        longitude: '19.437633065718344',
     },
 ];
