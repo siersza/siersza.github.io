@@ -23,7 +23,7 @@
         container.innerHTML += `
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="${image}">
+                    <a href=${image}><img class="card-img-top" src="${image}"></a>
                 </div>
             </div>
         `
