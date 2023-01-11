@@ -1,12 +1,17 @@
-const container = document.getElementById('main-row');
+import { renderHeader, renderFooter } from "./renderer.js";
+import { depressions } from "./depressions.js";
 
-function renderGallery() {
+(() => {
+    const body = document.getElementsByTagName('body')[0];
+    body.insertAdjacentHTML('afterbegin', renderHeader());
+
+    const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
     let images;
 
-    zapadliska.forEach(zapadlisko => {
-        if (zapadlisko.query === query) {
-            images = zapadlisko.images;
+    depressions.forEach(d => {
+        if (d.query === query) {
+            images = d.images;
             return;
         }
     });
@@ -24,11 +29,11 @@ function renderGallery() {
         container.innerHTML += `
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="${image}"">
+                    <a href=${image}><img class="card-img-top" src="${image}"></a>
                 </div>
             </div>
         `
     });
-}
 
-renderGallery();
+    body.insertAdjacentHTML('beforeend', renderFooter());
+})();
