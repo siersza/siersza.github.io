@@ -1,4 +1,4 @@
-export function renderHeader() {
+function renderHeader() {
     return `
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -32,14 +32,63 @@ export function renderHeader() {
     `;
 }
 
-export function renderFooter() {
+function renderFooter() {
     return `
-        <footer class="text-muted">
+        <footer class="text-muted bg-dark">
             <div class="container">
-                <p class="float-right">
-                    <a href="#">Powrót do góry</a>
-                </p>
+                <div class="card-body">
+                    <p class="float-right">
+                        <a href="#" class="btn btn-secondary">Powrót do góry</a>
+                    </p>
+                </div>
             </div>
         </footer>
     `;
 }
+
+function renderErrorMessage(message) {
+    return `
+    <div class="alert alert-danger" role="alert">
+        ${message}
+    </div>
+    `;
+}
+
+function renderCard(depression) {
+    return `
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="${depression.imgSrc}"/>
+                <div class="card-body">
+                    <p class="card-text">${depression.name}. ${depression.description}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-outline-primary" target='_blank'href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
+                            <a class="btn btn-sm btn-outline-success" href="./images.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
+                            <a class="btn btn-sm btn-outline-danger" href="./media.html?zapadlisko=${depression.query}">Media</a>
+                        </div>
+                        <small class="text-muted">${depression.date}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderMedia(url) {
+    return `
+        <a href=${url} target="_blank" class="list-group-item list-group-item-action">${url}</a>
+    `;
+}
+
+function renderImage(url) {
+    return `
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <a href=${url}><img class="card-img-top" src="${url}"></a>
+            </div>
+        </div>
+    `;
+}
+
+export { renderHeader, renderFooter, renderErrorMessage, renderCard, renderMedia, renderImage };

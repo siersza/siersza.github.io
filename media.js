@@ -1,9 +1,12 @@
-import { renderHeader, renderFooter } from "./renderer.js";
+import { renderHeader, renderFooter, renderErrorMessage, renderMedia } from "./renderer.js";
 import { depressions } from "./depressions.js";
+
+const ERROR_MESSAGE = 'Na ten moment nie ma odnośników dotyczących zapadliska. :(';
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
     body.insertAdjacentHTML('afterbegin', renderHeader());
+    body.insertAdjacentHTML('beforeend', renderFooter());
 
     const container = document.getElementById('list-group');
     const query = location.search.split('=')[1];
@@ -17,19 +20,9 @@ import { depressions } from "./depressions.js";
     });
 
     if (media.length < 1) {
-        container.innerHTML = `
-            <div class="alert alert-danger" role="alert">
-                Na ten moment nie ma odnośników dotyczących zapadliska. :(
-            </div>
-        `;
+        container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
         return;
     }
     
-    media.forEach(m => {
-        container.innerHTML += `
-            <a href=${m} target="_blank" class="list-group-item list-group-item-action">${m}
-        `
-    });
-
-    body.insertAdjacentHTML('beforeend', renderFooter());
+    media.forEach(m => container.innerHTML += renderMedia(m));
 })();

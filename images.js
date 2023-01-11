@@ -1,9 +1,12 @@
-import { renderHeader, renderFooter } from "./renderer.js";
+import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
 import { depressions } from "./depressions.js";
+
+const ERROR_MESSAGE = 'Na ten moment nie ma większej ilości zdjęć dla tego zapadliska. :(';
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
     body.insertAdjacentHTML('afterbegin', renderHeader());
+    body.insertAdjacentHTML('beforeend', renderFooter());
 
     const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
@@ -17,23 +20,9 @@ import { depressions } from "./depressions.js";
     });
 
     if (images.length < 1) {
-        container.innerHTML = `
-            <div class="alert alert-danger" role="alert">
-                Na ten moment nie ma większej ilości zdjęć dla tego zapadliska. :(
-            </div>
-        `;
+        container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
         return;
     }
     
-    images.forEach(image => {
-        container.innerHTML += `
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <a href=${image}><img class="card-img-top" src="${image}"></a>
-                </div>
-            </div>
-        `
-    });
-
-    body.insertAdjacentHTML('beforeend', renderFooter());
+    images.forEach(image => container.innerHTML += renderImage(image));
 })();
