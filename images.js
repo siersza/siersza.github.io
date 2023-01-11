@@ -1,12 +1,11 @@
-const container = document.getElementById('main-row');
-
-function renderGallery() {
+(() => {
+    const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
     let images;
 
-    zapadliska.forEach(zapadlisko => {
-        if (zapadlisko.query === query) {
-            images = zapadlisko.images;
+    depressions.forEach(d => {
+        if (d.query === query) {
+            images = d.images;
             return;
         }
     });
@@ -24,11 +23,9 @@ function renderGallery() {
         container.innerHTML += `
             <div class="col-md-4">
                 <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="${image}"">
+                    <img class="card-img-top" src="${image}">
                 </div>
             </div>
         `
     });
-}
-
-renderGallery();
+})();
