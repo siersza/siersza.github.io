@@ -1,4 +1,10 @@
+import { renderHeader, renderFooter } from "./renderer.js";
+import { depressions } from "./depressions.js";
+
 (() => {
+    const body = document.getElementsByTagName('body')[0];
+    body.insertAdjacentHTML('afterbegin', renderHeader());
+
     const container = document.getElementById('main-row');
     depressions.forEach(d => {
         container.innerHTML += `
@@ -20,4 +26,6 @@
             </div>
         `
     });
+
+    body.insertAdjacentHTML('beforeend', renderFooter());
 })();

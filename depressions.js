@@ -1,4 +1,4 @@
-const depressions = [
+export const depressions = [
     {
         name: 'Ta dziura nie ma jeszcze własnej nazwy',
         description: 'Jest jednak najprawdopodobniej najsłynniejszą w Polsce dziurą cmentarną.',

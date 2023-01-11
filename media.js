@@ -1,4 +1,10 @@
+import { renderHeader, renderFooter } from "./renderer.js";
+import { depressions } from "./depressions.js";
+
 (() => {
+    const body = document.getElementsByTagName('body')[0];
+    body.insertAdjacentHTML('afterbegin', renderHeader());
+
     const container = document.getElementById('list-group');
     const query = location.search.split('=')[1];
     let media;
@@ -24,4 +30,6 @@
             <a href=${m} target="_blank" class="list-group-item list-group-item-action">${m}
         `
     });
+
+    body.insertAdjacentHTML('beforeend', renderFooter());
 })();
