@@ -7,17 +7,5 @@ import { depressions } from "./depressions.js";
     body.insertAdjacentHTML('beforeend', renderFooter());
 
     const container = document.getElementById('main-row');
-    depressions.forEach(d => {
-        const depression = {
-            name: d.name,
-            description: d.description,
-            date: d.date,
-            query: d.query,
-            imgSrc: d.imgSrc,
-            latitude: d.latitude,
-            longitude: d.longitude
-        };
-
-        container.innerHTML += renderCard(depression);
-    });
+    depressions.forEach(d => container.innerHTML += renderCard(d));
 })();
