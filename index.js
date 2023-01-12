@@ -1,7 +1,6 @@
+import { DEFAULT_TITLE } from "./constants.js";
 import { renderHeader, renderFooter, renderCard } from "./renderer.js";
 import { depressions } from "./depressions.js";
-
-const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
 
 (() => {
     const body = document.getElementsByTagName('body')[0];

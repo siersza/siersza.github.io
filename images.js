@@ -1,8 +1,6 @@
+import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "./constants.js";
 import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
 import { depressions } from "./depressions.js";
-
-const ERROR_MESSAGE = 'Na ten moment nie ma większej ilości zdjęć dla tego zapadliska. :(';
-const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
@@ -21,7 +19,7 @@ const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
     body.insertAdjacentHTML('beforeend', renderFooter(true));
 
     if (depression === undefined || depression.images.length < 1) {
-        container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
+        container.innerHTML = renderErrorMessage(NO_IMAGES_ERROR);
         return;
     }
     
