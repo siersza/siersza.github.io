@@ -62,6 +62,10 @@ function renderCard(depression) {
                 <img class="card-img-top" src="${depression.imgSrc}"/>
                 <div class="card-body">
                     <p class="card-text">${depression.name}. ${depression.description}</p>
+                    <ul>
+                        <li>Głębokość: ${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metrów.'}</li>
+                        <li>Średnica: ${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metrów.'}</li>
+                    </ul>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a class="btn btn-sm btn-outline-primary" target='_blank'href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
