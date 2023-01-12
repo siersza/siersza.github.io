@@ -1,6 +1,6 @@
 export const depressions = [
     {
-        name: 'Ta zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Cmentarz',
         description: 'Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce.',
         date: '20.09.2022',
         query: 'cmentarz',
@@ -19,7 +19,7 @@ export const depressions = [
         longitude: '19.441122600264464',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Willa NOT',
         description: 'Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.',
         date: '10.01.2023',
         query: 'not',
@@ -32,7 +32,7 @@ export const depressions = [
         longitude: '19.428742187346753',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Stadion',
         description: 'Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza',
         date: '06.01.2023',
         query: 'stadion',
@@ -45,7 +45,7 @@ export const depressions = [
         longitude: '19.43240149796994',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Kościół',
         description: 'Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).',
         date: '25.12.2022',
         query: 'swieta',
@@ -58,7 +58,7 @@ export const depressions = [
         longitude: '19.429792459306146',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Ddziałki Gaj',
         description: 'Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.',
         date: '31.12.2022',
         query: 'dzialki',
@@ -73,7 +73,7 @@ export const depressions = [
         longitude: '19.437633065718344',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Działki Gaj 2',
         description: 'Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.',
         date: '23.11.2021',
         query: 'dzialki2',
@@ -92,7 +92,7 @@ export const depressions = [
         longitude: '19.437074995101472',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Osiedle Gaj',
         description: 'Zapadlisko pojawiło się na osiedlu Gaj.',
         date: '13.09.2022',
         query: 'gaj',
@@ -107,10 +107,10 @@ export const depressions = [
         longitude: '19.439685386610588',
     },
     {
-        name: 'To zapadlisko nie ma jeszcze własnej nazwy',
+        name: 'Działki Gaj 3',
         description: 'Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.',
         date: '22.02.2022',
-        query: 'gaj2',
+        query: 'dzialki3',
         imgSrc: 'https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8',
         images: [
             "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
