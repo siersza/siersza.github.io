@@ -1,19 +1,12 @@
 import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "../utils/constants.js";
 import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
-import { depressions } from "../data/depressions.js";
+import { getDepressionByQuery } from "../utils/utils.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
     const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
-    let depression;
-
-    depressions.forEach(d => {
-        if (d.query === query) {
-            depression = d;
-            return;
-        }
-    });
+    const depression = getDepressionByQuery(query);
 
     body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
     body.insertAdjacentHTML('beforeend', renderFooter(true));
