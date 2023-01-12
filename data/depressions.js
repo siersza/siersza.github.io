@@ -20,7 +20,7 @@ export const depressions = [
         ],
         latitude: "50.19658317777548",
         longitude: "19.441122600264464",
-        diameter: "20.",
+        diameter: "20",
         depth: "10"
     },
     {
