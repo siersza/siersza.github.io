@@ -1,6 +1,6 @@
-import { DEFAULT_TITLE } from "./constants.js";
+import { DEFAULT_TITLE } from "../utils/constants.js";
 import { renderHeader, renderFooter, renderCard } from "./renderer.js";
-import { depressions } from "./depressions.js";
+import { depressions } from "../data/depressions.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
