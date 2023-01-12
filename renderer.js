@@ -38,8 +38,8 @@ function renderFooter(renderHomePageButton) {
             <div class="container">
                 <div class="card-body">
                     <p class="float-right">
-                        <a href="#" class="btn btn-secondary">Powrót do góry</a>
                         ${renderHomePageButton ? '<a href="./" class="btn btn-danger">Strona główna</a>' : ''}
+                        <a href="#" class="btn btn-secondary">Powrót do góry</a>
                     </p>
                 </div>
             </div>
