@@ -2,27 +2,28 @@ import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./r
 import { depressions } from "./depressions.js";
 
 const ERROR_MESSAGE = 'Na ten moment nie ma większej ilości zdjęć dla tego zapadliska. :(';
+const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
-    body.insertAdjacentHTML('afterbegin', renderHeader());
-    body.insertAdjacentHTML('beforeend', renderFooter());
-
     const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
-    let images;
+    let depression;
 
     depressions.forEach(d => {
         if (d.query === query) {
-            images = d.images;
+            depression = d;
             return;
         }
     });
 
-    if (images === undefined || images.length < 1) {
+    body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
+    body.insertAdjacentHTML('beforeend', renderFooter());
+
+    if (depression === undefined || depression.images.length < 1) {
         container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
         return;
     }
     
-    images.forEach(image => container.innerHTML += renderImage(image));
+    depression.images.forEach(image => container.innerHTML += renderImage(image));
 })();

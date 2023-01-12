@@ -1,4 +1,4 @@
-function renderHeader() {
+function renderHeader(title) {
     return `
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -21,7 +21,7 @@ function renderHeader() {
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1 class="jumbotron-heading">Sierszańskie Zapadliska</h1>
-                    <p class="lead text-muted">Strona o sierszańskich zapadliskach</p>
+                    <p class="lead text-danger">${title}</p>
                     <!-- <p>
                         <a href="#" class="btn btn-primary my-2">Main call to action</a>
                         <a href="#" class="btn btn-secondary my-2">Secondary action</a>

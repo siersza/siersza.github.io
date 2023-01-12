@@ -1,9 +1,11 @@
 import { renderHeader, renderFooter, renderCard } from "./renderer.js";
 import { depressions } from "./depressions.js";
 
+const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
+
 (() => {
     const body = document.getElementsByTagName('body')[0];
-    body.insertAdjacentHTML('afterbegin', renderHeader());
+    body.insertAdjacentHTML('afterbegin', renderHeader(DEFAULT_TITLE));
     body.insertAdjacentHTML('beforeend', renderFooter());
 
     const container = document.getElementById('main-row');
