@@ -6,7 +6,7 @@ export const depressions = [
         query: 'cmentarz',
         imgSrc: './images/dziura-cmentarz.png',
         images: [
-            "./images/dziura-cmentarz.png",
+            "../images/dziura-cmentarz.png",
             "https://bi.im-g.pl/im/e9/98/1b/z28936937AMP,Zapadlisko-na-cmentarzu-w-Trzebini.jpg",
             "https://cdn.galleries.smcloud.net/t/galleries/gf-axGN-hPGy-Umwc_pod-cmentarzem-zapadla-sie-ziemia-groby-runely-do-poteznego-leju-sceny-grozy-w-trzebini-664x442.jpg",
             "https://ipla.pluscdn.pl/dituel/cp/6d/6dv899djergmo3axpubewpckd8k9jvfx.jpg"
@@ -23,9 +23,9 @@ export const depressions = [
         description: 'Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.',
         date: '10.01.2023',
         query: 'not',
-        imgSrc: './images/not.jpg',
+        imgSrc: '../images/not.jpg',
         images: [
-            "./images/not.jpg"
+            "../images/not.jpg"
         ],
         media: [],
         latitude: '50.19635551462979',
@@ -36,9 +36,9 @@ export const depressions = [
         description: 'Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza',
         date: '06.01.2023',
         query: 'stadion',
-        imgSrc: './images/stadion.png',
+        imgSrc: '../images/stadion.png',
         images: [
-            './images/stadion.png'
+            '../images/stadion.png'
         ],
         media: [],
         latitude: '50.195362835235706',
@@ -49,9 +49,9 @@ export const depressions = [
         description: 'Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).',
         date: '25.12.2022',
         query: 'swieta',
-        imgSrc: './images/swiateczna.png',
+        imgSrc: '../images/swiateczna.png',
         images: [
-            './images/swiateczna.png'
+            '../images/swiateczna.png'
         ],
         media: [],
         latitude: '50.1959729958199',
@@ -62,9 +62,9 @@ export const depressions = [
         description: 'Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.',
         date: '31.12.2022',
         query: 'dzialki',
-        imgSrc: './images/dzialki.png',
+        imgSrc: '../images/dzialki.png',
         images: [
-            './images/dzialki.png'
+            '../images/dzialki.png'
         ],
         media: [
             "https://fakty.tvn24.pl/fakty-po-poludniu,96/niespokojna-sylwestrowa-noc-w-trzebini-w-miescie-znow-zapadla-sie-ziemia,1131299.html?fbclid=IwAR0ETdNTGe9TPvFYE9bp5peUHTFyLNl6qD4z_CCTXmqiDSZq3CuhtZgOhxk"

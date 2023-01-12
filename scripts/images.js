@@ -1,10 +1,10 @@
-import { DEFAULT_TITLE, NO_MEDIA_ERROR } from "./constants.js";
-import { renderHeader, renderFooter, renderErrorMessage, renderMedia } from "./renderer.js";
-import { depressions } from "./depressions.js";
+import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "../utils/constants.js";
+import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
+import { depressions } from "../data/depressions.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
-    const container = document.getElementById('list-group');
+    const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
     let depression;
 
@@ -18,10 +18,10 @@ import { depressions } from "./depressions.js";
     body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
     body.insertAdjacentHTML('beforeend', renderFooter(true));
 
-    if (depression === undefined || depression.media.length < 1) {
-        container.innerHTML = renderErrorMessage(NO_MEDIA_ERROR);
+    if (depression === undefined || depression.images.length < 1) {
+        container.innerHTML = renderErrorMessage(NO_IMAGES_ERROR);
         return;
     }
     
-    depression.media.forEach(m => container.innerHTML += renderMedia(m));
+    depression.images.forEach(image => container.innerHTML += renderImage(image));
 })();

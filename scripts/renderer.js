@@ -38,7 +38,7 @@ function renderFooter(renderHomePageButton) {
             <div class="container">
                 <div class="card-body">
                     <p class="float-right">
-                        ${renderHomePageButton ? '<a href="./" class="btn btn-danger">Strona główna</a>' : ''}
+                        ${renderHomePageButton ? '<a href="../" class="btn btn-danger">Strona główna</a>' : ''}
                         <a href="#" class="btn btn-secondary">Powrót do góry</a>
                     </p>
                 </div>
@@ -49,9 +49,9 @@ function renderFooter(renderHomePageButton) {
 
 function renderErrorMessage(message) {
     return `
-    <div class="alert alert-danger" role="alert">
-        ${message}
-    </div>
+        <div class="alert alert-danger" role="alert">
+            ${message}
+        </div>
     `;
 }
 
@@ -65,8 +65,8 @@ function renderCard(depression) {
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a class="btn btn-sm btn-outline-primary" target='_blank'href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                            <a class="btn btn-sm btn-outline-success" href="./images.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
-                            <a class="btn btn-sm btn-outline-danger" href="./media.html?zapadlisko=${depression.query}">Media</a>
+                            <a class="btn btn-sm btn-outline-success" href="./pages/images.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
+                            <a class="btn btn-sm btn-outline-danger" href="./pages/media.html?zapadlisko=${depression.query}">Media</a>
                         </div>
                         <small class="text-muted">${depression.date}</small>
                     </div>
@@ -85,8 +85,8 @@ function renderMedia(url) {
 function renderImage(url) {
     return `
         <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-                <a href=${url}><img class="card-img-top" src="${url}"></a>
+            <div class="mb-4 box-shadow">
+                <a href=${url} target="_blank"><img class="card-img-top" src="${url}"></a>
             </div>
         </div>
     `;
