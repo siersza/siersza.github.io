@@ -49,9 +49,9 @@ function renderFooter(renderHomePageButton) {
 
 function renderErrorMessage(message) {
     return `
-    <div class="alert alert-danger" role="alert">
-        ${message}
-    </div>
+        <div class="alert alert-danger" role="alert">
+            ${message}
+        </div>
     `;
 }
 
