@@ -1,39 +1,27 @@
-import { renderHeader, renderFooter } from "./renderer.js";
+import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "./constants.js";
+import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
 import { depressions } from "./depressions.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
-    body.insertAdjacentHTML('afterbegin', renderHeader());
-
     const container = document.getElementById('main-row');
     const query = location.search.split('=')[1];
-    let images;
+    let depression;
 
     depressions.forEach(d => {
         if (d.query === query) {
-            images = d.images;
+            depression = d;
             return;
         }
     });
 
-    if (images.length < 1) {
-        container.innerHTML = `
-            <div class="alert alert-danger" role="alert">
-                Na ten moment nie ma większej ilości zdjęć dla tego zapadliska. :(
-            </div>
-        `;
+    body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
+    body.insertAdjacentHTML('beforeend', renderFooter(true));
+
+    if (depression === undefined || depression.images.length < 1) {
+        container.innerHTML = renderErrorMessage(NO_IMAGES_ERROR);
         return;
     }
     
-    images.forEach(image => {
-        container.innerHTML += `
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <a href=${image}><img class="card-img-top" src="${image}"></a>
-                </div>
-            </div>
-        `
-    });
-
-    body.insertAdjacentHTML('beforeend', renderFooter());
+    depression.images.forEach(image => container.innerHTML += renderImage(image));
 })();

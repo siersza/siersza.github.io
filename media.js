@@ -1,35 +1,27 @@
-import { renderHeader, renderFooter } from "./renderer.js";
+import { DEFAULT_TITLE, NO_MEDIA_ERROR } from "./constants.js";
+import { renderHeader, renderFooter, renderErrorMessage, renderMedia } from "./renderer.js";
 import { depressions } from "./depressions.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
-    body.insertAdjacentHTML('afterbegin', renderHeader());
-
     const container = document.getElementById('list-group');
     const query = location.search.split('=')[1];
-    let media;
+    let depression;
 
     depressions.forEach(d => {
         if (d.query === query) {
-            media = d.media;
+            depression = d;
             return;
         }
     });
 
-    if (media.length < 1) {
-        container.innerHTML = `
-            <div class="alert alert-danger" role="alert">
-                Na ten moment nie ma odnośników dotyczących zapadliska. :(
-            </div>
-        `;
+    body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
+    body.insertAdjacentHTML('beforeend', renderFooter(true));
+
+    if (depression === undefined || depression.media.length < 1) {
+        container.innerHTML = renderErrorMessage(NO_MEDIA_ERROR);
         return;
     }
     
-    media.forEach(m => {
-        container.innerHTML += `
-            <a href=${m} target="_blank" class="list-group-item list-group-item-action">${m}
-        `
-    });
-
-    body.insertAdjacentHTML('beforeend', renderFooter());
+    depression.media.forEach(m => container.innerHTML += renderMedia(m));
 })();
