@@ -19,7 +19,7 @@ const ERROR_MESSAGE = 'Na ten moment nie ma większej ilości zdjęć dla tego z
         }
     });
 
-    if (images.length < 1) {
+    if (images === undefined || images.length < 1) {
         container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
         return;
     }

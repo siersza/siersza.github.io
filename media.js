@@ -19,7 +19,7 @@ const ERROR_MESSAGE = 'Na ten moment nie ma odnośników dotyczących zapadliska
         }
     });
 
-    if (media.length < 1) {
+    if (media === undefined || media.length < 1) {
         container.innerHTML = renderErrorMessage(ERROR_MESSAGE);
         return;
     }
