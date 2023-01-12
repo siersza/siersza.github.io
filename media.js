@@ -18,7 +18,7 @@ const DEFAULT_TITLE = 'Strona o sierszańskich zapadliskach';
     });
 
     body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
-    body.insertAdjacentHTML('beforeend', renderFooter());
+    body.insertAdjacentHTML('beforeend', renderFooter(true));
 
     if (depression === undefined || depression.media.length < 1) {
         container.innerHTML = renderErrorMessage(ERROR_MESSAGE);

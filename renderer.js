@@ -32,13 +32,14 @@ function renderHeader(title) {
     `;
 }
 
-function renderFooter() {
+function renderFooter(renderHomePageButton) {
     return `
         <footer class="text-muted bg-dark">
             <div class="container">
                 <div class="card-body">
                     <p class="float-right">
                         <a href="#" class="btn btn-secondary">Powrót do góry</a>
+                        ${renderHomePageButton ? '<a href="./" class="btn btn-danger">Strona główna</a>' : ''}
                     </p>
                 </div>
             </div>
