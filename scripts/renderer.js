@@ -86,7 +86,7 @@ function renderImage(url) {
     return `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-                <a href=${url}><img class="card-img-top" src="${url}"></a>
+                <a href=${url} target="_blank"><img class="card-img-top" src="${url}"></a>
             </div>
         </div>
     `;
