@@ -18,5 +18,5 @@ import { getDepressionByQuery, replaceImgSrc } from "../utils/utils.js";
     
     depression.images.forEach(image => container.innerHTML += renderImage(image));
     
-    replaceImgSrc(document.getElementsByTagName('img'));
+    replaceImgSrc(document.getElementsByTagName('img'), true);
 })();

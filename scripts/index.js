@@ -11,5 +11,5 @@ import { replaceImgSrc } from "../utils/utils.js";
     const container = document.getElementById('main-row');
     depressions.forEach(d => container.innerHTML += renderCard(d));
 
-    replaceImgSrc(document.getElementsByTagName('img'));
+    replaceImgSrc(document.getElementsByTagName('img'), false);
 })();
