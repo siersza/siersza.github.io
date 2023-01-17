@@ -1,6 +1,6 @@
 import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "../utils/constants.js";
 import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
-import { getDepressionByQuery } from "../utils/utils.js";
+import { getDepressionByQuery, replaceImgSrc } from "../utils/utils.js";
 
 (() => {
     const body = document.getElementsByTagName('body')[0];
@@ -17,4 +17,6 @@ import { getDepressionByQuery } from "../utils/utils.js";
     }
     
     depression.images.forEach(image => container.innerHTML += renderImage(image));
+    
+    replaceImgSrc(document.getElementsByTagName('img'), true);
 })();
