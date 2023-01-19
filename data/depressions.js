@@ -1,6 +1,21 @@
 export const depressions = [
     {
         name: "Cmentarz",
+        description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
+        date: "19.01.2023",
+        query: "cmentarz2",
+        imgSrc: "./images/cmentarz.png",
+        images: [
+            "../images/cmentarz.png"
+        ],
+        media: [],
+        latitude: "50.19599798566062",
+        longitude: "19.440403558711264",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        name: "Cmentarz",
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
         query: "cmentarz",
