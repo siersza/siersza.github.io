@@ -83,10 +83,35 @@ function renderCard(depression) {
     `;
 }
 
+function renderMediaContainer(url) {
+    return `
+        <main role="main">
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div id="list-group" class="list-group">
+                    </div>
+                </div>
+            </div>
+        </main>
+    `;
+}
+
 function renderMedia(url) {
     return `
         <a href=${url} target="_blank" class="list-group-item list-group-item-action">${url}</a>
     `;
+}
+
+function renderImagesContainer() {
+    return `
+        <main role="main">
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div id="main-row" class="row"></div>
+                </div>
+            </div>
+        </main>
+    `
 }
 
 function renderImage(url) {
@@ -99,4 +124,23 @@ function renderImage(url) {
     `;
 }
 
-export { renderHeader, renderFooter, renderErrorMessage, renderCard, renderMedia, renderImage };
+function renderBody(headerTitle, renderHomePageButton, dataContainer) {
+    if (dataContainer !== undefined) {
+        document.body.innerHTML = dataContainer;
+    }
+
+    document.body.insertAdjacentHTML('afterbegin', renderHeader(headerTitle));
+    document.body.insertAdjacentHTML('beforeend', renderFooter(renderHomePageButton));
+}
+
+export {
+    renderHeader,
+    renderFooter,
+    renderErrorMessage,
+    renderCard,
+    renderMediaContainer,
+    renderMedia,
+    renderImagesContainer,
+    renderImage,
+    renderBody
+};

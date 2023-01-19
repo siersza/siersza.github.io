@@ -1,15 +1,13 @@
 import { DEFAULT_TITLE, NO_MEDIA_ERROR } from "../utils/constants.js";
-import { renderHeader, renderFooter, renderErrorMessage, renderMedia } from "./renderer.js";
+import { renderBody, renderErrorMessage, renderMediaContainer, renderMedia } from "./renderer.js";
 import { getDepressionByQuery } from "../utils/utils.js";
 
 (() => {
-    const body = document.getElementsByTagName('body')[0];
-    const container = document.getElementById('list-group');
-    const query = location.search.split('=')[1];
-    const depression = getDepressionByQuery(query);
+    const depression = getDepressionByQuery(location.search.split('=')[1]);
 
-    body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
-    body.insertAdjacentHTML('beforeend', renderFooter(true));
+    renderBody(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE, true, renderMediaContainer());
+
+    const container = document.getElementById('list-group');
 
     if (depression === undefined || depression.media.length < 1) {
         container.innerHTML = renderErrorMessage(NO_MEDIA_ERROR);
