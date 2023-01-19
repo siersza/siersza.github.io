@@ -13,7 +13,7 @@ function renderHeader(title) {
                                 <a class="nav-link active" aria-current="page" href="./">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./pages/video.html">Materiały wideo dotyczące zapadlisk</a>
+                                <a class="nav-link active" aria-current="page" href="../pages/video.html">Materiały wideo dotyczące zapadlisk</a>
                             </li>
                         </ul>
                     </div>
