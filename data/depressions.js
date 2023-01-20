@@ -5,7 +5,7 @@ export const depressions = [
         description: "Zapadlisko pojawiło się w lesie.",
         date: "20.01.2023",
         query: "las-1",
-        imgSrc: "./images/las-1.jpg",
+        imgSrc: "../images/las-1.jpg",
         images: [
             "../images/las-1.jpg",
             "../images/las-2.jpg",
@@ -26,7 +26,7 @@ export const depressions = [
         description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
         date: "19.01.2023",
         query: "cmentarz-2",
-        imgSrc: "./images/cmentarz.png",
+        imgSrc: "../images/cmentarz.png",
         images: [
             "../images/cmentarz.png"
         ],
@@ -131,7 +131,7 @@ export const depressions = [
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
         query: "cmentarz",
-        imgSrc: "./images/dziura-cmentarz.png",
+        imgSrc: "../images/dziura-cmentarz.png",
         images: [
             "../images/dziura-cmentarz.png",
             "https://bi.im-g.pl/im/e9/98/1b/z28936937AMP,Zapadlisko-na-cmentarzu-w-Trzebini.jpg",
@@ -156,11 +156,11 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
         query: "gaj",
-        imgSrc: "./images/gaj.jpg",
+        imgSrc: "../images/gaj.jpg",
         images: [
-            "./images/gaj.jpg",
-            "./images/gaj-2.jpg",
-            "./images/gaj-3.jpg"
+            "../images/gaj.jpg",
+            "../images/gaj-2.jpg",
+            "../images/gaj-3.jpg"
         ],
         media: [],
         latitude: "50.20020445148553",
@@ -195,10 +195,10 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "24.06.2022",
         query: "dzialki-4",
-        imgSrc: "./images/dzialki-4-1.jpg",
+        imgSrc: "../images/dzialki-4-1.jpg",
         images: [
-            "./images/dzialki-4-1.jpg",
-            "./images/dzialki-4-2.jpg",
+            "../images/dzialki-4-1.jpg",
+            "../images/dzialki-4-2.jpg",
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg"
         ],
         media: [
@@ -235,10 +235,10 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "23.11.2021",
         query: "dzialki-2",
-        imgSrc: "./images/dzialki-2-1.jpg",
+        imgSrc: "../images/dzialki-2-1.jpg",
         images: [
-            "./images/dzialki-2-1.jpg",
-            "./images/dzialki-2-2.jpg",
+            "../images/dzialki-2-1.jpg",
+            "../images/dzialki-2-2.jpg",
             "https://ipla.pluscdn.pl/dituel/cp/fo/foxjymumk4fxhb87tba7xfkk27fpjbs6.jpg",
             "https://srk.com.pl/assets/pics/galerie/945/-4204275680794393253__2_.jpg"
         ],
