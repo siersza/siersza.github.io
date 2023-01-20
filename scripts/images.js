@@ -1,22 +1,24 @@
-import { DEFAULT_TITLE, NO_IMAGES_ERROR } from "../utils/constants.js";
-import { renderHeader, renderFooter, renderErrorMessage, renderImage } from "./renderer.js";
-import { getDepressionByQuery, replaceImgSrc } from "../utils/utils.js";
+import { NO_DEPRESSION_ERROR, NO_IMAGES_ERROR } from "../utils/constants.js";
+import { renderBody, renderErrorMessage, renderImagesContainer, renderImage } from "./renderer.js";
+import { getDepressionByQuery, replaceImgSrc, setPageTitle } from "../utils/utils.js";
 
 (() => {
-    const body = document.getElementsByTagName('body')[0];
-    const container = document.getElementById('main-row');
-    const query = location.search.split('=')[1];
-    const depression = getDepressionByQuery(query);
+    renderBody(true, renderImagesContainer());
+    const container = document.getElementById('images-container');
+    const depression = getDepressionByQuery(location.search.split('=')[1]);
 
-    body.insertAdjacentHTML('afterbegin', renderHeader(depression !== undefined ? `Zapadlisko: ${depression.name}` : DEFAULT_TITLE));
-    body.insertAdjacentHTML('beforeend', renderFooter(true));
+    if (depression === undefined) {
+        container.innerHTML = renderErrorMessage(NO_DEPRESSION_ERROR);
+        return;
+    }
 
-    if (depression === undefined || depression.images.length < 1) {
+    if (depression.images.length < 1) {
         container.innerHTML = renderErrorMessage(NO_IMAGES_ERROR);
         return;
     }
-    
+
     depression.images.forEach(image => container.innerHTML += renderImage(image));
     
+    setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
     replaceImgSrc(document.getElementsByTagName('img'), true);
 })();

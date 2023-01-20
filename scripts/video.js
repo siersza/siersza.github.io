@@ -1,13 +1,13 @@
 import { VIDEOS_PAGE_TITLE } from "../utils/constants.js";
-import { renderHeader, renderFooter, renderMedia } from "./renderer.js";
+import { renderBody, renderMediaContainer, renderMedia } from "./renderer.js";
 import { videos } from "../data/videos.js";
+import { setPageTitle } from "../utils/utils.js";
 
 (() => {
-    const body = document.getElementsByTagName('body')[0];
-    const container = document.getElementById('list-group');
+    renderBody(true, renderMediaContainer());
 
-    body.insertAdjacentHTML('afterbegin', renderHeader(VIDEOS_PAGE_TITLE));
-    body.insertAdjacentHTML('beforeend', renderFooter(true));
-    
+    const container = document.getElementById('media-container');
     videos.forEach(v => container.innerHTML += renderMedia(v));
+
+    setPageTitle(VIDEOS_PAGE_TITLE);
 })();
