@@ -12,8 +12,8 @@ export const depressions = [
         media: [
             "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
         ],
-        latitude: "",
-        longitude: "",
+        latitude: "50.19821899033548",
+        longitude: "19.44042191115233",
         diameter: "b.d.",
         depth: "b.d."
     },
