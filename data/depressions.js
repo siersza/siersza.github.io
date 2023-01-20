@@ -137,6 +137,24 @@ export const depressions = [
         diameter: "b.d.",
         depth: "b.d."
     },
+        {
+        name: "Jana Pawła II",
+        description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
+        date: "23.07.2022",
+        query: "jana-pawla-ii",
+        imgSrc: "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65773_1658573218_40403900.jpg",
+        images: [
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65773_1658573218_40403900.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65772_1658573217_43852900.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65775_1658573220_04123300.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65776_1658573220_95588100.jpg"
+        ],
+        media: [],
+        latitude: "50.19569163953249",
+        longitude: "19.432938698828142",
+        diameter: "3",
+        depth: "2"
+    },
     {
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
