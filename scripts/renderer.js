@@ -67,7 +67,7 @@ const renderCard = depression => `
 `;
 
 const renderMediaContainer = () => `
-    <div id="media-container" class="list-group"></div>
+    <div id="media-container" class="list-group" style="overflow-wrap: break-word;"></div>
 `;
 
 const renderMedia = url => `

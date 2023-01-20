@@ -1,9 +1,28 @@
 export const depressions = [
     {
+        id: "14",
+        name: "Las",
+        description: "Zapadlisko pojawiło się w lesie.",
+        date: "20.01.2023",
+        query: "las-1",
+        imgSrc: "./images/las.png",
+        images: [
+            "../images/las.png"
+        ],
+        media: [
+            "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
+        ],
+        latitude: "50.19821899033548",
+        longitude: "19.44042191115233",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "13",
         name: "Cmentarz",
         description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
         date: "19.01.2023",
-        query: "cmentarz2",
+        query: "cmentarz-2",
         imgSrc: "./images/cmentarz.png",
         images: [
             "../images/cmentarz.png"
@@ -17,10 +36,11 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "12",
         name: "Willa NOT",
         description: "Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.",
         date: "10.01.2023",
-        query: "not",
+        query: "willa-not",
         imgSrc: "../images/not.jpg",
         images: [
             "../images/not.jpg"
@@ -32,6 +52,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "11",
         name: "Stadion",
         description: "Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza.",
         date: "06.01.2023",
@@ -50,6 +71,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "10",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "31.12.2022",
@@ -67,6 +89,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "9",
         name: "Kościół",
         description: "Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).",
         date: "25.12.2022",
@@ -82,10 +105,11 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "8",
         name: "Ddziałki Gaj",
         description: "Zapadlisko pojawiło się przy leśniej ścieżce w okolicy działek.",
         date: "24.11.2022",
-        query: "dzialki5",
+        query: "dzialki-5",
         imgSrc: "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/11/24/43822_1669309524_53176900.jpg",
         images: [],
         media: [
@@ -97,6 +121,7 @@ export const depressions = [
         depth: "8"
     },
     {
+        id: "7",
         name: "Cmentarz",
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
@@ -121,6 +146,7 @@ export const depressions = [
         depth: "10"
     },
     {
+        id: "6",
         name: "Osiedle Gaj",
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
@@ -138,10 +164,50 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "5",
+        name: "Ulica Jana Pawła II",
+        description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
+        date: "23.07.2022",
+        query: "jana-pawla-ii",
+        imgSrc: "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65773_1658573218_40403900.jpg",
+        images: [
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65773_1658573218_40403900.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65772_1658573217_43852900.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65775_1658573220_04123300.jpg",
+            "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65776_1658573220_95588100.jpg"
+        ],
+        media: [
+            "https://przelom.pl/42307-znow-zapadla-sie-ziemia-tym-razem-w-sierszy-zdjecia.html"
+        ],
+        latitude: "50.19569163953249",
+        longitude: "19.432938698828142",
+        diameter: "3",
+        depth: "2"
+    },
+    {
+        id: "4",
+        name: "Działki Gaj",
+        description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
+        date: "24.06.2022",
+        query: "dzialki-5",
+        imgSrc: "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg",
+        images: [
+            "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg"
+        ],
+        media: [
+            "https://przelom.pl/41923-wielka-dziura-na-ogrodkach-dzialkowych-w-gaju.html"
+        ],
+        latitude: "50.197312660291516",
+        longitude: "19.43782882794996",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "3",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "22.02.2022",
-        query: "dzialki3",
+        query: "dzialki-3",
         imgSrc: "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
         images: [
             "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
@@ -157,10 +223,11 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "2",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "23.11.2021",
-        query: "dzialki2",
+        query: "dzialki-2",
         imgSrc: "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/261152553_4474684142600989_2273444873593459973_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yfKlFGsOLmgAX8-jbF3&_nc_ht=scontent-waw1-1.xx&oh=00_AfCuLah9YFOq54xU0NCrm0fNSGn7Sf0jgq2AmTXsGCVpBQ&oe=63C2E5F3",
         images: [
             "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/261152553_4474684142600989_2273444873593459973_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yfKlFGsOLmgAX8-jbF3&_nc_ht=scontent-waw1-1.xx&oh=00_AfCuLah9YFOq54xU0NCrm0fNSGn7Sf0jgq2AmTXsGCVpBQ&oe=63C2E5F3",
@@ -178,10 +245,11 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "1",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "27.08.2021",
-        query: "dzialki4",
+        query: "dzialki-4",
         imgSrc: "../images/dzialki-4.png",
         images: [
             "../images/dzialki-4.png"
