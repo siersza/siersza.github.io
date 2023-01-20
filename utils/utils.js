@@ -23,9 +23,12 @@ const setPageTitle = title => document.getElementById('title').innerHTML = title
 
 const setPageDescription = description => document.getElementById('description').innerHTML = description;
 
+const setActivePage = id => document.getElementById(id).classList.remove('link-dark');
+
 export {
     getDepressionByQuery,
     replaceImgSrc,
     setPageTitle,
-    setPageDescription
+    setPageDescription,
+    setActivePage
 }

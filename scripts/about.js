@@ -1,14 +1,16 @@
-import { VIDEOS_PAGE_TITLE } from "../utils/constants.js";
+import { ABOUT_PAGE_TITLE } from "../utils/constants.js";
 import { renderBody, renderMediaContainer, renderMedia } from "./renderer.js";
-import { videos } from "../data/videos.js";
 import { setPageTitle, setActivePage } from "../utils/utils.js";
+import { info } from "../data/info.js";
 
 (() => {
     renderBody(true, renderMediaContainer());
 
     const container = document.getElementById('media-container');
-    videos.forEach(v => container.innerHTML += renderMedia(v));
+    container.innerHTML = `
+        <p>${info.about}</p>
+    `;
 
-    setActivePage('video');
-    setPageTitle(VIDEOS_PAGE_TITLE);
+    setActivePage('about');
+    setPageTitle(ABOUT_PAGE_TITLE);
 })();
