@@ -111,7 +111,9 @@ export const depressions = [
         date: "24.11.2022",
         query: "dzialki-5",
         imgSrc: "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/11/24/43822_1669309524_53176900.jpg",
-        images: [],
+        images: [
+            "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/11/24/43822_1669309524_53176900.jpg"
+        ],
         media: [
             "https://przelom.pl/43822-ziemia-znow-zapadla-sie-w-trzebini-w-poblizu-lesnej-sciezki.html"
         ],
@@ -189,7 +191,7 @@ export const depressions = [
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "24.06.2022",
-        query: "dzialki-5",
+        query: "dzialki-4",
         imgSrc: "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg",
         images: [
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg"
@@ -249,7 +251,7 @@ export const depressions = [
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "27.08.2021",
-        query: "dzialki-4",
+        query: "dzialki-1",
         imgSrc: "../images/dzialki-4.png",
         images: [
             "../images/dzialki-4.png"
