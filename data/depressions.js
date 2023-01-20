@@ -29,7 +29,8 @@ export const depressions = [
             "../images/cmentarz.png"
         ],
         media: [
-            "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
+            "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60",
+            "https://www.radiokrakow.pl/aktualnosci/malopolskazachodnia/kolejne-zapadlisko-w-trzebini-tym-razem-w-okolicy-osiedla-gaj?fbclid=IwAR2Zey6yu24SBogmRbHGSm-xW3FHfo67c1awt6UdKAbNzYsQoYLA0eIO0iM"
         ],
         latitude: "50.19599798566062",
         longitude: "19.440403558711264",
