@@ -1,5 +1,24 @@
 export const depressions = [
     {
+        id: "14",
+        name: "Las",
+        description: "Zapadlisko pojawiło się w lesie.",
+        date: "20.01.2023",
+        query: "las-1",
+        imgSrc: "./images/las.png",
+        images: [
+            "../images/las.png"
+        ],
+        media: [
+            "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
+        ],
+        latitude: "",
+        longitude: "",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "13",
         name: "Cmentarz",
         description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
         date: "19.01.2023",
@@ -17,6 +36,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "12",
         name: "Willa NOT",
         description: "Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.",
         date: "10.01.2023",
@@ -32,6 +52,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "11",
         name: "Stadion",
         description: "Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza.",
         date: "06.01.2023",
@@ -50,6 +71,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "10",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "31.12.2022",
@@ -67,6 +89,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "9",
         name: "Kościół",
         description: "Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).",
         date: "25.12.2022",
@@ -82,6 +105,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "8",
         name: "Ddziałki Gaj",
         description: "Zapadlisko pojawiło się przy leśniej ścieżce w okolicy działek.",
         date: "24.11.2022",
@@ -97,6 +121,7 @@ export const depressions = [
         depth: "8"
     },
     {
+        id: "7",
         name: "Cmentarz",
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
@@ -121,6 +146,7 @@ export const depressions = [
         depth: "10"
     },
     {
+        id: "6",
         name: "Osiedle Gaj",
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
@@ -138,6 +164,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "5",
         name: "Ulica Jana Pawła II",
         description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
         date: "23.07.2022",
@@ -158,6 +185,7 @@ export const depressions = [
         depth: "2"
     },
     {
+        id: "4",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "24.06.2022",
@@ -175,6 +203,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "3",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "22.02.2022",
@@ -194,6 +223,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "2",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "23.11.2021",
@@ -215,6 +245,7 @@ export const depressions = [
         depth: "b.d."
     },
     {
+        id: "1",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "27.08.2021",
