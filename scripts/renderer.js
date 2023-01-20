@@ -4,6 +4,7 @@ const renderHeader = () => `
             Siersza | Zapadliska
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="./" class="nav-link px-2 link-dark">Strona główna</a></li>
+                <li><a href="../pages/about.html" class="nav-link px-2 link-dark">O zapadliskach</a></li>
                 <li><a href="../pages/video.html" class="nav-link px-2 link-dark">Materiały wideo dotyczące zapadlisk</a></li>
             </ul>
         </header>

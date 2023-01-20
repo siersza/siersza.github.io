@@ -5,6 +5,7 @@ const NO_MEDIA_ERROR = 'Na ten moment nie ma odnośników do artykułów dotycz�
 const NO_IMAGES_ERROR = 'Na ten moment nie ma zdjęć dotyczących tego zapadliska.';
 const COULD_NOT_LOAD_IMAGE_ERROR = 'Nie udało się załadować zdjęcia. Zostało usunięte lub nie ma do niego dostępu';
 const VIDEOS_PAGE_TITLE = 'Materiały wideo dotyczące zapadlisk';
+const ABOUT_PAGE_TITLE = 'O zapadliskach';
 
 export {
     DEFAULT_TITLE,
@@ -13,5 +14,6 @@ export {
     NO_MEDIA_ERROR,
     NO_IMAGES_ERROR,
     COULD_NOT_LOAD_IMAGE_ERROR,
-    VIDEOS_PAGE_TITLE
+    VIDEOS_PAGE_TITLE,
+    ABOUT_PAGE_TITLE
 }
