@@ -1,7 +1,7 @@
 import { VIDEOS_PAGE_TITLE } from "../utils/constants.js";
 import { renderBody, renderMediaContainer, renderMedia } from "./renderer.js";
 import { videos } from "../data/videos.js";
-import { setPageTitle } from "../utils/utils.js";
+import { setPageTitle, setActivePage } from "../utils/utils.js";
 
 (() => {
     renderBody(true, renderMediaContainer());
@@ -9,5 +9,6 @@ import { setPageTitle } from "../utils/utils.js";
     const container = document.getElementById('media-container');
     videos.forEach(v => container.innerHTML += renderMedia(v));
 
+    setActivePage('video');
     setPageTitle(VIDEOS_PAGE_TITLE);
 })();

@@ -3,9 +3,9 @@ const renderHeader = () => `
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             Siersza | Zapadliska
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="./" class="nav-link px-2 link-dark">Strona główna</a></li>
-                <li><a href="../pages/about.html" class="nav-link px-2 link-dark">O zapadliskach</a></li>
-                <li><a href="../pages/video.html" class="nav-link px-2 link-dark">Materiały wideo dotyczące zapadlisk</a></li>
+                <li><a id="home" href="./" class="nav-link link-dark">Strona główna</a></li>
+                <li><a id="about" href="../pages/about.html" class="nav-link link-dark">O zapadliskach</a></li>
+                <li><a id="video" href="../pages/video.html" class="nav-link link-dark">Materiały wideo dotyczące zapadlisk</a></li>
             </ul>
         </header>
     </div>

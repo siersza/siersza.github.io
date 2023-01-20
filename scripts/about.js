@@ -1,6 +1,6 @@
 import { ABOUT_PAGE_TITLE } from "../utils/constants.js";
 import { renderBody, renderMediaContainer, renderMedia } from "./renderer.js";
-import { setPageTitle } from "../utils/utils.js";
+import { setPageTitle, setActivePage } from "../utils/utils.js";
 import { info } from "../data/info.js";
 
 (() => {
@@ -11,5 +11,6 @@ import { info } from "../data/info.js";
         <p>${info.about}</p>
     `;
 
+    setActivePage('about');
     setPageTitle(ABOUT_PAGE_TITLE);
 })();
