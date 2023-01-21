@@ -2,7 +2,7 @@ export const depressions = [
     {
         id: "14",
         name: "Las",
-        description: "Zapadlisko pojawiło się w lesie.",
+        description: "Zapadlisko pojawiło się między jednym z bloków (około 60 metrów od niego) osiedla Gaj a tzw. salką dla młodzieży.",
         date: "20.01.2023",
         query: "las-1",
         imgSrc: "../images/las-1.jpg",
@@ -12,7 +12,9 @@ export const depressions = [
             "../images/las-3.jpg",
             "../images/las-4.jpg"
         ],
-        media: [],
+        media: [
+            "https://przelom.pl/44446-nastepne-zapadlisko-w-rejonie-cmentarza-w-trzebini-srk-rozpoczyna-pomiary-na-zagrozonych-terenach.html?fbclid=IwAR367Vnn9oc8WM4ArVtN_gdskYIw9PA0LRQO8EL7KX_b8i6fyvQGTo4Yu3M"
+        ],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
         diameter: "b.d.",
