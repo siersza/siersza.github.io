@@ -30,11 +30,13 @@ const renderHeader = () => `
 
 const renderFooter = renderHomePageButton => `
     <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            ${renderHomePageButton ? '<li class="nav-item"><a href="../" class="nav-link px-2 text-muted">Strona główna</a></li>' : ''}
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Do góry</a></li>
-        </ul>
-        <p class="text-center text-muted">&copy; 2023 Siersza</p>
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                ${renderHomePageButton ? '<li class="nav-item"><a href="../" class="nav-link px-2 text-muted">Strona główna</a></li>' : ''}
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Do góry</a></li>
+            </ul>
+            <p class="text-center text-muted">&copy; 2023 Siersza</p>
+        </div>
     </footer>
 `;
 
@@ -51,8 +53,8 @@ const renderCard = depression => `
             <div class="card-body">
                 <p class="card-text">${depression.name}. ${depression.description}</p>
                 <ul>
-                    <li>Głębokość: ${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metrów.'}</li>
-                    <li>Średnica: ${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metrów.'}</li>
+                    <li>Głębokość: ${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metry/ów.'}</li>
+                    <li>Średnica: ${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metry/ów.'}</li>
                 </ul>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
