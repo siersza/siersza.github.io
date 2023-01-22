@@ -69,13 +69,15 @@ const renderCard = depression => `
     </div>
 `;
 
-const renderMediaContainer = () => `
+const renderURLContainer = () => `
     <div id="media-container" class="list-group" style="overflow-wrap: break-word;"></div>
 `;
 
-const renderMedia = url => `
-    <a href=${url} target="_blank" class="list-group-item list-group-item-action">${url}</a>
-`;
+const renderURL = url => {
+    return `
+        <a href=${url.href} target="_blank" class="list-group-item list-group-item-action">${url.title !== '' ? url.title : url.href}</a>
+    `;
+}
 
 const renderImagesContainer = () => `
     <div id="images-container" class="row"></div>
@@ -104,8 +106,8 @@ export {
     renderFooter,
     renderErrorMessage,
     renderCard,
-    renderMediaContainer,
-    renderMedia,
+    renderURLContainer,
+    renderURL,
     renderImagesContainer,
     renderImage,
     renderBody
