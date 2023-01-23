@@ -1,5 +1,5 @@
 import { VIDEOS_PAGE_TITLE } from "../utils/constants.js";
-import { renderBody, renderURL, renderURL } from "./renderer.js";
+import { renderBody, renderURLContainer, renderURL } from "./renderer.js";
 import { videos } from "../data/videos.js";
 import { setPageTitle, setActivePage } from "../utils/utils.js";
 
