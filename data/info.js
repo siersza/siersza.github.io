@@ -12,6 +12,10 @@ export const info = {
         {
             title: "Kopalnia Węgla Kamiennego Siersza",
             href: "https://pl.wikipedia.org/wiki/Kopalnia_W%C4%99gla_Kamiennego_Siersza"
+        },
+        {
+            title: "Mapa zagrożeń",
+            href: "https://zapadliska.gig.eu/pl/content/mapa"
         }
     ]
 };
