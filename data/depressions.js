@@ -13,7 +13,10 @@ export const depressions = [
             "../images/las-4.jpg"
         ],
         media: [
-            "https://przelom.pl/44446-nastepne-zapadlisko-w-rejonie-cmentarza-w-trzebini-srk-rozpoczyna-pomiary-na-zagrozonych-terenach.html?fbclid=IwAR367Vnn9oc8WM4ArVtN_gdskYIw9PA0LRQO8EL7KX_b8i6fyvQGTo4Yu3M"
+            {
+                title: "",
+                href: "https://przelom.pl/44446-nastepne-zapadlisko-w-rejonie-cmentarza-w-trzebini-srk-rozpoczyna-pomiary-na-zagrozonych-terenach.html?fbclid=IwAR367Vnn9oc8WM4ArVtN_gdskYIw9PA0LRQO8EL7KX_b8i6fyvQGTo4Yu3M"
+            }
         ],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
@@ -31,8 +34,14 @@ export const depressions = [
             "../images/cmentarz.png"
         ],
         media: [
-            "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60",
-            "https://www.radiokrakow.pl/aktualnosci/malopolskazachodnia/kolejne-zapadlisko-w-trzebini-tym-razem-w-okolicy-osiedla-gaj?fbclid=IwAR2Zey6yu24SBogmRbHGSm-xW3FHfo67c1awt6UdKAbNzYsQoYLA0eIO0iM"
+            {
+                title: "",
+                href: "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
+            },
+            {
+                title: "",
+                href: "https://www.radiokrakow.pl/aktualnosci/malopolskazachodnia/kolejne-zapadlisko-w-trzebini-tym-razem-w-okolicy-osiedla-gaj?fbclid=IwAR2Zey6yu24SBogmRbHGSm-xW3FHfo67c1awt6UdKAbNzYsQoYLA0eIO0iM"
+            }
         ],
         latitude: "50.19599798566062",
         longitude: "19.440403558711264",
@@ -67,7 +76,10 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2023/01/07/44288_1673097539_96131600.jpg"
         ],
         media: [
-            "https://przelom.pl/44288-kolejne-zapadlisko-pojawilo-sie-w-trzebini-minal-zaledwie-tydzien-od-poprzedniego.html"
+            {
+                title: "",
+                href: "https://przelom.pl/44288-kolejne-zapadlisko-pojawilo-sie-w-trzebini-minal-zaledwie-tydzien-od-poprzedniego.html"
+            }
         ],
         latitude: "50.195362835235706",
         longitude: "19.43240149796994",
@@ -85,7 +97,10 @@ export const depressions = [
             "../images/dzialki.png"
         ],
         media: [
-            "https://fakty.tvn24.pl/fakty-po-poludniu,96/niespokojna-sylwestrowa-noc-w-trzebini-w-miescie-znow-zapadla-sie-ziemia,1131299.html?fbclid=IwAR0ETdNTGe9TPvFYE9bp5peUHTFyLNl6qD4z_CCTXmqiDSZq3CuhtZgOhxk"
+            {
+                title: "",
+                href: "https://fakty.tvn24.pl/fakty-po-poludniu,96/niespokojna-sylwestrowa-noc-w-trzebini-w-miescie-znow-zapadla-sie-ziemia,1131299.html?fbclid=IwAR0ETdNTGe9TPvFYE9bp5peUHTFyLNl6qD4z_CCTXmqiDSZq3CuhtZgOhxk"
+            }
         ],
         latitude: "50.195532485126364",
         longitude: "19.437633065718344",
@@ -119,7 +134,10 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/11/24/43822_1669309524_53176900.jpg"
         ],
         media: [
-            "https://przelom.pl/43822-ziemia-znow-zapadla-sie-w-trzebini-w-poblizu-lesnej-sciezki.html"
+            {
+                title: "",
+                href: "https://przelom.pl/43822-ziemia-znow-zapadla-sie-w-trzebini-w-poblizu-lesnej-sciezki.html"
+            }
         ],
         latitude: "50.1951635163176",
         longitude: "19.43935301014418",
@@ -141,10 +159,22 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/09/20/66890_1663684639_03035100.jpg"
         ],
         media: [
-            "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-na-wyniki-badan-georadarowych-trzeba-c,nId,6358075",
-            "https://www.rmf24.pl/regiony/krakow/news-czy-na-cmentarzu-w-trzebini-jest-bezpiecznie-1-listopada-prz,nId,6374102",
-            "https://przelom.pl/galeria/3661-zapadlisko-20-wrzesnia-2022-r/foto-66890.html",
-            "https://tvn24.pl/krakow/trzebinia-zapadlisko-na-cmentarzu-zostalo-ogrodzone-nekropolia-jest-otwarta-dla-bliskich-osob-ktorych-groby-zostaly-zniszczone-powstala-tablica-upamietniajaca-6187513"
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-na-wyniki-badan-georadarowych-trzeba-c,nId,6358075"
+            },
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-czy-na-cmentarzu-w-trzebini-jest-bezpiecznie-1-listopada-prz,nId,6374102"
+            },
+            {
+                title: "",
+                href: "https://przelom.pl/galeria/3661-zapadlisko-20-wrzesnia-2022-r/foto-66890.html"
+            },
+            {
+                title: "",
+                href: "https://tvn24.pl/krakow/trzebinia-zapadlisko-na-cmentarzu-zostalo-ogrodzone-nekropolia-jest-otwarta-dla-bliskich-osob-ktorych-groby-zostaly-zniszczone-powstala-tablica-upamietniajaca-6187513"
+            }
         ],
         latitude: "50.19658317777548",
         longitude: "19.441122600264464",
@@ -183,7 +213,10 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/07/23/65776_1658573220_95588100.jpg"
         ],
         media: [
-            "https://przelom.pl/42307-znow-zapadla-sie-ziemia-tym-razem-w-sierszy-zdjecia.html"
+            {
+                title: "",
+                href: "https://przelom.pl/42307-znow-zapadla-sie-ziemia-tym-razem-w-sierszy-zdjecia.html"
+            }
         ],
         latitude: "50.19569163953249",
         longitude: "19.432938698828142",
@@ -203,7 +236,10 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg"
         ],
         media: [
-            "https://przelom.pl/41923-wielka-dziura-na-ogrodkach-dzialkowych-w-gaju.html"
+            {
+                title: "",
+                href: "https://przelom.pl/41923-wielka-dziura-na-ogrodkach-dzialkowych-w-gaju.html"
+            }
         ],
         latitude: "50.197312660291516",
         longitude: "19.43782882794996",
@@ -223,7 +259,10 @@ export const depressions = [
             "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274525120_4797291183673615_5814169930771295582_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xW3qt6PZf-cAX9_yk73&_nc_ht=scontent-waw1-1.xx&oh=00_AfA2oHpzCblZHg_Vg0UbcuF0NjFUn0oa0oh-3avJ54Ya3w&oe=63C3311E"
         ],
         media: [
-            "https://przelom.pl/39929-w-trzebini-powstalo-kolejne-zapadlisko-w-ziemi.html"
+            {
+                title: "",
+                href: "https://przelom.pl/39929-w-trzebini-powstalo-kolejne-zapadlisko-w-ziemi.html"
+            }
         ],
         latitude: "50.19727959900457",
         longitude: "19.43782025926947",
@@ -244,8 +283,14 @@ export const depressions = [
             "https://srk.com.pl/assets/pics/galerie/945/-4204275680794393253__2_.jpg"
         ],
         media: [
-            "https://www.polsatnews.pl/wiadomosc/2022-08-02/trzebinia-zmarnowana-praca-dzialkowcow-zapadlisko-zniszczylo-ich-ogrodki/",
-            "https://srk.com.pl/media/aktualnosci/Sprawna-likwidacja-zapadliska-w-Trzebini/idn:179"
+            {
+                title: "",
+                href: "https://www.polsatnews.pl/wiadomosc/2022-08-02/trzebinia-zmarnowana-praca-dzialkowcow-zapadlisko-zniszczylo-ich-ogrodki/"
+            },
+            {
+                title: "",
+                href: "https://srk.com.pl/media/aktualnosci/Sprawna-likwidacja-zapadliska-w-Trzebini/idn:179"
+            }
         ],
         latitude: "50.1962980388074",
         longitude: "19.437074995101472",
@@ -263,8 +308,14 @@ export const depressions = [
             "../images/dzialki-4.png"
         ],
         media: [
-            "https://przelom.pl/37453-na-osiedlu-gaj-w-trzebini-zapadla-sie-ziemia.html",
-            "https://przelom.pl/37669-zapadliska-sa-nieuniknione-i-poza-kontrola-tak-twierdzi-ekspert.html"
+            {
+                title: "",
+                href: "https://przelom.pl/37453-na-osiedlu-gaj-w-trzebini-zapadla-sie-ziemia.html"
+            },
+            {
+                title: "",
+                href: "https://przelom.pl/37669-zapadliska-sa-nieuniknione-i-poza-kontrola-tak-twierdzi-ekspert.html"
+            }
         ],
         latitude: "50.19730312078567",
         longitude: "19.437840787164696",

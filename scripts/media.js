@@ -1,9 +1,9 @@
 import { NO_DEPRESSION_ERROR, NO_MEDIA_ERROR } from "../utils/constants.js";
-import { renderBody, renderErrorMessage, renderMediaContainer, renderMedia } from "./renderer.js";
+import { renderBody, renderErrorMessage, renderURLContainer, renderURL } from "./renderer.js";
 import { getDepressionByQuery, setPageTitle } from "../utils/utils.js";
 
 (() => {
-    renderBody(true, renderMediaContainer());
+    renderBody(true, renderURLContainer());
     const container = document.getElementById('media-container');
     const depression = getDepressionByQuery(location.search.split('=')[1]);
 
@@ -17,7 +17,7 @@ import { getDepressionByQuery, setPageTitle } from "../utils/utils.js";
         return;
     }
 
-    depression.media.forEach(m => container.innerHTML += renderMedia(m));
+    depression.media.forEach(m => container.innerHTML += renderURL(m));
     
     setPageTitle(`Artykuły dotyczące zapadliska: ${depression.name}`);
 })();
