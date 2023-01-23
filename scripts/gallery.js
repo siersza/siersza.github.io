@@ -1,9 +1,9 @@
 import { NO_DEPRESSION_ERROR, NO_IMAGES_ERROR } from "../utils/constants.js";
-import { renderBody, renderErrorMessage, renderImagesContainer, renderImage } from "./renderer.js";
+import { renderBody, renderErrorMessage, renderGalleryContainer, renderGalleryImage } from "./renderer.js";
 import { getDepressionByQuery, replaceImgSrc, setPageTitle } from "../utils/utils.js";
 
 (() => {
-    renderBody(true, renderImagesContainer());
+    renderBody(true, renderGalleryContainer());
     const container = document.getElementById('images-container');
     const depression = getDepressionByQuery(location.search.split('=')[1]);
 
@@ -17,7 +17,7 @@ import { getDepressionByQuery, replaceImgSrc, setPageTitle } from "../utils/util
         return;
     }
 
-    depression.images.forEach(image => container.innerHTML += renderImage(image));
+    depression.images.forEach(image => container.innerHTML += renderGalleryImage(image));
     
     setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
     replaceImgSrc(document.getElementsByTagName('img'), true);

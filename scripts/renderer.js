@@ -59,7 +59,7 @@ const renderCard = depression => `
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                         <a class="btn btn-sm btn-outline-primary" target='_blank'href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                        <a class="btn btn-sm btn-outline-success" href="./pages/images.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
+                        <a class="btn btn-sm btn-outline-success" href="./pages/gallery.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
                         <a class="btn btn-sm btn-outline-danger" href="./pages/media.html?zapadlisko=${depression.query}">Media</a>
                     </div>
                     <small class="text-muted">${depression.date}</small>
@@ -79,16 +79,22 @@ const renderURL = url => {
     `;
 }
 
-const renderImagesContainer = () => `
+const renderGalleryContainer = () => `
     <div id="images-container" class="row"></div>
 `;
 
-const renderImage = url => `
+const renderGalleryImage = url => `
     <div class="col-md-4">
         <div class="mb-4 box-shadow">
             <a href=${url} target="_blank"><img class="card-img-top" src="${url}"></a>
         </div>
     </div>
+`;
+
+const renderImage = url => `
+    <a href="${url}">
+        <img src="${url}" class="rounded mx-auto d-block" style="margin: 30px"></img>
+    </a>
 `;
 
 const renderBody = (renderHomePageButton, dataContainer) => {
@@ -108,7 +114,8 @@ export {
     renderCard,
     renderURLContainer,
     renderURL,
-    renderImagesContainer,
+    renderGalleryContainer,
+    renderGalleryImage,
     renderImage,
     renderBody
 };
