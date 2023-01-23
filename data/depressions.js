@@ -15,13 +15,21 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://wydarzenia.interia.pl/malopolskie/news-w-trzebini-powstalo-kolejne-zapadlisko-to-juz-szoste-od-swia,nId,6547036"
+            },
+            {
+                title: "",
+                href: "https://wiadomosci.onet.pl/krakow/nowe-zapadlisko-w-trzebini-jest-glebokie-na-5-m-i-ma-7-m-srednicy/meelpse"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44446-nastepne-zapadlisko-w-rejonie-cmentarza-w-trzebini-srk-rozpoczyna-pomiary-na-zagrozonych-terenach.html?fbclid=IwAR367Vnn9oc8WM4ArVtN_gdskYIw9PA0LRQO8EL7KX_b8i6fyvQGTo4Yu3M"
             }
         ],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "7",
+        depth: "5"
     },
     {
         id: "13",
@@ -36,6 +44,10 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-wiekszy-lej-niz-wczoraj-w-trzebini-znow-zapadla-sie-ziemia,nId,6546972"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
             },
             {
@@ -45,8 +57,8 @@ export const depressions = [
         ],
         latitude: "50.19599798566062",
         longitude: "19.440403558711264",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "6"
     },
     {
         id: "12",
@@ -58,7 +70,12 @@ export const depressions = [
         images: [
             "../images/not.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-wojewoda-malopolski-zwolal-sztab-kryzy,nId,6527656"
+            }
+        ],
         latitude: "50.19635551462979",
         longitude: "19.428742187346753",
         diameter: "b.d.",
@@ -78,13 +95,17 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-nowe-zapadlisko-w-trzebini-ma-srednice-3-metrow-i-2-metry-gl,nId,6518358"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44288-kolejne-zapadlisko-pojawilo-sie-w-trzebini-minal-zaledwie-tydzien-od-poprzedniego.html"
             }
         ],
         latitude: "50.195362835235706",
         longitude: "19.43240149796994",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "3",
+        depth: "2"
     },
     {
         id: "10",
@@ -159,6 +180,14 @@ export const depressions = [
             "https://imgcdn1.przelom.pl/im/v1/gallery-900-widen-wm/2022/09/20/66890_1663684639_03035100.jpg"
         ],
         media: [
+            {
+                title: "",
+                href: "https://wiadomosci.gazeta.pl/wiadomosci/7,114883,29389166,trzebinia-cmentarz-na-ktorym-pojawilo-sie-zapadlisko-nie.html"
+            },
+            {
+                title: "",
+                href: "https://tvn24.pl/krakow/trzebinia-cmentarz-na-ktorym-zapadla-sie-ziemia-jest-samowola-budowlana-ustalenia-reportera-tvn24-6644795"
+            },
             {
                 title: "",
                 href: "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-na-wyniki-badan-georadarowych-trzeba-c,nId,6358075"
