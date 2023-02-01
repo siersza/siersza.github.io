@@ -1,5 +1,27 @@
 export const depressions = [
     {
+        id: "15",
+        name: "Ścieżka Zdrowia",
+        description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
+        date: "b.d.",
+        query: "sciezka-zdrowia",
+        imgSrc: "../images/sciezka-zdrowia-1.jpg",
+        images: [
+            "../images/sciezka-zdrowia-1.jpg",
+            "../images/sciezka-zdrowia-2.jpg",
+            "../images/sciezka-zdrowia-3.jpg",
+            "../images/sciezka-zdrowia-4.jpg",
+            "../images/sciezka-zdrowia-5.jpg",
+            "../images/sciezka-zdrowia-6.jpg",
+            "../images/sciezka-zdrowia-7.jpg"
+        ],
+        media: [],
+        latitude: "50.19516986729115",
+        longitude: "19.448505825594445",
+        diameter: "~4",
+        depth: "~4"
+    },
+    {
         id: "14",
         name: "Las",
         description: "Zapadlisko pojawiło się między jednym z bloków (około 60 metrów od niego) osiedla Gaj a tzw. salką dla młodzieży.",
