@@ -11,9 +11,18 @@ export const depressions = [
             "../images/stadion-2.jpg"
         ],
         media: [
-            "https://przelom.pl/44610-zapadlisko-na-stadionie-pilkarskim-w-trzebini.html",
-            "https://wydarzenia.interia.pl/wiadomosci-lokalne/news-kolejne-zapadlisko-w-trzebini-dziura-na-murawie-stadionu,nId,6575671".
-            "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-ziemia-zapadla-sie-na-srodku-stadionu-potezna-dziura-na-boisku-6725728"
+            {
+                title: "",
+                href: "https://przelom.pl/44610-zapadlisko-na-stadionie-pilkarskim-w-trzebini.html"
+            },
+            {
+                title: "",
+                href: "https://wydarzenia.interia.pl/wiadomosci-lokalne/news-kolejne-zapadlisko-w-trzebini-dziura-na-murawie-stadionu,nId,6575671"
+            },
+            {
+                title: "",
+                href: "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-ziemia-zapadla-sie-na-srodku-stadionu-potezna-dziura-na-boisku-6725728"
+            }
         ],
         latitude: "50.19403848967438",
         longitude: "19.43449286389972",
