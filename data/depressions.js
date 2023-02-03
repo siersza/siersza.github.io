@@ -1,5 +1,26 @@
 export const depressions = [
     {
+        id: "16",
+        name: "Stadion GKS",
+        description: "Zapadlisko pojawiło się na środku stadionu GKS.",
+        date: "03.02.2023",
+        query: "stadion-gks",
+        imgSrc: "../images/stadion-2.jpg",
+        images: [
+            "../images/stadion-1.jpg",
+            "../images/stadion-2.jpg"
+        ],
+        media: [
+            "https://przelom.pl/44610-zapadlisko-na-stadionie-pilkarskim-w-trzebini.html",
+            "https://wydarzenia.interia.pl/wiadomosci-lokalne/news-kolejne-zapadlisko-w-trzebini-dziura-na-murawie-stadionu,nId,6575671".
+            "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-ziemia-zapadla-sie-na-srodku-stadionu-potezna-dziura-na-boisku-6725728"
+        ],
+        latitude: "50.19403848967438",
+        longitude: "19.43449286389972",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "15",
         name: "Ścieżka Zdrowia",
         description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
