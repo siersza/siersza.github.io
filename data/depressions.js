@@ -1,8 +1,8 @@
 export const depressions = [
     {
         id: "16",
-        name: "Stadion GKS",
-        description: "Zapadlisko pojawiło się na środku stadionu GKS.",
+        name: "Stadion GKS Górnik Siersza",
+        description: "Zapadlisko pojawiło się na środku stadionu GKS Górnik Siersza.",
         date: "03.02.2023",
         query: "stadion-gks",
         imgSrc: "../images/stadion-2.jpg",
