@@ -11,6 +11,6 @@ import { setPageTitle, setPageDescription, replaceImgSrc, setActivePage } from "
 
     setActivePage('home');
     setPageTitle(DEFAULT_TITLE);
-    setPageDescription(DEFAULT_DESCRIPTION);
+    setPageDescription(`${DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`);
     replaceImgSrc(document.getElementsByTagName('img'), false);
 })();

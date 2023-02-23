@@ -92,7 +92,7 @@ const renderGalleryImage = url => `
 `;
 
 const renderImage = url => `
-    <a href="${url}">
+    <a href="${url}" target="_blank">
         <img src="${url}" class="rounded mx-auto d-block" style="margin: 30px"></img>
     </a>
 `;

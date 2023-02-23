@@ -14,6 +14,10 @@ export const info = {
             href: "https://pl.wikipedia.org/wiki/Kopalnia_W%C4%99gla_Kamiennego_Siersza"
         },
         {
+            title: "Interaktywna mapa zapadlisk",
+            href: "https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR1JvcVtk_-YDASjikRoQP828v-GkOaunvjjzpxrhLCuEfSsWbqIDRNnKm8&mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ll=50.19645865574307%2C19.431670914274854&z=16"
+        },
+        {
             title: "Mapa zagrożeń",
             href: "https://zapadliska.gig.eu/pl/content/mapa"
         }

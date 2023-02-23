@@ -1,5 +1,73 @@
 export const depressions = [
     {
+        id: "17",
+        name: "Osiedle Gaj",
+        description: "Zapadlisko pojawiło się na Osiedlu Gaj. W chwili pojawienia się zapadliska prowadzone były prace zawiązane z uzdatnianiem terenu.",
+        date: "23.02.2023",
+        query: "gaj-2",
+        imgSrc: "../images/gaj-4.jpg",
+        images: [
+            "../images/gaj-4.jpg"
+        ],
+        media: [],
+        latitude: "50.1994706351815",
+        longitude: "19.44004220713269",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "16",
+        name: "Stadion GKS Górnik Siersza",
+        description: "Zapadlisko pojawiło się na środku stadionu GKS Górnik Siersza.",
+        date: "03.02.2023",
+        query: "stadion-gks",
+        imgSrc: "../images/stadion-2.jpg",
+        images: [
+            "../images/stadion-1.jpg",
+            "../images/stadion-2.jpg"
+        ],
+        media: [
+            {
+                title: "",
+                href: "https://przelom.pl/44610-zapadlisko-na-stadionie-pilkarskim-w-trzebini.html"
+            },
+            {
+                title: "",
+                href: "https://wydarzenia.interia.pl/wiadomosci-lokalne/news-kolejne-zapadlisko-w-trzebini-dziura-na-murawie-stadionu,nId,6575671"
+            },
+            {
+                title: "",
+                href: "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-ziemia-zapadla-sie-na-srodku-stadionu-potezna-dziura-na-boisku-6725728"
+            }
+        ],
+        latitude: "50.19403848967438",
+        longitude: "19.43449286389972",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "15",
+        name: "Ścieżka Zdrowia",
+        description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
+        date: "b.d.",
+        query: "sciezka-zdrowia",
+        imgSrc: "../images/sciezka-zdrowia-1.jpg",
+        images: [
+            "../images/sciezka-zdrowia-1.jpg",
+            "../images/sciezka-zdrowia-2.jpg",
+            "../images/sciezka-zdrowia-3.jpg",
+            "../images/sciezka-zdrowia-4.jpg",
+            "../images/sciezka-zdrowia-5.jpg",
+            "../images/sciezka-zdrowia-6.jpg",
+            "../images/sciezka-zdrowia-7.jpg"
+        ],
+        media: [],
+        latitude: "50.19516986729115",
+        longitude: "19.448505825594445",
+        diameter: "~4",
+        depth: "~4"
+    },
+    {
         id: "14",
         name: "Las",
         description: "Zapadlisko pojawiło się między jednym z bloków (około 60 metrów od niego) osiedla Gaj a tzw. salką dla młodzieży.",
@@ -15,13 +83,21 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://wydarzenia.interia.pl/malopolskie/news-w-trzebini-powstalo-kolejne-zapadlisko-to-juz-szoste-od-swia,nId,6547036"
+            },
+            {
+                title: "",
+                href: "https://wiadomosci.onet.pl/krakow/nowe-zapadlisko-w-trzebini-jest-glebokie-na-5-m-i-ma-7-m-srednicy/meelpse"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44446-nastepne-zapadlisko-w-rejonie-cmentarza-w-trzebini-srk-rozpoczyna-pomiary-na-zagrozonych-terenach.html?fbclid=IwAR367Vnn9oc8WM4ArVtN_gdskYIw9PA0LRQO8EL7KX_b8i6fyvQGTo4Yu3M"
             }
         ],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "7",
+        depth: "5"
     },
     {
         id: "13",
@@ -36,6 +112,10 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-wiekszy-lej-niz-wczoraj-w-trzebini-znow-zapadla-sie-ziemia,nId,6546972"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44428-zapadla-sie-ziemia-przy-cmentarzu-w-trzebini.html?fbclid=IwAR0XS8KYjGYyulsTkkpOAOEd_DDOkI4EZ2fbR7avCrNpRGtYSQcVYyY7f60"
             },
             {
@@ -45,8 +125,8 @@ export const depressions = [
         ],
         latitude: "50.19599798566062",
         longitude: "19.440403558711264",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "6"
     },
     {
         id: "12",
@@ -58,7 +138,12 @@ export const depressions = [
         images: [
             "../images/not.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-wojewoda-malopolski-zwolal-sztab-kryzy,nId,6527656"
+            }
+        ],
         latitude: "50.19635551462979",
         longitude: "19.428742187346753",
         diameter: "b.d.",
@@ -78,13 +163,17 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-nowe-zapadlisko-w-trzebini-ma-srednice-3-metrow-i-2-metry-gl,nId,6518358"
+            },
+            {
+                title: "",
                 href: "https://przelom.pl/44288-kolejne-zapadlisko-pojawilo-sie-w-trzebini-minal-zaledwie-tydzien-od-poprzedniego.html"
             }
         ],
         latitude: "50.195362835235706",
         longitude: "19.43240149796994",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "3",
+        depth: "2"
     },
     {
         id: "10",
@@ -161,6 +250,14 @@ export const depressions = [
         media: [
             {
                 title: "",
+                href: "https://wiadomosci.gazeta.pl/wiadomosci/7,114883,29389166,trzebinia-cmentarz-na-ktorym-pojawilo-sie-zapadlisko-nie.html"
+            },
+            {
+                title: "",
+                href: "https://tvn24.pl/krakow/trzebinia-cmentarz-na-ktorym-zapadla-sie-ziemia-jest-samowola-budowlana-ustalenia-reportera-tvn24-6644795"
+            },
+            {
+                title: "",
                 href: "https://www.rmf24.pl/regiony/krakow/news-zapadlisko-w-trzebini-na-wyniki-badan-georadarowych-trzeba-c,nId,6358075"
             },
             {
@@ -186,7 +283,7 @@ export const depressions = [
         name: "Osiedle Gaj",
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
-        query: "gaj",
+        query: "gaj-1",
         imgSrc: "../images/gaj.jpg",
         images: [
             "../images/gaj.jpg",
