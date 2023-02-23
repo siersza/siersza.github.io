@@ -6,6 +6,7 @@ const renderHeader = () => `
                 <li><a id="home" href="./" class="nav-link link-dark">Strona główna</a></li>
                 <li><a id="about" href="../pages/about.html" class="nav-link link-dark">O zapadliskach</a></li>
                 <li><a id="video" href="../pages/video.html" class="nav-link link-dark">Materiały wideo dotyczące zapadlisk</a></li>
+                <li><a id="memes" href="../pages/memes.html" class="nav-link link-dark">Memy</a></li>
             </ul>
         </header>
     </div>
