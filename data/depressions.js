@@ -1,15 +1,39 @@
 export const depressions = [
     {
+        id: "18",
+        name: "Działki Gaj",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj. Dokładnie w tym samym dniu, parę godzin wcześniej, pojawiło się inne zapadlisko przy jednym z bloków mieszkalnych na osiedlu.",
+        date: "23.02.2023",
+        query: "dzialki-6",
+        imgSrc: "../images/dzialki-6-1.jpg",
+        images: [
+            "../images/dzialki-6-1.jpg"
+        ],
+        media: [
+            "https://przelom.pl/44821-nowe-zapadlisko-na-ogrodkach-dzialkowych-w-trzebini.html?fbclid=IwAR3bff0_2koSD9MocsvOGpXy3HxsdqDOPpKpwc7HdlH1_8tI6vJAnn4tL4Q
+        ],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "17",
         name: "Osiedle Gaj",
         description: "Zapadlisko pojawiło się na Osiedlu Gaj. W chwili pojawienia się zapadliska prowadzone były prace zawiązane z uzdatnianiem terenu.",
         date: "23.02.2023",
         query: "gaj-2",
-        imgSrc: "../images/gaj-4.jpg",
+        imgSrc: "../images/gaj-2-1.jpg",
         images: [
-            "../images/gaj-4.jpg"
+            "../images/gaj-2-1.jpg",
+            "../images/gaj-2-2.jpg",
+            "../images/gaj-2-3.jpg",
+            "../images/gaj-2-4.jpg",
+            "../images/gaj-2-5.jpg"
         ],
-        media: [],
+        media: [
+            "https://przelom.pl/44814-trzebinia-nowe-zapadlisko-niedaleko-bloku-26.html"
+        ],
         latitude: "50.1994706351815",
         longitude: "19.44004220713269",
         diameter: "b.d.",
