@@ -1,5 +1,21 @@
 export const depressions = [
     {
+        id: "17",
+        name: "Osiedle Gaj",
+        description: "Zapadlisko pojawiło się na Osiedlu Gaj. W chwili pojawienia się zapadliska prowadzone były prace zawiązane z uzdatnianiem terenu.",
+        date: "23.02.2023",
+        query: "gaj-2",
+        imgSrc: "../images/gaj-4.jpg",
+        images: [
+            "../images/gaj-4.jpg"
+        ],
+        media: [],
+        latitude: "50.1994706351815",
+        longitude: "19.44004220713269",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "16",
         name: "Stadion GKS Górnik Siersza",
         description: "Zapadlisko pojawiło się na środku stadionu GKS Górnik Siersza.",
@@ -267,7 +283,7 @@ export const depressions = [
         name: "Osiedle Gaj",
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
-        query: "gaj",
+        query: "gaj-1",
         imgSrc: "../images/gaj.jpg",
         images: [
             "../images/gaj.jpg",
