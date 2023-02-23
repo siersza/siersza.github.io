@@ -10,7 +10,7 @@ export const depressions = [
             "../images/dzialki-6-1.jpg"
         ],
         media: [
-            "https://przelom.pl/44821-nowe-zapadlisko-na-ogrodkach-dzialkowych-w-trzebini.html?fbclid=IwAR3bff0_2koSD9MocsvOGpXy3HxsdqDOPpKpwc7HdlH1_8tI6vJAnn4tL4Q
+            "https://przelom.pl/44821-nowe-zapadlisko-na-ogrodkach-dzialkowych-w-trzebini.html?fbclid=IwAR3bff0_2koSD9MocsvOGpXy3HxsdqDOPpKpwc7HdlH1_8tI6vJAnn4tL4Q"
         ],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
