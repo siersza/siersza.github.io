@@ -12,7 +12,10 @@ export const depressions = [
             "../images/dzialki-7-3.jpg"
         ],
         media: [
-            "https://przelom.pl/44840-nowe-zapadlisko-w-trzebini-ziemia-zapadla-sie-pod-budynkiem-gospodarczym.html"
+            {
+                title: "",
+                href: "https://przelom.pl/44840-nowe-zapadlisko-w-trzebini-ziemia-zapadla-sie-pod-budynkiem-gospodarczym.html"
+            }
         ],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
@@ -30,7 +33,10 @@ export const depressions = [
             "../images/dzialki-6-1.jpg"
         ],
         media: [
-            "https://przelom.pl/44821-nowe-zapadlisko-na-ogrodkach-dzialkowych-w-trzebini.html?fbclid=IwAR3bff0_2koSD9MocsvOGpXy3HxsdqDOPpKpwc7HdlH1_8tI6vJAnn4tL4Q"
+            {
+                title: "",
+                href: "https://przelom.pl/44821-nowe-zapadlisko-na-ogrodkach-dzialkowych-w-trzebini.html?fbclid=IwAR3bff0_2koSD9MocsvOGpXy3HxsdqDOPpKpwc7HdlH1_8tI6vJAnn4tL4Q"
+            }
         ],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
@@ -52,7 +58,10 @@ export const depressions = [
             "../images/gaj-2-5.jpg"
         ],
         media: [
-            "https://przelom.pl/44814-trzebinia-nowe-zapadlisko-niedaleko-bloku-26.html"
+            {
+                title: "",
+                href: "https://przelom.pl/44814-trzebinia-nowe-zapadlisko-niedaleko-bloku-26.html"
+            }
         ],
         latitude: "50.1994706351815",
         longitude: "19.44004220713269",
