@@ -1,14 +1,15 @@
-// TODO: refactor this mess!
-import { DEFAULT_TITLE, DEFAULT_DESCRIPTION, ABOUT_PAGE_TITLE, ABOUT_PAGE_DESCRIPTION, VIDEOS_PAGE_TITLE, MEMES_PAGE_TITLE, MEMES_PAGE_DESCRIPTION } from "../utils/constants.js";
-import { renderBody, renderCard, renderURL, renderImage, renderURLContainer, renderGalleryImage, renderGalleryContainer } from "./renderer.js";
+import * as CONSTANT from "../utils/constants.js";
+import { renderCard, renderURL, renderImage, renderGalleryImage, renderErrorMessage } from "./renderer.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
 import { memes } from "../data/memes.js";
-import { setPageTitle, setPageDescription, replaceImgSrc, setActivePage, getDepressionById } from "../utils/utils.js";
+import { setPageTitle, setPageDescription, setActivePage, getDepressionById, replaceImgSrc } from "../utils/utils.js";
+
+const mediaContainer = document.getElementById('media-container');
+const imagesContainer = document.getElementById('images-container');
 
 (() => {
-    renderBody(false);
     renderHomePage();
 
     const home = document.getElementById('home');
@@ -25,83 +26,82 @@ import { setPageTitle, setPageDescription, replaceImgSrc, setActivePage, getDepr
 })();
 
 function renderHomePage() {
-    const mainContainer = document.getElementById('main-container');
-    mainContainer.innerHTML = renderGalleryContainer();
-
-    const container = document.getElementById('images-container');
-    depressions.forEach(d => container.innerHTML += renderCard(d));
-
+    clearContainers();
     const galleryButtons = document.getElementsByClassName('btn btn-sm btn-outline-success');
-    
-    for (let btn of galleryButtons) {
-        btn.addEventListener('click', () => {
-            const mainContainer = document.getElementById('main-container');
-            mainContainer.innerHTML = renderGalleryContainer();
-
-            const container = document.getElementById('images-container');
-            const depression = getDepressionById(btn.dataset.id);
-            depression.images.forEach(image => container.innerHTML += renderGalleryImage(image));
-            setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
-        });
-    }
-
     const mediaButtons = document.getElementsByClassName('btn btn-sm btn-outline-danger');
 
-    for (let btn of mediaButtons) {
-        btn.addEventListener('click', () => {
-            const mainContainer = document.getElementById('main-container');
-            mainContainer.innerHTML = renderURLContainer();
+    depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
 
-            const container = document.getElementById('media-container');
-            const depression = getDepressionById(btn.dataset.id);
-            depression.media.forEach(m => {
-                container.innerHTML += renderURL(m);
-            });
-            setPageTitle(`Artykuły dotyczące zapadliska: ${depression.name}`);
-        });
-    }
+    for (let btn of galleryButtons) { btn.addEventListener('click', renderGalleryForSpecificDepression); }
+    for (let btn of mediaButtons) { btn.addEventListener('click', renderUrlsForSpecificDepression); }
 
     setActivePage('home');
-    setPageTitle(DEFAULT_TITLE);
-    setPageDescription(`${DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`);
+    setPageTitle(CONSTANT.DEFAULT_TITLE);
+    setPageDescription(`${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`);
     replaceImgSrc(document.getElementsByTagName('img'), false);
 }
 
+function renderGalleryForSpecificDepression() {
+    clearContainers();
+
+    const depression = getDepressionById(this.dataset.id);
+    depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
+    
+    setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
+    setPageDescription('');
+    replaceImgSrc(document.getElementsByTagName('img'), true);
+
+    if (depression.images.length < 1) {
+        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_IMAGES_ERROR);
+    }
+}
+
+function renderUrlsForSpecificDepression() {
+    clearContainers();
+    
+    const depression = getDepressionById(this.dataset.id);
+    depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
+
+    setPageTitle(`Artykuły dotyczące zapadliska: ${depression.name}`);
+    setPageDescription('');
+
+    if (depression.media.length < 1) {
+        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_MEDIA_ERROR);
+    }
+}
+
 function renderAboutPage() {
-    const mainContainer = document.getElementById('main-container');
-    mainContainer.innerHTML = renderURLContainer();
+    clearContainers();
 
-    const mediaContainer = document.getElementById('media-container');
-    mediaContainer.innerHTML = `
-        <p>${info.about}</p>
-    `;
-
+    mediaContainer.innerHTML = `<p>${info.about}</p>`;
     info.urls.forEach(u => mediaContainer.innerHTML += renderURL(u));
     mediaContainer.innerHTML += renderImage("../images/map.png");
 
     setActivePage('about');
-    setPageTitle(ABOUT_PAGE_TITLE);
-    setPageDescription(ABOUT_PAGE_DESCRIPTION);
+    setPageTitle(CONSTANT.ABOUT_PAGE_TITLE);
+    setPageDescription(CONSTANT.ABOUT_PAGE_DESCRIPTION);
 }
 
 function renderVideoPage() {
-    const mainContainer = document.getElementById('main-container');
-    mainContainer.innerHTML = renderURLContainer();
+    clearContainers();
 
-    const container = document.getElementById('media-container');
-    videos.forEach(v => container.innerHTML += renderURL(v));
+    videos.forEach(v => mediaContainer.innerHTML += renderURL(v));
 
     setActivePage('video');
-    setPageTitle(VIDEOS_PAGE_TITLE);
+    setPageTitle(CONSTANT.VIDEOS_PAGE_TITLE);
 }
 
 function renderMemesPage() {
-    const mainContainer = document.getElementById('main-container');
-    mainContainer.innerHTML = renderGalleryContainer();
+    clearContainers();
 
-    const container = document.getElementById('images-container');
-    memes.forEach(meme => container.innerHTML += renderGalleryImage(meme.href));
-    setPageTitle(MEMES_PAGE_TITLE);
-    setPageDescription(MEMES_PAGE_DESCRIPTION);
+    memes.forEach(meme => imagesContainer.innerHTML += renderGalleryImage(meme.href));
+
+    setPageTitle(CONSTANT.MEMES_PAGE_TITLE);
+    setPageDescription(CONSTANT.MEMES_PAGE_DESCRIPTION);
     setActivePage('memes');
+}
+
+function clearContainers() {
+    imagesContainer.innerHTML = '';
+    mediaContainer.innerHTML = '';
 }
