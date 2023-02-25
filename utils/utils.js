@@ -3,6 +3,7 @@ import { renderErrorMessage } from "../scripts/renderer.js";
 import { COULD_NOT_LOAD_IMAGE_ERROR } from "./constants.js"
 
 const getDepressionByQuery = query => depressions.filter(d => d.query === query)[0];
+const getDepressionById = id => depressions.filter(d => d.id === id)[0];
 
 // Replace the src if the image failed to load (it does not exist, there is no access to it etc.).
 const replaceImgSrc = (images, showMessage) => {
@@ -23,12 +24,23 @@ const setPageTitle = title => document.getElementById('title').innerHTML = title
 
 const setPageDescription = description => document.getElementById('description').innerHTML = description;
 
-const setActivePage = id => document.getElementById(id).classList.remove('link-dark');
+const setActivePage = id => {
+    const navElements = document.getElementsByClassName('nav-link');
+
+    for (let element of navElements) {
+        if (!element.classList.contains('link-dark')) {
+            element.classList.add('link-dark');
+        }
+    }
+
+    document.getElementById(id).classList.remove('link-dark')
+};
 
 export {
     getDepressionByQuery,
     replaceImgSrc,
     setPageTitle,
     setPageDescription,
-    setActivePage
+    setActivePage,
+    getDepressionById
 }

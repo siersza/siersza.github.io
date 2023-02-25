@@ -3,30 +3,34 @@ const renderHeader = () => `
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             Siersza | Zapadliska
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a id="home" href="./" class="nav-link link-dark">Strona główna</a></li>
-                <li><a id="about" href="../pages/about.html" class="nav-link link-dark">O zapadliskach</a></li>
-                <li><a id="video" href="../pages/video.html" class="nav-link link-dark">Materiały wideo dotyczące zapadlisk</a></li>
-                <li><a id="memes" href="../pages/memes.html" class="nav-link link-dark">Memy</a></li>
+                <li><a id="home" class="nav-link link-dark">Strona główna</a></li>
+                <li><a id="about" class="nav-link link-dark">O zapadliskach</a></li>
+                <li><a id="video" class="nav-link link-dark">Materiały wideo dotyczące zapadlisk</a></li>
+                <li><a id="memes" class="nav-link link-dark">Memy</a></li>
             </ul>
         </header>
     </div>
-    <div class="px-4 py-1 my-1 text-center">
-        <h1 id="title" class="fw-bold"></h1>
-        <div class="col-lg-6 mx-auto">
-            <p id="description" class="lead mb-4"></p>
-            <!--
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+    <body>
+        <div class="px-4 py-1 my-1 text-center">
+            <h1 id="title" class="fw-bold"></h1>
+            <div class="col-lg-6 mx-auto">
+                <p id="description" class="lead mb-4"></p>
+                <!--
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+                </div>
+                -->
             </div>
-            -->
         </div>
-    </div>
-    <main role="main">
-        <div class="album py-5 bg-light">
-            <div id="main-container" class="container"></div>
-        </div>
-    </main>
+        <main role="main">
+            <div class="album py-5 bg-light">
+                <div id="main-container" class="container">
+                    <div id="media-container" class="list-group" style="overflow-wrap: break-word;"></div>
+                </div>
+            </div>
+        </main>
+    </body>
 `;
 
 const renderFooter = renderHomePageButton => `
@@ -59,9 +63,9 @@ const renderCard = depression => `
                 </ul>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <a class="btn btn-sm btn-outline-primary" target='_blank'href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                        <a class="btn btn-sm btn-outline-success" href="./pages/gallery.html?zapadlisko=${depression.query}">Więcej zdjęć</a>
-                        <a class="btn btn-sm btn-outline-danger" href="./pages/media.html?zapadlisko=${depression.query}">Media</a>
+                        <a class="btn btn-sm btn-outline-primary" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
+                        <button class="btn btn-sm btn-outline-success" data-id="${depression.id}">Więcej zdjęć</button>
+                        <button class="btn btn-sm btn-outline-danger" data-id="${depression.id}" href="./pages/media.html?zapadlisko=${depression.query}">Media</button>
                     </div>
                     <small class="text-muted">${depression.date}</small>
                 </div>
