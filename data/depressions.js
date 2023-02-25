@@ -7,7 +7,9 @@ export const depressions = [
         query: "dzialki-7",
         imgSrc: "../images/dzialki-7-1.jpg",
         images: [
-            "../images/dzialki-7-1.jpg"
+            "../images/dzialki-7-1.jpg",
+            "../images/dzialki-7-2.jpg",
+            "../images/dzialki-7-3.jpg"
         ],
         media: [
             "https://przelom.pl/44840-nowe-zapadlisko-w-trzebini-ziemia-zapadla-sie-pod-budynkiem-gospodarczym.html"
