@@ -1,5 +1,23 @@
 export const depressions = [
     {
+        id: "19",
+        name: "Działki Gaj",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj pod jednym z budynków gospodarczych.",
+        date: "25.02.2023",
+        query: "dzialki-7",
+        imgSrc: "../images/dzialki-7-1.jpg",
+        images: [
+            "../images/dzialki-7-1.jpg"
+        ],
+        media: [
+            "https://przelom.pl/44840-nowe-zapadlisko-w-trzebini-ziemia-zapadla-sie-pod-budynkiem-gospodarczym.html"
+        ],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "18",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj. Dokładnie w tym samym dniu, parę godzin wcześniej, pojawiło się inne zapadlisko przy jednym z bloków mieszkalnych na osiedlu.",
