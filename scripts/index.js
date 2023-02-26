@@ -9,31 +9,46 @@ import { setPageTitle, setPageDescription, setActivePage, getDepressionById, rep
 const mediaContainer = document.getElementById('media-container');
 const imagesContainer = document.getElementById('images-container');
 
-(() => {
-    renderHomePage();
+console.log('hehee');
+const route = event => {
+    event = event || window.event;
+    event.preventDefault();
+    window.history.pushState({}, '', event.target.href);
+    handleRoute();
+}
 
-    const home = document.getElementById('home');
-    home.addEventListener('click', renderHomePage);
+const handleRoute = () => {
+    console.log('handle');
+    const path = window.location.pathname;
+    const id = window.location.search.split('=')[1];
 
-    const about = document.getElementById('about');
-    about.addEventListener('click', renderAboutPage);
-    
-    const video = document.getElementById('video');
-    video.addEventListener('click', renderVideoPage);
+    console.log(path);
+    console.log(id);
 
-    const memes = document.getElementById('memes');
-    memes.addEventListener('click', renderMemesPage);
-})();
+    const test = routes[path] || routes[404];
+    test(id);
+}
+
+window.route = route;
+window.onpopstate = handleRoute;
+
+// Map path with a specific function that is responsible for rendering UI.
+const routes = {
+    404: "/",
+    "/": renderHomePage,
+    "/about": renderAboutPage,
+    "/video": renderVideoPage,
+    "/memes": renderMemesPage,
+    "/gallery/depression": renderGalleryForSpecificDepression,
+    "/media/depression": renderUrlsForSpecificDepression
+};
+
+handleRoute();
 
 function renderHomePage() {
     clearContainers();
-    const galleryButtons = document.getElementsByClassName('btn btn-sm btn-outline-success');
-    const mediaButtons = document.getElementsByClassName('btn btn-sm btn-outline-danger');
 
     depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
-
-    for (let btn of galleryButtons) { btn.addEventListener('click', renderGalleryForSpecificDepression); }
-    for (let btn of mediaButtons) { btn.addEventListener('click', renderUrlsForSpecificDepression); }
 
     setActivePage('home');
     setPageTitle(CONSTANT.DEFAULT_TITLE);
@@ -41,10 +56,10 @@ function renderHomePage() {
     replaceImgSrc(document.getElementsByTagName('img'), false);
 }
 
-function renderGalleryForSpecificDepression() {
+function renderGalleryForSpecificDepression(id) {
     clearContainers();
 
-    const depression = getDepressionById(this.dataset.id);
+    const depression = getDepressionById(id);
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
     
     setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
@@ -56,10 +71,10 @@ function renderGalleryForSpecificDepression() {
     }
 }
 
-function renderUrlsForSpecificDepression() {
+function renderUrlsForSpecificDepression(id) {
     clearContainers();
     
-    const depression = getDepressionById(this.dataset.id);
+    const depression = getDepressionById(id);
     depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
 
     setPageTitle(`Artykuły dotyczące zapadliska: ${depression.name}`);
