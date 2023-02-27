@@ -402,12 +402,8 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "22.02.2022",
         query: "dzialki-3",
-        imgSrc: "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
-        images: [
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274492637_4797291080340292_3818008607252825712_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7NySRAMpFO4AX9DCcCb&_nc_ht=scontent-waw1-1.xx&oh=00_AfBjlSb4SNFs7KpoIylLYmb86aSjROAZih-UA_fCoI56tQ&oe=63C47C6F",
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274525120_4797291183673615_5814169930771295582_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xW3qt6PZf-cAX9_yk73&_nc_ht=scontent-waw1-1.xx&oh=00_AfA2oHpzCblZHg_Vg0UbcuF0NjFUn0oa0oh-3avJ54Ya3w&oe=63C3311E"
-        ],
+        imgSrc: "../images/image-placeholder.png",
+        images: [],
         media: [
             {
                 title: "",
