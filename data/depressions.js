@@ -5,11 +5,11 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj pod jednym z budynków gospodarczych.",
         date: "25.02.2023",
         query: "dzialki-7",
-        imgSrc: "../images/dzialki-7-1.jpg",
+        imgSrc: "./images/dzialki-7-1.jpg",
         images: [
-            "../images/dzialki-7-1.jpg",
-            "../images/dzialki-7-2.jpg",
-            "../images/dzialki-7-3.jpg"
+            "./../../images/dzialki-7-1.jpg",
+            "./../../images/dzialki-7-2.jpg",
+            "./../../images/dzialki-7-3.jpg"
         ],
         media: [
             {
@@ -28,9 +28,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj. Dokładnie w tym samym dniu, parę godzin wcześniej, pojawiło się inne zapadlisko przy jednym z bloków mieszkalnych na osiedlu.",
         date: "23.02.2023",
         query: "dzialki-6",
-        imgSrc: "../images/dzialki-6-1.jpg",
+        imgSrc: "./images/dzialki-6-1.jpg",
         images: [
-            "../images/dzialki-6-1.jpg"
+            "./../../images/dzialki-6-1.jpg"
         ],
         media: [
             {
@@ -49,13 +49,13 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na Osiedlu Gaj. W chwili pojawienia się zapadliska prowadzone były prace zawiązane z uzdatnianiem terenu.",
         date: "23.02.2023",
         query: "gaj-2",
-        imgSrc: "../images/gaj-2-1.jpg",
+        imgSrc: "./images/gaj-2-1.jpg",
         images: [
-            "../images/gaj-2-1.jpg",
-            "../images/gaj-2-2.jpg",
-            "../images/gaj-2-3.jpg",
-            "../images/gaj-2-4.jpg",
-            "../images/gaj-2-5.jpg"
+            "./../../images/gaj-2-1.jpg",
+            "./../../images/gaj-2-2.jpg",
+            "./../../images/gaj-2-3.jpg",
+            "./../../images/gaj-2-4.jpg",
+            "./../../images/gaj-2-5.jpg"
         ],
         media: [
             {
@@ -74,10 +74,10 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na środku stadionu GKS Górnik Siersza.",
         date: "03.02.2023",
         query: "stadion-gks",
-        imgSrc: "../images/stadion-2.jpg",
+        imgSrc: "./images/stadion-2.jpg",
         images: [
-            "../images/stadion-1.jpg",
-            "../images/stadion-2.jpg"
+            "./../../images/stadion-1.jpg",
+            "./../../images/stadion-2.jpg"
         ],
         media: [
             {
@@ -104,15 +104,15 @@ export const depressions = [
         description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
         date: "b.d.",
         query: "sciezka-zdrowia",
-        imgSrc: "../images/sciezka-zdrowia-1.jpg",
+        imgSrc: "./images/sciezka-zdrowia-1.jpg",
         images: [
-            "../images/sciezka-zdrowia-1.jpg",
-            "../images/sciezka-zdrowia-2.jpg",
-            "../images/sciezka-zdrowia-3.jpg",
-            "../images/sciezka-zdrowia-4.jpg",
-            "../images/sciezka-zdrowia-5.jpg",
-            "../images/sciezka-zdrowia-6.jpg",
-            "../images/sciezka-zdrowia-7.jpg"
+            "./../../images/sciezka-zdrowia-1.jpg",
+            "./../../images/sciezka-zdrowia-2.jpg",
+            "./../../images/sciezka-zdrowia-3.jpg",
+            "./../../images/sciezka-zdrowia-4.jpg",
+            "./../../images/sciezka-zdrowia-5.jpg",
+            "./../../images/sciezka-zdrowia-6.jpg",
+            "./../../images/sciezka-zdrowia-7.jpg"
         ],
         media: [],
         latitude: "50.19516986729115",
@@ -126,12 +126,12 @@ export const depressions = [
         description: "Zapadlisko pojawiło się między jednym z bloków (około 60 metrów od niego) osiedla Gaj a tzw. salką dla młodzieży.",
         date: "20.01.2023",
         query: "las-1",
-        imgSrc: "../images/las-1.jpg",
+        imgSrc: "./images/las-1.jpg",
         images: [
-            "../images/las-1.jpg",
-            "../images/las-2.jpg",
-            "../images/las-3.jpg",
-            "../images/las-4.jpg"
+            "./../../images/las-1.jpg",
+            "./../../images/las-2.jpg",
+            "./../../images/las-3.jpg",
+            "./../../images/las-4.jpg"
         ],
         media: [
             {
@@ -158,9 +158,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
         date: "19.01.2023",
         query: "cmentarz-2",
-        imgSrc: "../images/cmentarz.png",
+        imgSrc: "./images/cmentarz.png",
         images: [
-            "../images/cmentarz.png"
+            "./../../images/cmentarz.png"
         ],
         media: [
             {
@@ -187,9 +187,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działce, na której znajduje się Willa NOT w Sierszy.",
         date: "10.01.2023",
         query: "willa-not",
-        imgSrc: "../images/not.jpg",
+        imgSrc: "./images/not.jpg",
         images: [
-            "../images/not.jpg"
+            "./../../images/not.jpg"
         ],
         media: [
             {
@@ -208,9 +208,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się w okolicach stadionu KS Górnik Siersza.",
         date: "06.01.2023",
         query: "stadion",
-        imgSrc: "../images/stadion.png",
+        imgSrc: "./images/stadion.png",
         images: [
-            "../images/stadion.png",
+            "./../../images/stadion.png",
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2023/01/07/44288_1673097539_96131600.jpg"
         ],
         media: [
@@ -234,9 +234,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "31.12.2022",
         query: "dzialki",
-        imgSrc: "../images/dzialki.png",
+        imgSrc: "./images/dzialki.png",
         images: [
-            "../images/dzialki.png"
+            "./../../images/dzialki.png"
         ],
         media: [
             {
@@ -255,9 +255,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się w okolicach kościoła pw. Niepokalanego Serca NMP w Trzebini (Siersza).",
         date: "25.12.2022",
         query: "swieta",
-        imgSrc: "../images/swiateczna.png",
+        imgSrc: "./images/swiateczna.png",
         images: [
-            "../images/swiateczna.png"
+            "./../../images/swiateczna.png"
         ],
         media: [],
         latitude: "50.1959729958199",
@@ -292,9 +292,9 @@ export const depressions = [
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
         query: "cmentarz",
-        imgSrc: "../images/dziura-cmentarz.png",
+        imgSrc: "./images/dziura-cmentarz.png",
         images: [
-            "../images/dziura-cmentarz.png",
+            "./../../images/dziura-cmentarz.png",
             "https://bi.im-g.pl/im/e9/98/1b/z28936937AMP,Zapadlisko-na-cmentarzu-w-Trzebini.jpg",
             "https://cdn.galleries.smcloud.net/t/galleries/gf-axGN-hPGy-Umwc_pod-cmentarzem-zapadla-sie-ziemia-groby-runely-do-poteznego-leju-sceny-grozy-w-trzebini-664x442.jpg",
             "https://ipla.pluscdn.pl/dituel/cp/6d/6dv899djergmo3axpubewpckd8k9jvfx.jpg",
@@ -337,11 +337,11 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
         query: "gaj-1",
-        imgSrc: "../images/gaj.jpg",
+        imgSrc: "./images/gaj.jpg",
         images: [
-            "../images/gaj.jpg",
-            "../images/gaj-2.jpg",
-            "../images/gaj-3.jpg"
+            "./../../images/gaj.jpg",
+            "./../../images/gaj-2.jpg",
+            "./../../images/gaj-3.jpg"
         ],
         media: [],
         latitude: "50.20020445148553",
@@ -379,10 +379,10 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "24.06.2022",
         query: "dzialki-4",
-        imgSrc: "../images/dzialki-4-1.jpg",
+        imgSrc: "./images/dzialki-4-1.jpg",
         images: [
-            "../images/dzialki-4-1.jpg",
-            "../images/dzialki-4-2.jpg",
+            "./../../images/dzialki-4-1.jpg",
+            "./../../images/dzialki-4-2.jpg",
             "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/06/24/41923_1656090014_70869500.jpg"
         ],
         media: [
@@ -402,12 +402,8 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "22.02.2022",
         query: "dzialki-3",
-        imgSrc: "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
-        images: [
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274296038_4797291000340300_321699214953397860_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=VVczN7GUjCIAX8r1uFH&_nc_ht=scontent-waw1-1.xx&oh=00_AfANdq5P5sbL5jBeXyOxbDCKiw6cFd_f8Hjv5X47JYIbQw&oe=63C3AEB8",
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274492637_4797291080340292_3818008607252825712_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7NySRAMpFO4AX9DCcCb&_nc_ht=scontent-waw1-1.xx&oh=00_AfBjlSb4SNFs7KpoIylLYmb86aSjROAZih-UA_fCoI56tQ&oe=63C47C6F",
-            "https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/274525120_4797291183673615_5814169930771295582_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xW3qt6PZf-cAX9_yk73&_nc_ht=scontent-waw1-1.xx&oh=00_AfA2oHpzCblZHg_Vg0UbcuF0NjFUn0oa0oh-3avJ54Ya3w&oe=63C3311E"
-        ],
+        imgSrc: "./images/image-placeholder.png",
+        images: [],
         media: [
             {
                 title: "",
@@ -425,10 +421,10 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "23.11.2021",
         query: "dzialki-2",
-        imgSrc: "../images/dzialki-2-1.jpg",
+        imgSrc: "./images/dzialki-2-1.jpg",
         images: [
-            "../images/dzialki-2-1.jpg",
-            "../images/dzialki-2-2.jpg",
+            "./../../images/dzialki-2-1.jpg",
+            "./../../images/dzialki-2-2.jpg",
             "https://ipla.pluscdn.pl/dituel/cp/fo/foxjymumk4fxhb87tba7xfkk27fpjbs6.jpg",
             "https://srk.com.pl/assets/pics/galerie/945/-4204275680794393253__2_.jpg"
         ],
@@ -453,9 +449,9 @@ export const depressions = [
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "27.08.2021",
         query: "dzialki-1",
-        imgSrc: "../images/dzialki-4.png",
+        imgSrc: "./images/dzialki-4.png",
         images: [
-            "../images/dzialki-4.png"
+            "./../../images/dzialki-4.png"
         ],
         media: [
             {
