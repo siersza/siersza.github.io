@@ -17,8 +17,8 @@ export const renderCard = depression => `
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                         <a class="btn btn-sm btn-outline-primary" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                        <button class="btn btn-sm btn-outline-success" data-id="${depression.id}">Więcej zdjęć</button>
-                        <button class="btn btn-sm btn-outline-danger" data-id="${depression.id}" href="./pages/media.html?zapadlisko=${depression.query}">Media</button>
+                        <a class="btn btn-sm btn-outline-success" href="./pages/gallery/depression?id=${depression.id}" onclick="route()">Więcej zdjęć</a>
+                        <a class="btn btn-sm btn-outline-danger" href="./pages/media/depression?id=${depression.id}" onclick="route()">Media</a>
                     </div>
                     <small class="text-muted">${depression.date}</small>
                 </div>
@@ -29,14 +29,14 @@ export const renderCard = depression => `
 
 export const renderURL = url => {
     return `
-        <a href=${url.href} target="_blank" class="list-group-item list-group-item-action">${url.title !== '' ? url.title : url.href}</a>
+        <a href="${url.href}" target="_blank" class="list-group-item list-group-item-action">${url.title !== '' ? url.title : url.href}</a>
     `;
 }
 
 export const renderGalleryImage = url => `
     <div class="col-md-4">
         <div class="mb-4 box-shadow">
-            <a href=${url} target="_blank"><img class="card-img-top" src="${url}"></a>
+            <a href="${url}" target="_blank"><img class="card-img-top" src="${url}"></a>
         </div>
     </div>
 `;

@@ -4,101 +4,110 @@ import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
 import { memes } from "../data/memes.js";
-import { setPageTitle, setPageDescription, setActivePage, getDepressionById, replaceImgSrc } from "../utils/utils.js";
+import { setPageTitle, setPageDescription, setActivePage, getDepressionById } from "../utils/utils.js";
+
+const routes = {
+    "/": {
+        renderer: home,
+        page: 'home',
+        title: CONSTANT.DEFAULT_TITLE,
+        description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`
+    },
+    "/pages/about": {
+        renderer: about,
+        page: 'about',
+        title: CONSTANT.ABOUT_PAGE_TITLE,
+        description: CONSTANT.ABOUT_PAGE_DESCRIPTION
+    },
+    "/pages/video": {
+        renderer: video,
+        page: 'video',
+        title: CONSTANT.VIDEOS_PAGE_TITLE,
+        description: ''
+    },
+    "/pages/meme": {
+        renderer: meme,
+        page: 'meme',
+        title: CONSTANT.MEMES_PAGE_TITLE,
+        description: CONSTANT.MEMES_PAGE_DESCRIPTION
+    },
+    "/pages/gallery/depression": {
+        renderer: gallery,
+        page: '',
+        title: 'Zdjęcia dotyczące zapadliska:',
+        description: ''
+    },
+    "/pages/media/depression": {
+        renderer: urls,
+        page: '',
+        title: 'Artykuły dotyczące zapadliska:',
+        description: ''
+    }
+};
 
 const mediaContainer = document.getElementById('media-container');
 const imagesContainer = document.getElementById('images-container');
 
-(() => {
-    renderHomePage();
+window.route = route;
+window.onpopstate = handleRoute;
 
-    const home = document.getElementById('home');
-    home.addEventListener('click', renderHomePage);
+handleRoute();
 
-    const about = document.getElementById('about');
-    about.addEventListener('click', renderAboutPage);
-    
-    const video = document.getElementById('video');
-    video.addEventListener('click', renderVideoPage);
-
-    const memes = document.getElementById('memes');
-    memes.addEventListener('click', renderMemesPage);
-})();
-
-function renderHomePage() {
-    clearContainers();
-    const galleryButtons = document.getElementsByClassName('btn btn-sm btn-outline-success');
-    const mediaButtons = document.getElementsByClassName('btn btn-sm btn-outline-danger');
-
-    depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
-
-    for (let btn of galleryButtons) { btn.addEventListener('click', renderGalleryForSpecificDepression); }
-    for (let btn of mediaButtons) { btn.addEventListener('click', renderUrlsForSpecificDepression); }
-
-    setActivePage('home');
-    setPageTitle(CONSTANT.DEFAULT_TITLE);
-    setPageDescription(`${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`);
-    replaceImgSrc(document.getElementsByTagName('img'), false);
+function route(event) {
+    event = event || window.event;
+    event.preventDefault();
+    window.history.pushState({}, '', event.target.href);
+    handleRoute();
 }
 
-function renderGalleryForSpecificDepression() {
-    clearContainers();
+export function handleRoute() {
+    const path = window.location.pathname;
+    const id = window.location.search.split('=')[1];
+    const routeData = routes[path];
+    const render = routeData.renderer;
+    const depression = getDepressionById(id);
 
-    const depression = getDepressionById(this.dataset.id);
+    clearContainers();
+    render(depression);
+    setActivePage(routeData.page);
+    setPageTitle(depression === undefined ? routeData.title : `${routeData.title} ${depression.name}`);
+    setPageDescription(routeData.description);
+}
+
+function home() {
+    depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
+}
+
+function about() {
+    mediaContainer.innerHTML = `<p>${info.about}</p>`;
+    info.urls.forEach(u => mediaContainer.innerHTML += renderURL(u));
+    mediaContainer.innerHTML += renderImage("../../images/map.png");
+}
+
+function video() {
+    videos.forEach(v => mediaContainer.innerHTML += renderURL(v));
+}
+
+function meme() {
+    memes.forEach(meme => imagesContainer.innerHTML += renderGalleryImage(meme.href));
+}
+
+function gallery(depression) {
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
     
-    setPageTitle(`Zdjęcia dotyczące zapadliska: ${depression.name}`);
-    setPageDescription('');
-    replaceImgSrc(document.getElementsByTagName('img'), true);
-
+    console.log(depression);
+    
     if (depression.images.length < 1) {
         mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_IMAGES_ERROR);
     }
 }
 
-function renderUrlsForSpecificDepression() {
-    clearContainers();
-    
-    const depression = getDepressionById(this.dataset.id);
+function urls(depression) {
     depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
-
-    setPageTitle(`Artykuły dotyczące zapadliska: ${depression.name}`);
-    setPageDescription('');
 
     if (depression.media.length < 1) {
         mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_MEDIA_ERROR);
     }
-}
-
-function renderAboutPage() {
-    clearContainers();
-
-    mediaContainer.innerHTML = `<p>${info.about}</p>`;
-    info.urls.forEach(u => mediaContainer.innerHTML += renderURL(u));
-    mediaContainer.innerHTML += renderImage("../images/map.png");
-
-    setActivePage('about');
-    setPageTitle(CONSTANT.ABOUT_PAGE_TITLE);
-    setPageDescription(CONSTANT.ABOUT_PAGE_DESCRIPTION);
-}
-
-function renderVideoPage() {
-    clearContainers();
-
-    videos.forEach(v => mediaContainer.innerHTML += renderURL(v));
-
-    setActivePage('video');
-    setPageTitle(CONSTANT.VIDEOS_PAGE_TITLE);
-}
-
-function renderMemesPage() {
-    clearContainers();
-
-    memes.forEach(meme => imagesContainer.innerHTML += renderGalleryImage(meme.href));
-
-    setPageTitle(CONSTANT.MEMES_PAGE_TITLE);
-    setPageDescription(CONSTANT.MEMES_PAGE_DESCRIPTION);
-    setActivePage('memes');
 }
 
 function clearContainers() {
