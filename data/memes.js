@@ -10,5 +10,9 @@ export const memes = [
     {
         title: "",
         href: "../../images/memes/trzebinia-wytrzyma.jpg"
+    },
+    {
+        title: "",
+        href: "../../images/memes/siersza-narcos.jpg"
     }
 ];

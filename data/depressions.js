@@ -1,5 +1,20 @@
 export const depressions = [
     {
+        id: "21",
+        name: "Działki Gaj",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "02.03.2023",
+        imgSrc: "./images/dzialki-9-1.jpg",
+        images: [
+            "./../../images/dzialki-9-1.jpg",
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "~2",
+        depth: "~1.5"
+    },
+    {
         id: "20",
         name: "Działki Gaj",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
