@@ -23,6 +23,8 @@ export const setPageTitle = title => document.getElementById('title').innerHTML 
 
 export const setPageDescription = description => document.getElementById('description').innerHTML = description;
 
+export const setDocumentTitle = title => document.title = title;
+
 export const setActivePage = id => {
     if (id === '') {
         return;
