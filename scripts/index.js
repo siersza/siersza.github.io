@@ -4,44 +4,50 @@ import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
 import { memes } from "../data/memes.js";
-import { setPageTitle, setPageDescription, setActivePage, getDepressionById } from "../utils/utils.js";
+import { setPageTitle, setPageDescription, setDocumentTitle, setActivePage, getDepressionById } from "../utils/utils.js";
 
 const routes = {
     "/": {
         renderer: home,
         page: 'home',
         title: CONSTANT.DEFAULT_TITLE,
-        description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`
+        description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`,
+        documentTitle: 'Trzebinia Siersza | Zapadliska'
     },
     "/pages/about": {
         renderer: about,
         page: 'about',
         title: CONSTANT.ABOUT_PAGE_TITLE,
-        description: CONSTANT.ABOUT_PAGE_DESCRIPTION
+        description: CONSTANT.ABOUT_PAGE_DESCRIPTION,
+        documentTitle: 'Trzebinia Siersza | O Zapadliskach'
     },
     "/pages/video": {
         renderer: video,
         page: 'video',
         title: CONSTANT.VIDEOS_PAGE_TITLE,
-        description: ''
+        description: '',
+        documentTitle: 'Trzebinia Siersza | Materiały Wideo'
     },
     "/pages/meme": {
         renderer: meme,
         page: 'meme',
         title: CONSTANT.MEMES_PAGE_TITLE,
-        description: CONSTANT.MEMES_PAGE_DESCRIPTION
+        description: CONSTANT.MEMES_PAGE_DESCRIPTION,
+        documentTitle: 'Trzebinia Siersza | Memy'
     },
     "/pages/gallery/depression": {
         renderer: gallery,
         page: '',
         title: 'Zdjęcia dotyczące zapadliska:',
-        description: ''
+        description: '',
+        documentTitle: 'Galeria |'
     },
     "/pages/media/depression": {
         renderer: urls,
         page: '',
         title: 'Artykuły dotyczące zapadliska:',
-        description: ''
+        description: '',
+        documentTitle: 'Media |'
     }
 };
 
@@ -72,6 +78,7 @@ export function handleRoute() {
     setActivePage(routeData.page);
     setPageTitle(depression === undefined ? routeData.title : `${routeData.title} ${depression.name}`);
     setPageDescription(routeData.description);
+    setDocumentTitle(depression === undefined ? routeData.documentTitle : `${routeData.documentTitle} ${depression.name}`);
 }
 
 function home() {
@@ -94,8 +101,6 @@ function meme() {
 
 function gallery(depression) {
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
-    
-    console.log(depression);
     
     if (depression.images.length < 1) {
         mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_IMAGES_ERROR);
