@@ -88,6 +88,7 @@ function home() {
 function about() {
     mediaContainer.innerHTML = `<p>${info.about}</p>`;
     info.urls.forEach(u => mediaContainer.innerHTML += renderURL(u));
+    mediaContainer.innerHTML += '<iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>';
     mediaContainer.innerHTML += renderImage("../../images/map.png");
 }
 
