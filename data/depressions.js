@@ -1,7 +1,24 @@
 export const depressions = [
     {
+        id: "22",
+        name: "Działki Gaj XI",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "10.03.2023",
+        imgSrc: "./images/dzialki-10-1.jpg",
+        images: [
+            "./../../images/dzialki-10-1.jpg",
+            "./../../images/dzialki-10-2.jpg",
+            "./../../images/dzialki-10-3.jpg"
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "21",
-        name: "Działki Gaj",
+        name: "Działki Gaj X",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
         date: "02.03.2023",
         imgSrc: "./images/dzialki-9-1.jpg",
@@ -16,7 +33,7 @@ export const depressions = [
     },
     {
         id: "20",
-        name: "Działki Gaj",
+        name: "Działki Gaj IX",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
         date: "26.02.2023",
         imgSrc: "./images/dzialki-8-1.jpg",
@@ -33,7 +50,7 @@ export const depressions = [
     },
     {
         id: "19",
-        name: "Działki Gaj",
+        name: "Działki Gaj VIII",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj pod jednym z budynków gospodarczych.",
         date: "25.02.2023",
         imgSrc: "./images/dzialki-7-1.jpg",
@@ -55,7 +72,7 @@ export const depressions = [
     },
     {
         id: "18",
-        name: "Działki Gaj",
+        name: "Działki Gaj VII",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj. Dokładnie w tym samym dniu, parę godzin wcześniej, pojawiło się inne zapadlisko przy jednym z bloków mieszkalnych na osiedlu.",
         date: "23.02.2023",
         imgSrc: "./images/dzialki-6-1.jpg",
@@ -180,7 +197,7 @@ export const depressions = [
     },
     {
         id: "13",
-        name: "Cmentarz",
+        name: "Cmentarz II",
         description: "Zapadlisko pojawiło się przy ogrodzeniu cmentarza.",
         date: "19.01.2023",
         imgSrc: "./images/cmentarz.png",
@@ -253,7 +270,7 @@ export const depressions = [
     },
     {
         id: "10",
-        name: "Działki Gaj",
+        name: "Działki Gaj VI",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "31.12.2022",
         imgSrc: "./images/dzialki.png",
@@ -288,7 +305,7 @@ export const depressions = [
     },
     {
         id: "8",
-        name: "Ddziałki Gaj",
+        name: "Ddziałki Gaj V",
         description: "Zapadlisko pojawiło się przy leśniej ścieżce w okolicy działek.",
         date: "24.11.2022",
         imgSrc: "https://imgcdn1.przelom.pl/im/v1/news-900-widen-wm/2022/11/24/43822_1669309524_53176900.jpg",
@@ -308,7 +325,7 @@ export const depressions = [
     },
     {
         id: "7",
-        name: "Cmentarz",
+        name: "Cmentarz I",
         description: "Na chwilę obecną jest najprawdopodobniej jednym z najsłynniejszych zapadlisk w Polsce. Zapadlisko pochłonęło 40 grobów, w których spoczywało 61 osób",
         date: "20.09.2022",
         imgSrc: "./images/dziura-cmentarz.png",
@@ -392,7 +409,7 @@ export const depressions = [
     },
     {
         id: "4",
-        name: "Działki Gaj",
+        name: "Działki Gaj IV",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "24.06.2022",
         imgSrc: "./images/dzialki-4-1.jpg",
@@ -414,7 +431,7 @@ export const depressions = [
     },
     {
         id: "3",
-        name: "Działki Gaj",
+        name: "Działki Gaj III",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "22.02.2022",
         imgSrc: "./images/image-placeholder.png",
@@ -432,7 +449,7 @@ export const depressions = [
     },
     {
         id: "2",
-        name: "Działki Gaj",
+        name: "Działki Gaj II",
         description: "Zapadlisko pojawiło się na jednej z działek w okolicach osiedla Gaj.",
         date: "23.11.2021",
         imgSrc: "./images/dzialki-2-1.jpg",
@@ -459,7 +476,7 @@ export const depressions = [
     },
     {
         id: "1",
-        name: "Działki Gaj",
+        name: "Działki Gaj I",
         description: "Zapadlisko pojawiło się na działkach w okolicy osiedla Gaj.",
         date: "27.08.2021",
         imgSrc: "./images/dzialki-4.png",
