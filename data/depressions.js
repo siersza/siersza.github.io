@@ -11,8 +11,8 @@ export const depressions = [
             "./../../images/tory-1-3.jpg"
         ],
         media: [],
-        latitude: "50.19683394549026",
-        longitude: "19.43750656613749",
+        latitude: "50.195501064410124",
+        longitude: "19.449039445271854",
         diameter: "b.d.",
         depth: "b.d."
     },
