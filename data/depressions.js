@@ -4,8 +4,9 @@ export const depressions = [
         name: "Ścieżka Zdrowia II (torowisko)",
         description: "Zapadlisko pojawiło się przy torach w okolicy ścieżki zdrowia.",
         date: "12.03.2023",
-        imgSrc: "./images/tory-1-1.jpg",
+        imgSrc: "./images/tory-1-4.png",
         images: [
+            "./../../images/tory-1-4.png",
             "./../../images/tory-1-1.jpg",
             "./../../images/tory-1-2.jpg",
             "./../../images/tory-1-3.jpg"
