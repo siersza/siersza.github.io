@@ -1,5 +1,23 @@
 export const depressions = [
     {
+        id: "24",
+        name: "Działki Gaj XII",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "26.03.2023",
+        imgSrc: "./images/dzialki-11-1.jpg",
+        images: [
+            "./../../images/dzialki-11-1.jpg",
+            "./../../images/dzialki-11-2.jpg",
+            "./../../images/dzialki-11-3.jpg",
+            "./../../images/dzialki-11-4.jpg"
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "23",
         name: "Ścieżka Zdrowia II (torowisko)",
         description: "Zapadlisko pojawiło się przy torach w okolicy ścieżki zdrowia.",
