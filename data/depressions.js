@@ -4,9 +4,11 @@ export const depressions = [
         name: "Ulica Jana Pawła II",
         description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
         date: "28.03.2023",
-        imgSrc: "./images/jana-pawla-1-1.jpg",
+        imgSrc: "./images/jana-pawla-1-2.jpg",
         images: [
-            "./../../images/jana-pawla-1-1.jpg"
+            "./../../images/jana-pawla-1-2.jpg",
+            "./../../images/jana-pawla-1-1.jpg",
+            "./../../images/jana-pawla-1-3.jpg"
         ],
         media: [],
         latitude: "50.19569163953249",
