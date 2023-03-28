@@ -1,5 +1,20 @@
 export const depressions = [
     {
+        id: "5",
+        name: "Ulica Jana Pawła II",
+        description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
+        date: "23.07.2022",
+        imgSrc: "./images/jana-pawla-1-1.jpg",
+        images: [
+            "./../../images/jana-pawla-1-1.jpg"
+        ],
+        media: [],
+        latitude: "50.19569163953249",
+        longitude: "19.432938698828142",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "24",
         name: "Działki Gaj XII",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
