@@ -1,6 +1,6 @@
 export const depressions = [
     {
-        id: "5",
+        id: "25",
         name: "Ulica Jana Pawła II",
         description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
         date: "23.07.2022",
