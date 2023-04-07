@@ -1,5 +1,22 @@
 export const depressions = [
     {
+        id: "27",
+        name: "Ścieżka Zdrowia III",
+        description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
+        date: "~07.04.2023",
+        imgSrc: "./images/sciezka-zdrowia-3-1.png",
+        images: [
+            "./../../images/sciezka-zdrowia-3-1.png",
+            "./../../images/sciezka-zdrowia-3-2.png",
+            "./../../images/sciezka-zdrowia-3-3.png"
+        ],
+        media: [],
+        latitude: "50.19516986729115",
+        longitude: "19.448505825594445",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "26",
         name: "Osiedle Gaj III",
         description: "Zapadlisko pojawiło się na Osiedlu Gaj. To już drugie zapadlisko (w tym miejscu), które pojawiło się w momencie prowadzenia prac zawiązanych z uzdatnianiem terenu. Do zapadliska wpadł silos zawierający materiał służący do uzdatniania terenu",
@@ -218,7 +235,7 @@ export const depressions = [
         id: "15",
         name: "Ścieżka Zdrowia I",
         description: "Zapadlisko pojawiło się w okolicy tzw. Ścieżki Zdrowia.",
-        date: "b.d.",
+        date: "~01.02.2023",
         imgSrc: "./images/sciezka-zdrowia-1.jpg",
         images: [
             "./../../images/sciezka-zdrowia-1.jpg",
