@@ -69,8 +69,7 @@ function handleRouteChange() {
     }
 
     if (routeData === undefined) {
-        mediaContainer.innerHTML += renderErrorMessage(CONSTANT.ERROR_404);
-        return;
+        redirectToIndex();
     }
 
     routeData.renderer(depression);
@@ -109,6 +108,10 @@ function route(event) {
     handleRouteChange();
 }
 
+function redirectToIndex() {
+    window.location.href = './';
+}
+
 function renderHome() {
     depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
 }
@@ -130,8 +133,7 @@ function renderMemes() {
 
 function renderGallery(depression) {
     if (depression === undefined) {
-        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_DEPRESSION_ERROR);
-        return;
+        redirectToIndex();
     }
 
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
@@ -143,8 +145,7 @@ function renderGallery(depression) {
 
 function renderUrls(depression) {
     if (depression === undefined) {
-        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_DEPRESSION_ERROR);
-        return;
+        redirectToIndex();
     }
 
     depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
