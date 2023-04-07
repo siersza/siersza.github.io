@@ -68,6 +68,11 @@ function handleRouteChange() {
         depression = getDepressionById(params['id']);
     }
 
+    if (routeData === undefined) {
+        mediaContainer.innerHTML += renderErrorMessage(CONSTANT.ERROR_404);
+        return;
+    }
+
     routeData.renderer(depression);
     setActivePage(routeData.page);
     setPageTitle(depression === undefined ? routeData.title : `${routeData.title} ${depression.name}`);
@@ -124,6 +129,11 @@ function renderMemes() {
 }
 
 function renderGallery(depression) {
+    if (depression === undefined) {
+        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_DEPRESSION_ERROR);
+        return;
+    }
+
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
 
     if (depression.images.length < 1) {
@@ -132,6 +142,11 @@ function renderGallery(depression) {
 }
 
 function renderUrls(depression) {
+    if (depression === undefined) {
+        mediaContainer.innerHTML = renderErrorMessage(CONSTANT.NO_DEPRESSION_ERROR);
+        return;
+    }
+
     depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
 
     if (depression.media.length < 1) {
