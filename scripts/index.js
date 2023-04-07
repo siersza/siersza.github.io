@@ -18,35 +18,35 @@ const routes = {
         description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`,
         documentTitle: 'Trzebinia Siersza | Zapadliska'
     },
-    "/pages/about": {
+    "/about": {
         renderer: renderAbout,
         page: 'about',
         title: CONSTANT.ABOUT_PAGE_TITLE,
         description: CONSTANT.ABOUT_PAGE_DESCRIPTION,
         documentTitle: 'Trzebinia Siersza | O Zapadliskach'
     },
-    "/pages/video": {
+    "/video": {
         renderer: renderVideos,
         page: 'video',
         title: CONSTANT.VIDEOS_PAGE_TITLE,
         description: '',
         documentTitle: 'Trzebinia Siersza | Materiały Wideo'
     },
-    "/pages/meme": {
+    "/meme": {
         renderer: renderMemes,
         page: 'meme',
         title: CONSTANT.MEMES_PAGE_TITLE,
         description: CONSTANT.MEMES_PAGE_DESCRIPTION,
         documentTitle: 'Trzebinia Siersza | Memy'
     },
-    "/pages/gallery/depression": {
+    "/gallery/depression": {
         renderer: renderGallery,
         page: '',
         title: 'Zdjęcia dotyczące zapadliska:',
         description: '',
         documentTitle: 'Galeria |'
     },
-    "/pages/media/depression": {
+    "/media/depression": {
         renderer: renderUrls,
         page: '',
         title: 'Artykuły dotyczące zapadliska:',
