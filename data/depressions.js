@@ -6,7 +6,10 @@ export const depressions = [
         date: "07.04.2023",
         imgSrc: "./images/gaj-3-1.jpg",
         images: [
-            "./../../images/gaj-3-1.jpg"
+            "./../../images/gaj-3-1.jpg",
+            "./../../images/gaj-3-2.jpg",
+            "./../../images/gaj-3-3.jpg",
+            "./../../images/gaj-3-4.jpg"
         ],
         media: [],
         latitude: "50.1994706351815",
