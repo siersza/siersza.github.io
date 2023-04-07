@@ -26,7 +26,11 @@ export const depressions = [
             "./../../images/gaj-3-1.jpg",
             "./../../images/gaj-3-2.jpg",
             "./../../images/gaj-3-3.jpg",
-            "./../../images/gaj-3-4.jpg"
+            "./../../images/gaj-3-4.jpg",
+            "./../../images/gaj-3-5.jpg",
+            "./../../images/gaj-3-6.jpg",
+            "./../../images/gaj-3-7.jpg",
+            "./../../images/gaj-3-8.jpg"
         ],
         media: [],
         latitude: "50.1994706351815",
