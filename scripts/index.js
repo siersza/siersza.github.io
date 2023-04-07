@@ -10,43 +10,92 @@ import { setPageTitle, setPageDescription, setDocumentTitle, setActivePage, getD
 const mediaContainer = document.getElementById('media-container');
 const imagesContainer = document.getElementById('images-container');
 
-function handleRouteChange() {
-    const route = window.location.hash.substr(1);
-    const params = getQueryParams(route);
+const routes = {
+    "": {
+        renderer: renderHome,
+        page: 'home',
+        title: CONSTANT.DEFAULT_TITLE,
+        description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`,
+        documentTitle: 'Trzebinia Siersza | Zapadliska'
+    },
+    "/pages/about": {
+        renderer: renderAbout,
+        page: 'about',
+        title: CONSTANT.ABOUT_PAGE_TITLE,
+        description: CONSTANT.ABOUT_PAGE_DESCRIPTION,
+        documentTitle: 'Trzebinia Siersza | O Zapadliskach'
+    },
+    "/pages/video": {
+        renderer: renderVideos,
+        page: 'video',
+        title: CONSTANT.VIDEOS_PAGE_TITLE,
+        description: '',
+        documentTitle: 'Trzebinia Siersza | Materiały Wideo'
+    },
+    "/pages/meme": {
+        renderer: renderMemes,
+        page: 'meme',
+        title: CONSTANT.MEMES_PAGE_TITLE,
+        description: CONSTANT.MEMES_PAGE_DESCRIPTION,
+        documentTitle: 'Trzebinia Siersza | Memy'
+    },
+    "/pages/gallery/depression": {
+        renderer: renderGallery,
+        page: '',
+        title: 'Zdjęcia dotyczące zapadliska:',
+        description: '',
+        documentTitle: 'Galeria |'
+    },
+    "/pages/media/depression": {
+        renderer: renderUrls,
+        page: '',
+        title: 'Artykuły dotyczące zapadliska:',
+        description: '',
+        documentTitle: 'Media |'
+    }
+};
 
+function handleRouteChange() {
     clearContainers();
 
-    if (route === '') {
+    const url = window.location.hash.substring(1);
+    const params = getQueryParams(url);
+    const baseUrl = url.split('?')[0];
+    const routeData = routes[baseUrl];
+    let depression;
+
+    if (params !== undefined && params['id']) {
+        depression = getDepressionById(params['id']);
+    }
+
+    if (url === '') {
         renderHome();
     }
 
-    if (route === '/pages/about') {
+    if (url === '/pages/about') {
         renderAbout();
     }
 
-    if (route === '/pages/video') {
+    if (url === '/pages/video') {
         renderVideos();
     }
 
-    if (route === '/pages/meme') {
+    if (url === '/pages/meme') {
         renderMemes();
     }
 
-    if (route.includes('/pages/gallery/depression')) {
-        if (params === undefined || params.size === 0) {
-            return;
-        }
-
-        renderGallery(getDepressionById(params['id']));
+    if (url.includes('/pages/gallery/depression')) {
+        renderGallery(depression);
     }
 
-    if (route.includes('/pages/media/depression')) {
-        if (params === undefined) {
-            return;
-        }
-
-        renderUrls(getDepressionById(params['id']));
+    if (url.includes('/pages/media/depression')) {
+        renderUrls(depression);
     }
+
+    setActivePage(routeData.page);
+    setPageTitle(depression === undefined ? routeData.title : `${routeData.title} ${depression.name}`);
+    setPageDescription(routeData.description);
+    setDocumentTitle(depression === undefined ? routeData.documentTitle : `${routeData.documentTitle} ${depression.name}`);
 }
 
 handleRouteChange();
