@@ -17,8 +17,8 @@ export const renderCard = depression => `
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                         <a class="btn btn-sm btn-outline-primary" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                        <a class="btn btn-sm btn-outline-success" href="#/gallery/depression?id=${depression.id}" onclick="route()">Więcej zdjęć</a>
-                        <a class="btn btn-sm btn-outline-danger" href="#/media/depression?id=${depression.id}" onclick="route()">Media</a>
+                        <a class="btn btn-sm btn-outline-success" href="#/gallery/depression?id=${depression.id}" onclick="route()">Więcej zdjęć <strong>(${depression.images.length})</strong></a>
+                        <a class="btn btn-sm btn-outline-danger" href="#/media/depression?id=${depression.id}" onclick="route()">Media <strong>(${depression.media.length})</strong></a>
                     </div>
                     <small class="text-muted">${depression.date}</small>
                 </div>
