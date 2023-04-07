@@ -18,35 +18,35 @@ const routes = {
         description: `${CONSTANT.DEFAULT_DESCRIPTION}. Na dzień dzisiejszy strona zawiera informacje na temat <b>${depressions.length}</b> zapadlisk.`,
         documentTitle: 'Trzebinia Siersza | Zapadliska'
     },
-    "/pages/about": {
+    "/about": {
         renderer: renderAbout,
         page: 'about',
         title: CONSTANT.ABOUT_PAGE_TITLE,
         description: CONSTANT.ABOUT_PAGE_DESCRIPTION,
         documentTitle: 'Trzebinia Siersza | O Zapadliskach'
     },
-    "/pages/video": {
+    "/video": {
         renderer: renderVideos,
         page: 'video',
         title: CONSTANT.VIDEOS_PAGE_TITLE,
         description: '',
         documentTitle: 'Trzebinia Siersza | Materiały Wideo'
     },
-    "/pages/meme": {
+    "/meme": {
         renderer: renderMemes,
         page: 'meme',
         title: CONSTANT.MEMES_PAGE_TITLE,
         description: CONSTANT.MEMES_PAGE_DESCRIPTION,
         documentTitle: 'Trzebinia Siersza | Memy'
     },
-    "/pages/gallery/depression": {
+    "/gallery/depression": {
         renderer: renderGallery,
         page: '',
         title: 'Zdjęcia dotyczące zapadliska:',
         description: '',
         documentTitle: 'Galeria |'
     },
-    "/pages/media/depression": {
+    "/media/depression": {
         renderer: renderUrls,
         page: '',
         title: 'Artykuły dotyczące zapadliska:',
@@ -57,7 +57,7 @@ const routes = {
 
 function handleRouteChange() {
     clearContainers();
-
+    
     const url = window.location.hash.substring(1);
     const params = getQueryParams(url);
     const baseUrl = url.split('?')[0];
@@ -68,30 +68,11 @@ function handleRouteChange() {
         depression = getDepressionById(params['id']);
     }
 
-    if (url === '') {
-        renderHome();
+    if (routeData === undefined) {
+        redirectToIndex();
     }
 
-    if (url === '/pages/about') {
-        renderAbout();
-    }
-
-    if (url === '/pages/video') {
-        renderVideos();
-    }
-
-    if (url === '/pages/meme') {
-        renderMemes();
-    }
-
-    if (url.includes('/pages/gallery/depression')) {
-        renderGallery(depression);
-    }
-
-    if (url.includes('/pages/media/depression')) {
-        renderUrls(depression);
-    }
-
+    routeData.renderer(depression);
     setActivePage(routeData.page);
     setPageTitle(depression === undefined ? routeData.title : `${routeData.title} ${depression.name}`);
     setPageDescription(routeData.description);
@@ -127,6 +108,10 @@ function route(event) {
     handleRouteChange();
 }
 
+function redirectToIndex() {
+    window.location.href = './';
+}
+
 function renderHome() {
     depressions.forEach(d => imagesContainer.innerHTML += renderCard(d));
 }
@@ -147,6 +132,10 @@ function renderMemes() {
 }
 
 function renderGallery(depression) {
+    if (depression === undefined) {
+        redirectToIndex();
+    }
+
     depression.images.forEach(image => imagesContainer.innerHTML += renderGalleryImage(image));
 
     if (depression.images.length < 1) {
@@ -155,6 +144,10 @@ function renderGallery(depression) {
 }
 
 function renderUrls(depression) {
+    if (depression === undefined) {
+        redirectToIndex();
+    }
+
     depression.media.forEach(m => mediaContainer.innerHTML += renderURL(m));
 
     if (depression.media.length < 1) {
