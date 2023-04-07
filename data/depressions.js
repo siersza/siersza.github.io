@@ -1,5 +1,20 @@
 export const depressions = [
     {
+        id: "26",
+        name: "Osiedle Gaj III",
+        description: "Zapadlisko pojawiło się na Osiedlu Gaj. To już drugie zapadlisko (w tym miejscu), które pojawiło się w momencie prowadzenia prac zawiązanych z uzdatnianiem terenu. Do zapadliska wpadł silos zawierający materiał służący do uzdatniania terenu",
+        date: "07.04.2023",
+        imgSrc: "./images/gaj-3-1.jpg",
+        images: [
+            "./../../images/gaj-3-1.jpg"
+        ],
+        media: [],
+        latitude: "50.1994706351815",
+        longitude: "19.44004220713269",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "25",
         name: "Ulica Jana Pawła II",
         description: "Zapadlisko pojawiło się przy ulicy Jana Pawła II.",
@@ -145,7 +160,7 @@ export const depressions = [
     },
     {
         id: "17",
-        name: "Osiedle Gaj",
+        name: "Osiedle Gaj II",
         description: "Zapadlisko pojawiło się na Osiedlu Gaj. W chwili pojawienia się zapadliska prowadzone były prace zawiązane z uzdatnianiem terenu.",
         date: "23.02.2023",
         imgSrc: "./images/gaj-2-1.jpg",
@@ -422,7 +437,7 @@ export const depressions = [
     },
     {
         id: "6",
-        name: "Osiedle Gaj",
+        name: "Osiedle Gaj I",
         description: "Zapadlisko pojawiło się na osiedlu Gaj.",
         date: "13.09.2022",
         imgSrc: "./images/gaj.jpg",
