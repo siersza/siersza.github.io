@@ -3,7 +3,7 @@ export const depressions = [
         id: "28",
         name: "Działki Gaj XIII",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
-        date: "~07.04.2023",
+        date: "12.04.2023",
         imgSrc: "./images/dzialki-3-1.jpg",
         images: [
             "./../../images/dzialki-3-1.jpg"
