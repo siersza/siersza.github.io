@@ -40,3 +40,20 @@ export const setActivePage = id => {
 
     document.getElementById(id).classList.remove('link-dark')
 };
+
+export function getQueryParams(url) {
+    if (!url.includes('?')) {
+        return;
+    }
+
+    const params = [];
+    const queryString = url.split('?')[1];
+    const queryParams = queryString.split('&');
+
+    queryParams.forEach(param => {
+        const [key, value] = param.split('=');
+        params[key] = value;
+    });
+
+    return params;
+}
