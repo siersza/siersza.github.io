@@ -1,6 +1,5 @@
 // TODO: Refactor.
 import * as CONSTANT from "../utils/constants.js";
-import { renderCard, renderURL, renderImage, renderGalleryImage, renderErrorMessage } from "./renderer.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -24,7 +23,7 @@ function getQueryParams(url) {
     return params;
 }
 
-function generateHomePage() {
+function renderHome() {
     const listItems = depressions.map((depression, index) => `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
@@ -61,7 +60,7 @@ function generateHomePage() {
     `;
 }
 
-function generateAboutPage() {
+function renderAbout() {
     return `
         <div class="px-4 py-1 my-1 text-center">
             <h1 id="title" class="fw-bold">${CONSTANT.ABOUT_PAGE_TITLE}</h1>
@@ -80,7 +79,7 @@ function generateAboutPage() {
     `;
 }
 
-function generateVideoPage() {
+function renderVideos() {
     const listItems = videos.map((element, index) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
@@ -98,7 +97,7 @@ function generateVideoPage() {
   `;
 }
 
-function generateMemePage() {
+function renderMemes() {
     const listItems = memes.map((element, index) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
@@ -121,15 +120,15 @@ function generateMemePage() {
 }
 
 const routes = {
-    '': generateHomePage,
-    '#/about': generateAboutPage,
-    '#/video': generateVideoPage,
-    '#/meme': generateMemePage,
-    '#/gallery/depression': generateGallery,
-    '#/media/depression': generateMedia
+    '': renderHome,
+    '#/about': renderAbout,
+    '#/video': renderVideos,
+    '#/meme': renderMemes,
+    '#/gallery/depression': renderGallery,
+    '#/media/depression': renderMedia
 };
 
-function generateGallery(depression) {
+function renderGallery(depression) {
     const listItems = depression.images.map((element, index) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
@@ -145,7 +144,7 @@ function generateGallery(depression) {
     `;
 }
 
-function generateMedia(depression) {
+function renderMedia(depression) {
     const listItems = depression.media.map((element, index) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
@@ -159,7 +158,7 @@ function generateMedia(depression) {
 
 function renderContent() {
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
-    const routeHandler = routes[currentRoute] || generateHomePage;
+    const routeHandler = routes[currentRoute] || renderHome;
     const contentDiv = document.getElementById('content');
     const params = getQueryParams(window.location.hash.substring(1));
 
