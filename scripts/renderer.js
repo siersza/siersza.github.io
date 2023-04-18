@@ -12,6 +12,7 @@ export function renderContent() {
     const contentDiv = document.getElementById('content');
     const params = getQueryParams(window.location.hash.substring(1));
 
+    // Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
         const depression = getDepressionById(params['id']);
         contentDiv.innerHTML = routeHandler(depression);
@@ -28,7 +29,7 @@ export function renderContent() {
 }
 
 export function renderHome() {
-    const listItems = depressions.map((depression, index) => `
+    const listItems = depressions.map((depression) => `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
@@ -84,7 +85,7 @@ export function renderAbout() {
 }
 
 export function renderVideos() {
-    const listItems = videos.map((element, index) => `
+    const listItems = videos.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
@@ -102,7 +103,7 @@ export function renderVideos() {
 }
 
 export function renderMemes() {
-    const listItems = memes.map((element, index) => `
+    const listItems = memes.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
                 <a href="${element.href}" target="_blank"><img class="card-img-top" src="${element.href}"></a>
@@ -124,7 +125,7 @@ export function renderMemes() {
 }
 
 export function renderGallery(depression) {
-    const listItems = depression.images.map((element, index) => `
+    const listItems = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
                 <a href="${element}" target="_blank"><img class="card-img-top" src="${element}"></a>
@@ -140,7 +141,7 @@ export function renderGallery(depression) {
 }
 
 export function renderMedia(depression) {
-    const listItems = depression.media.map((element, index) => `
+    const listItems = depression.media.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
