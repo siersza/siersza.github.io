@@ -29,7 +29,7 @@ export function renderContent() {
 }
 
 export function renderHome() {
-    const listItems = depressions.map((depression) => `
+    const items = depressions.map((depression) => `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
@@ -60,12 +60,16 @@ export function renderHome() {
             </div>
         </div>
         <div class="row">
-            ${listItems}
+            ${items}
         </div>
     `;
 }
 
 export function renderAbout() {
+    const items = info.urls.map((element) => `
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
+    ).join('');
+
     return `
         <div class="px-4 py-1 my-1 text-center">
             <h1 id="title" class="fw-bold">${CONSTANT.ABOUT_PAGE_TITLE}</h1>
@@ -75,6 +79,7 @@ export function renderAbout() {
         </div>
         <div class="list-group" style="overflow-wrap: break-word;">
             <p>${info.about}</p>
+            ${items}
             <a href="../../images/map.png" target="_blank">
                 <img src="../../images/map.png" class="rounded mx-auto d-block" style="margin: 30px"></img>
             </a>
@@ -85,7 +90,7 @@ export function renderAbout() {
 }
 
 export function renderVideos() {
-    const listItems = videos.map((element) => `
+    const items = videos.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
@@ -97,13 +102,13 @@ export function renderVideos() {
             </div>
         </div>
         <ul>
-            ${listItems}
+            ${items}
         </ul>
   `;
 }
 
 export function renderMemes() {
-    const listItems = memes.map((element) => `
+    const items = memes.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
                 <a href="${element.href}" target="_blank"><img class="card-img-top" src="${element.href}"></a>
@@ -119,13 +124,13 @@ export function renderMemes() {
             </div>
         </div>
         <div class="row">
-            ${listItems}
+            ${items}
         </div>
     `;
 }
 
 export function renderGallery(depression) {
-    const listItems = depression.images.map((element) => `
+    const items = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
                 <a href="${element}" target="_blank"><img class="card-img-top" src="${element}"></a>
@@ -134,20 +139,32 @@ export function renderGallery(depression) {
     ).join('');
 
     return `
+        <div class="px-4 py-1 my-1 text-center">
+            <h1 id="title" class="fw-bold">Zdjęcia dotyczące zapadliska: ${depression.name}</h1>
+            <div class="col-lg-6 mx-auto">
+                <p id="description" class="lead mb-4"></p>
+            </div>
+        </div>
         <div class="row">
-            ${listItems}
+            ${items}
         </div>
     `;
 }
 
 export function renderMedia(depression) {
-    const listItems = depression.media.map((element) => `
+    const items = depression.media.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
+        <div class="px-4 py-1 my-1 text-center">
+            <h1 id="title" class="fw-bold">Artykuły dotyczące zapadliska: ${depression.name}</h1>
+            <div class="col-lg-6 mx-auto">
+                <p id="description" class="lead mb-4"></p>
+            </div>
+        </div>
         <div class="row">
-            ${listItems}
+            ${items}
         </div>
     `;
 }
