@@ -159,7 +159,7 @@ export function renderVideos() {
     setDocumentTitle('Trzebinia Siersza | Materiały Wideo');
 
     const items = videos.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
@@ -169,9 +169,11 @@ export function renderVideos() {
                 <p id="description" class="lead mb-4"></p>
             </div>
         </div>
-        <ul>
-            ${items}
-        </ul>
+        <div class="list-group"
+            <ul>
+                ${items}
+            </ul>
+        </div>
   `;
 }
 
