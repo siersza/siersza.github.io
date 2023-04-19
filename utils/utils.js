@@ -25,6 +25,8 @@ export const setPageDescription = description => document.getElementById('descri
 
 export const setDocumentTitle = title => document.title = title;
 
+export const redirectToIndex = () => window.location.href = '#/home';
+
 export const setActivePage = id => {
     if (id === '') {
         return;
@@ -40,3 +42,25 @@ export const setActivePage = id => {
 
     document.getElementById(id).classList.remove('link-dark')
 };
+
+export function setActivePaginationItem(index) {
+    const paginationItem = document.getElementById(`pagination-item-${index}`);
+    paginationItem.classList.toggle('active');
+}
+
+export function getQueryParams(url) {
+    if (!url.includes('?')) {
+        return;
+    }
+
+    const params = [];
+    const queryString = url.split('?')[1];
+    const queryParams = queryString.split('&');
+
+    queryParams.forEach(param => {
+        const [key, value] = param.split('=');
+        params[key] = value;
+    });
+
+    return params;
+}
