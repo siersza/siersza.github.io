@@ -43,6 +43,11 @@ export const setActivePage = id => {
     document.getElementById(id).classList.remove('link-dark')
 };
 
+export function setActivePaginationItem(index) {
+    const paginationItem = document.getElementById(`pagination-item-${index}`);
+    paginationItem.classList.toggle('active');
+}
+
 export function getQueryParams(url) {
     if (!url.includes('?')) {
         return;

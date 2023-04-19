@@ -1,5 +1,5 @@
 import { routes } from "../data/routes.js";
-import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex, setActivePage } from "../utils/utils.js";
+import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex, setActivePage, setActivePaginationItem } from "../utils/utils.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -25,6 +25,11 @@ export function renderContent() {
     } else {
         pagination.innerHTML = '';
     }
+
+    if (window.location.hash.includes('/home')) {
+        setActivePaginationItem(params === undefined ? 1 : params['id']);
+    }
+
 
     // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
@@ -66,8 +71,9 @@ export function renderContent() {
 
         return;
     }
-
+    
     setActivePage(currentRoute.split('/')[1]);
+
     contentDiv.innerHTML = routeHandler();
 }
 
@@ -247,7 +253,7 @@ function renderError(message) {
 
 function renderPaginationItem(index) {
     return `
-        <li class="page-item">
+        <li id="pagination-item-${index}" class="page-item">
             <a href="#/home/page?id=${index}" class="page-link">${index}</a>
         </li>
     `;
