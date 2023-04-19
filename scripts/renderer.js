@@ -16,9 +16,15 @@ export function renderContent() {
     }
 
     const contentDiv = document.getElementById('content');
+    const pagination = document.getElementById('pagination');
     const params = getQueryParams(window.location.hash.substring(1));
 
-    console.log('window.location.hash: ' + window.location.hash);
+    // Render the pagination for the home page and remove it for other pages.
+    if (window.location.hash.includes('/home')) {
+        pagination.innerHTML = renderPagination();
+    } else {
+        pagination.innerHTML = '';
+    }
 
     // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
@@ -45,15 +51,6 @@ export function renderContent() {
         contentDiv.innerHTML = routeHandler(depression);
 
         return;
-    }
-
-    // Render the pagination for the home page and remove it for other pages.
-    if (window.location.hash === '' || window.location.hash.includes('/page')) {
-        const pagination = document.getElementById('pagination');
-        pagination.innerHTML = renderPagination();
-    } else {
-        const pagination = document.getElementById('pagination');
-        pagination.innerHTML = '';
     }
 
     // Render the depressions for the specific id range.
@@ -250,7 +247,7 @@ function renderError(message) {
 function renderPaginationItem(index) {
     return `
         <li class="page-item">
-            <a href="#/page?id=${index}" class="page-link">${index}</a>
+            <a href="#/home/page?id=${index}" class="page-link">${index}</a>
         </li>
     `;
 }
