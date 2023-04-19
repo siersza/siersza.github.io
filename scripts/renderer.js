@@ -1,5 +1,5 @@
 import { routes } from "../data/routes.js";
-import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex } from "../utils/utils.js";
+import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex, setActivePage } from "../utils/utils.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -67,6 +67,7 @@ export function renderContent() {
         return;
     }
 
+    setActivePage(currentRoute.split('/')[1]);
     contentDiv.innerHTML = routeHandler();
 }
 

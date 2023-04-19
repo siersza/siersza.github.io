@@ -2,10 +2,10 @@ import { renderHome, renderAbout, renderVideos, renderMemes, renderGallery, rend
 
 export const routes = {
     '#/home': renderHome,
+    '#/home/page': renderHome,
     '#/about': renderAbout,
     '#/video': renderVideos,
     '#/meme': renderMemes,
     '#/gallery/depression': renderGallery,
     '#/media/depression': renderMedia,
-    '#/home/page': renderHome
 };
