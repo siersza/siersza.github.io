@@ -1,5 +1,5 @@
 import { routes } from "../data/routes.js";
-import { getQueryParams, getDepressionById } from "../utils/utils.js";
+import { getQueryParams, getDepressionById, setDocumentTitle } from "../utils/utils.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -12,7 +12,7 @@ export function renderContent() {
     const contentDiv = document.getElementById('content');
     const params = getQueryParams(window.location.hash.substring(1));
 
-    // Refactor those if statements.
+    // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
         const depression = getDepressionById(params['id']);
         contentDiv.innerHTML = routeHandler(depression);
@@ -29,6 +29,8 @@ export function renderContent() {
 }
 
 export function renderHome() {
+    setDocumentTitle('Trzebinia Siersza | Zapadliska');
+
     const items = depressions.map((depression) => `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
@@ -66,6 +68,8 @@ export function renderHome() {
 }
 
 export function renderAbout() {
+    setDocumentTitle('Trzebinia Siersza | O Zapadliskach');
+
     const items = info.urls.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
@@ -90,6 +94,8 @@ export function renderAbout() {
 }
 
 export function renderVideos() {
+    setDocumentTitle('Trzebinia Siersza | Materiały Wideo');
+
     const items = videos.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
@@ -108,6 +114,8 @@ export function renderVideos() {
 }
 
 export function renderMemes() {
+    setDocumentTitle('Trzebinia Siersza | Memy');
+
     const items = memes.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
@@ -130,6 +138,8 @@ export function renderMemes() {
 }
 
 export function renderGallery(depression) {
+    setDocumentTitle(`Galeria | ${depression.name}`);
+
     const items = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
@@ -152,6 +162,8 @@ export function renderGallery(depression) {
 }
 
 export function renderMedia(depression) {
+    setDocumentTitle(`Galeria | ${depression.name}`);
+
     const items = depression.media.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
