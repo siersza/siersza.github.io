@@ -6,5 +6,6 @@ export const routes = {
     '#/video': renderVideos,
     '#/meme': renderMemes,
     '#/gallery/depression': renderGallery,
-    '#/media/depression': renderMedia
+    '#/media/depression': renderMedia,
+    '#/page': renderHome
 };

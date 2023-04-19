@@ -18,6 +18,8 @@ export function renderContent() {
     const contentDiv = document.getElementById('content');
     const params = getQueryParams(window.location.hash.substring(1));
 
+    console.log('window.location.hash: ' + window.location.hash);
+
     // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
         const depression = getDepressionById(params['id']);
@@ -45,13 +47,41 @@ export function renderContent() {
         return;
     }
 
+    // Render the pagination for the home page and remove it for other pages.
+    if (window.location.hash === '' || window.location.hash.includes('/page')) {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = renderPagination();
+    } else {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+    }
+
+    // Render the depressions for the specific id range.
+    if (window.location.hash.includes('/page')) {
+        if (params['id'] === undefined || params['id'] > Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE)) {
+            redirectToIndex();
+        }
+
+        let from = depressions.length - (params['id'] - 1) * CONSTANT.MAX_PER_PAGE;
+        let to = from - CONSTANT.MAX_PER_PAGE < 1 ? 0 : from - CONSTANT.MAX_PER_PAGE;
+
+        contentDiv.innerHTML = routeHandler(from, to);
+
+        return;
+    }
+
     contentDiv.innerHTML = routeHandler();
 }
 
-export function renderHome() {
+export function renderHome(from, to) {
     setDocumentTitle('Trzebinia Siersza | Zapadliska');
 
-    const items = depressions.map((depression) => `
+    if (from === undefined || to === undefined) {
+        from = depressions.length;
+        to = depressions.length - CONSTANT.MAX_PER_PAGE;
+    }
+
+    const items = depressions.filter(d => d.id <= from && d.id > to).map((depression) => `
         <div class="col-md-4">
             <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
@@ -215,4 +245,22 @@ function renderError(message) {
             ${message}
         </div>
     `;
+}
+
+function renderPaginationItem(index) {
+    return `
+        <li class="page-item">
+            <a href="#/page?id=${index}" class="page-link">${index}</a>
+        </li>
+    `;
+}
+
+function renderPagination() {
+    let items = '';
+
+    for (let i = 0; i < Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE); i++) {
+        items += renderPaginationItem(i + 1);
+    }
+
+    return items;
 }
