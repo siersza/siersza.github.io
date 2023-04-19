@@ -95,7 +95,7 @@ export function renderHome(from, to) {
 
     const items = depressions.filter(d => d.id <= from && d.id > to).map((depression) => `
         <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
+            <div class="card mb-4 box-shadow border-primary">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
                 <div class="card-body">
                     <p class="card-text">${depression.name}. ${depression.description}</p>
@@ -133,7 +133,7 @@ export function renderAbout() {
     setDocumentTitle('Trzebinia Siersza | O Zapadliskach');
 
     const items = info.urls.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
@@ -146,11 +146,8 @@ export function renderAbout() {
         <div class="list-group" style="overflow-wrap: break-word;">
             <p>${info.about}</p>
             ${items}
-            <a href="../../images/map.png" target="_blank">
-                <img src="../../images/map.png" class="rounded mx-auto d-block" style="margin: 30px"></img>
-            </a>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>
             <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>
         </div>
     `;
 }
@@ -159,7 +156,7 @@ export function renderVideos() {
     setDocumentTitle('Trzebinia Siersza | Materiały Wideo');
 
     const items = videos.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
@@ -207,7 +204,7 @@ export function renderGallery(depression) {
     let items = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
-                <a href="${element}" target="_blank"><img class="card-img-top" src="${element}"></a>
+                <a href="${element}" target="_blank"><img class="card-img-top gallery-img" src="${element}"></a>
             </div>
         </div>`
     ).join('');
@@ -233,7 +230,7 @@ export function renderMedia(depression) {
     setDocumentTitle(`Galeria | ${depression.name}`);
 
     let items = depression.media.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     if (items === '') {
