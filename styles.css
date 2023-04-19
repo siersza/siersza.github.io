@@ -1,6 +1,6 @@
 /* The CSS below is a slightly modified version of one of the following examples: https://codepen.io/alicevega/pen/vEWXGL */
 
-img {
+.gallery-img {
     width: 100%;
     height: auto;
     -webkit-transition: all 0.5s ease-in-out;
@@ -10,7 +10,7 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
-img:hover {
+.gallery-img:hover {
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
