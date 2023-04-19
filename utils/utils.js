@@ -35,12 +35,12 @@ export const setActivePage = id => {
     const navElements = document.getElementsByClassName('nav-link');
 
     for (let element of navElements) {
-        if (!element.classList.contains('link-dark')) {
-            element.classList.add('link-dark');
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
         }
     }
 
-    document.getElementById(id).classList.remove('link-dark')
+    document.getElementById(id).classList.toggle('active');
 };
 
 export function setActivePaginationItem(index) {
