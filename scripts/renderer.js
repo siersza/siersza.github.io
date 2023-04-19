@@ -27,7 +27,9 @@ export function renderContent() {
        
         for (let e of paginationElements) {
             e.addEventListener('click', function() {
-                window.scroll(0, 0);
+                setTimeout(() => {
+                    window.scroll(0, 0);
+                }, 200);
             });
         }
     } else {
