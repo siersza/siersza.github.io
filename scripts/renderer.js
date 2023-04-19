@@ -29,9 +29,16 @@ export function renderContent() {
             e.addEventListener('click', function() {
                 setTimeout(() => {
                     window.scroll(0, 0);
-                }, 200);
+                }, 150);
             });
         }
+
+        if (params !== undefined && params['id'] > Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE)) {
+            redirectToIndex();
+            return;
+        }
+
+        setActivePaginationItem(params === undefined ? 1 : params['id']);
     } else {
         pagination.innerHTML = '';
     }
@@ -65,11 +72,6 @@ export function renderContent() {
 
     // Render the depressions for the specific id range.
     if (window.location.hash.includes('/page')) {
-        if (params !== undefined && params['id'] > Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE)) {
-            redirectToIndex();
-            return;
-        }
-
         let from = depressions.length - (params['id'] - 1) * CONSTANT.MAX_PER_PAGE;
         let to = from - CONSTANT.MAX_PER_PAGE < 1 ? 0 : from - CONSTANT.MAX_PER_PAGE;
 
@@ -79,7 +81,6 @@ export function renderContent() {
     }
     
     setActivePage(currentRoute.split('/')[1]);
-    setActivePaginationItem(params === undefined ? 1 : params['id']);
 
     contentDiv.innerHTML = routeHandler();
 }
