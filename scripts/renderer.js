@@ -22,6 +22,14 @@ export function renderContent() {
     // Render the pagination for the home page and remove it for other pages.
     if (window.location.hash.includes('/home')) {
         pagination.innerHTML = renderPagination();
+       
+        const paginationElements = document.getElementsByClassName('page-link');
+       
+        for (let e of paginationElements) {
+            e.addEventListener('click', function() {
+                window.scroll(0, 0);
+            });
+        }
     } else {
         pagination.innerHTML = '';
     }
