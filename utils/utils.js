@@ -25,6 +25,8 @@ export const setPageDescription = description => document.getElementById('descri
 
 export const setDocumentTitle = title => document.title = title;
 
+export const redirectToIndex = () => window.location.href = './';
+
 export const setActivePage = id => {
     if (id === '') {
         return;

@@ -1,5 +1,5 @@
 import { routes } from "../data/routes.js";
-import { getQueryParams, getDepressionById, setDocumentTitle } from "../utils/utils.js";
+import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex } from "../utils/utils.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -8,20 +8,40 @@ import * as CONSTANT from "../utils/constants.js";
 
 export function renderContent() {
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
-    const routeHandler = routes[currentRoute] || renderHome;
+    const routeHandler = routes[currentRoute];
+    
+    if (routeHandler === undefined) {
+        redirectToIndex();
+        return;
+    }
+
     const contentDiv = document.getElementById('content');
     const params = getQueryParams(window.location.hash.substring(1));
 
     // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
         const depression = getDepressionById(params['id']);
+
+        if (depression === undefined) {
+            redirectToIndex();
+            return;
+        }
+
         contentDiv.innerHTML = routeHandler(depression);
+
         return;
     }
 
     if (window.location.hash.includes('/media/depression')) {
         const depression = getDepressionById(params['id']);
+        
+        if (depression === undefined) {
+            redirectToIndex();
+            return;
+        }
+
         contentDiv.innerHTML = routeHandler(depression);
+
         return;
     }
 
@@ -140,13 +160,17 @@ export function renderMemes() {
 export function renderGallery(depression) {
     setDocumentTitle(`Galeria | ${depression.name}`);
 
-    const items = depression.images.map((element) => `
+    let items = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
                 <a href="${element}" target="_blank"><img class="card-img-top" src="${element}"></a>
             </div>
         </div>`
     ).join('');
+
+    if (items === '') {
+        items = renderError(CONSTANT.NO_IMAGES_ERROR);
+    }
 
     return `
         <div class="px-4 py-1 my-1 text-center">
@@ -164,9 +188,13 @@ export function renderGallery(depression) {
 export function renderMedia(depression) {
     setDocumentTitle(`Galeria | ${depression.name}`);
 
-    const items = depression.media.map((element) => `
+    let items = depression.media.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
+
+    if (items === '') {
+        items = renderError(CONSTANT.NO_MEDIA_ERROR);
+    }
 
     return `
         <div class="px-4 py-1 my-1 text-center">
@@ -177,6 +205,14 @@ export function renderMedia(depression) {
         </div>
         <div class="row">
             ${items}
+        </div>
+    `;
+}
+
+function renderError(message) {
+    return `
+        <div class="alert alert-danger" role="alert">
+            ${message}
         </div>
     `;
 }
