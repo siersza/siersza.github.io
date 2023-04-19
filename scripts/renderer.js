@@ -36,11 +36,6 @@ export function renderContent() {
         pagination.innerHTML = '';
     }
 
-    if (window.location.hash.includes('/home')) {
-        setActivePaginationItem(params === undefined ? 1 : params['id']);
-    }
-
-
     // TODO: Refactor those if statements.
     if (window.location.hash.includes('/gallery/depression')) {
         const depression = getDepressionById(params['id']);
@@ -70,8 +65,9 @@ export function renderContent() {
 
     // Render the depressions for the specific id range.
     if (window.location.hash.includes('/page')) {
-        if (params['id'] === undefined || params['id'] > Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE)) {
+        if (params !== undefined && params['id'] > Math.ceil(depressions.length / CONSTANT.MAX_PER_PAGE)) {
             redirectToIndex();
+            return;
         }
 
         let from = depressions.length - (params['id'] - 1) * CONSTANT.MAX_PER_PAGE;
@@ -83,6 +79,7 @@ export function renderContent() {
     }
     
     setActivePage(currentRoute.split('/')[1]);
+    setActivePaginationItem(params === undefined ? 1 : params['id']);
 
     contentDiv.innerHTML = routeHandler();
 }
