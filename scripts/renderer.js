@@ -1,5 +1,5 @@
 import { routes } from "../data/routes.js";
-import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex, setActivePage, setActivePaginationItem } from "../utils/utils.js";
+import { getQueryParams, getDepressionById, setDocumentTitle, redirectToIndex, setActivePage, setActivePaginationItem, clearActivePages } from "../utils/utils.js";
 import { depressions } from "../data/depressions.js";
 import { info } from "../data/info.js";
 import { videos } from "../data/videos.js";
@@ -98,11 +98,12 @@ export function renderHome(from, to) {
             <div class="card mb-4 box-shadow border-primary">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
                 <div class="card-body">
-                    <p class="card-text">${depression.name}. ${depression.description}</p>
+                    <p class="card-text"><strong>${depression.name}</strong>. ${depression.description}</p>
                     <ul class="list-group">
-                        <li class="list-group-item">Data wystąpienia: ${depression.date}</li>
-                        <li class="list-group-item">Głębokość: ${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metry/ów.'}</li>
-                        <li class="list-group-item">Średnica: ${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metry/ów.'}</li>
+                        <li class="list-group-item">Id: <strong>${depression.id}</strong></li>
+                        <li class="list-group-item">Data wystąpienia: <strong>${depression.date}</strong></li>
+                        <li class="list-group-item">Głębokość: <strong>${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
+                        <li class="list-group-item">Średnica: <strong>${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
                     </ul>
                     <div style="margin-top: 16px">
                         <div class="btn-group" style="width: 100%">
@@ -200,6 +201,7 @@ export function renderMemes() {
 
 export function renderGallery(depression) {
     setDocumentTitle(`Galeria | ${depression.name}`);
+    clearActivePages();
 
     let items = depression.images.map((element) => `
         <div class="col-md-4">
@@ -227,7 +229,8 @@ export function renderGallery(depression) {
 }
 
 export function renderMedia(depression) {
-    setDocumentTitle(`Galeria | ${depression.name}`);
+    setDocumentTitle(`Media | ${depression.name}`);
+    clearActivePages();
 
     let items = depression.media.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
