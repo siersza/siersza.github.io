@@ -31,7 +31,13 @@ export const setActivePage = id => {
     if (id === '') {
         return;
     }
-    
+
+    clearActivePages();
+
+    document.getElementById(id).classList.toggle('active');
+};
+
+export const clearActivePages = () => {
     const navElements = document.getElementsByClassName('nav-link');
 
     for (let element of navElements) {
@@ -39,9 +45,7 @@ export const setActivePage = id => {
             element.classList.remove('active');
         }
     }
-
-    document.getElementById(id).classList.toggle('active');
-};
+}
 
 export function setActivePaginationItem(index) {
     const paginationItem = document.getElementById(`pagination-item-${index}`);
