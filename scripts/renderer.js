@@ -86,7 +86,7 @@ export function renderContent() {
 }
 
 export function renderHome(from, to) {
-    setDocumentTitle('Trzebinia Siersza | Zapadliska');
+    setDocumentTitle('Siersza | Zapadliska');
 
     if (from === undefined || to === undefined) {
         from = depressions.length;
@@ -131,7 +131,7 @@ export function renderHome(from, to) {
 }
 
 export function renderAbout() {
-    setDocumentTitle('Trzebinia Siersza | O Zapadliskach');
+    setDocumentTitle('Siersza | O Zapadliskach');
 
     const items = info.urls.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
@@ -154,7 +154,7 @@ export function renderAbout() {
 }
 
 export function renderVideos() {
-    setDocumentTitle('Trzebinia Siersza | Materiały Wideo');
+    setDocumentTitle('Siersza | Materiały Wideo');
 
     const items = videos.map((element) => `
         <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
@@ -176,7 +176,7 @@ export function renderVideos() {
 }
 
 export function renderMemes() {
-    setDocumentTitle('Trzebinia Siersza | Memy');
+    setDocumentTitle('Siersza | Memy');
 
     const items = memes.map((element) => `
         <div class="col-md-4">
