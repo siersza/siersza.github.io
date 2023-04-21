@@ -6,6 +6,8 @@ import { videos } from "../data/videos.js";
 import { memes } from "../data/memes.js";
 import * as CONSTANT from "../utils/constants.js";
 
+const scrollToTopButton = document.getElementById('scroll-to-top-btn');
+
 export function renderContent() {
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
     const routeHandler = routes[currentRoute];
@@ -18,6 +20,8 @@ export function renderContent() {
     const contentDiv = document.getElementById('content');
     const pagination = document.getElementById('pagination');
     const params = getQueryParams(window.location.hash.substring(1));
+
+    scrollToTopButton.onclick = scrollToTop;
 
     // Render the pagination for the home page and remove it for other pages.
     if (window.location.hash.includes('/home')) {
@@ -278,3 +282,12 @@ function renderPagination() {
 
     return items;
 }
+
+export function showScrollToTopButton() {
+    scrollToTopButton.style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? 'block' : 'none';
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0; // Safari.
+    document.documentElement.scrollTop = 0; // Chrome, FF, IE & Opera.
+} 
