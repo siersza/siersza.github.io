@@ -31,17 +31,21 @@ export const setActivePage = id => {
     if (id === '') {
         return;
     }
-    
+
+    clearActivePages();
+
+    document.getElementById(id).classList.toggle('active');
+};
+
+export const clearActivePages = () => {
     const navElements = document.getElementsByClassName('nav-link');
 
     for (let element of navElements) {
-        if (!element.classList.contains('link-dark')) {
-            element.classList.add('link-dark');
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
         }
     }
-
-    document.getElementById(id).classList.remove('link-dark')
-};
+}
 
 export function setActivePaginationItem(index) {
     const paginationItem = document.getElementById(`pagination-item-${index}`);
