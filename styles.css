@@ -69,3 +69,11 @@ li {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
+
+.callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--main-color);
+    border-left-width: 5px;
+    border-radius: 3px;
+}
