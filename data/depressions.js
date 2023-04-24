@@ -7,7 +7,11 @@ export const depressions = [
         imgSrc: "./images/las-2/las-2-1.jpg",
         images: [
             "./../../images/las-2/las-2-1.jpg",
-            "./../../images/las-2/las-2-2.jpg"
+            "./../../images/las-2/las-2-2.jpg",
+            "./../../images/las-2/las-2-3.jpg",
+            "./../../images/las-2/las-2-4.jpg",
+            "./../../images/las-2/las-2-5.jpg",
+            "./../../images/las-2/las-2-6.jpg"
         ],
         media: [],
         latitude: "50.19821899033548",
