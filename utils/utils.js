@@ -25,18 +25,46 @@ export const setPageDescription = description => document.getElementById('descri
 
 export const setDocumentTitle = title => document.title = title;
 
+export const redirectToIndex = () => window.location.href = '#/home';
+
 export const setActivePage = id => {
     if (id === '') {
         return;
     }
-    
+
+    clearActivePages();
+
+    document.getElementById(id).classList.toggle('active');
+};
+
+export const clearActivePages = () => {
     const navElements = document.getElementsByClassName('nav-link');
 
     for (let element of navElements) {
-        if (!element.classList.contains('link-dark')) {
-            element.classList.add('link-dark');
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
         }
     }
+}
 
-    document.getElementById(id).classList.remove('link-dark')
-};
+export function setActivePaginationItem(index) {
+    const paginationItem = document.getElementById(`pagination-item-${index}`);
+    paginationItem.classList.toggle('active');
+}
+
+export function getQueryParams(url) {
+    if (!url.includes('?')) {
+        return;
+    }
+
+    const params = [];
+    const queryString = url.split('?')[1];
+    const queryParams = queryString.split('&');
+
+    queryParams.forEach(param => {
+        const [key, value] = param.split('=');
+        params[key] = value;
+    });
+
+    return params;
+}

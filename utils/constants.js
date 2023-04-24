@@ -1,3 +1,4 @@
+export const MAX_PER_PAGE = 6;
 export const DEFAULT_TITLE = 'Strona główna';
 export const DEFAULT_DESCRIPTION = 'Strona poświęcona występującym w Sierszy zapadliskom';
 export const NO_DEPRESSION_ERROR = 'Nie znaleziono takiego zapadliska.';
