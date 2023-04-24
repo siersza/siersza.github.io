@@ -1,5 +1,21 @@
 export const depressions = [
     {
+        id: "29",
+        name: "Las II (okolice osiedla Gaj)",
+        description: "Zapadlisko pojawiło się między jednym z bloków osiedla Gaj a tzw. salką dla młodzieży.",
+        date: "24.04.2023",
+        imgSrc: "./images/las-2/las-2-1.jpg",
+        images: [
+            "./../../images/las-2/las-2-1.jpg",
+            "./../../images/las-2/las-2-2.jpg"
+        ],
+        media: [],
+        latitude: "50.19821899033548",
+        longitude: "19.44042191115233",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "28",
         name: "Działki Gaj XIII",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
@@ -273,7 +289,7 @@ export const depressions = [
     },
     {
         id: "14",
-        name: "Las",
+        name: "Las I (okolice osiedla Gaj)",
         description: "Zapadlisko pojawiło się między jednym z bloków (około 60 metrów od niego) osiedla Gaj a tzw. salką dla młodzieży.",
         date: "20.01.2023",
         imgSrc: "./images/las-1/las-1.jpg",
