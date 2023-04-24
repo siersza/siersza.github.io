@@ -25,10 +25,47 @@ li {
     cursor: pointer;
 }
 
+/* Override some Bootstrap styles. */
+:root {
+    --main-color: #32a71e;
+}
+
 #scroll-to-top-btn {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
+    background-color: var(--main-color);
+}
+
+.active {
+    background-color: var(--main-color) !important;
+}
+
+.nav-link {
+    color: var(--main-color);
+}
+
+.nav-link:hover {
+    color: #127900;
+}
+
+.card {
+    border-color: var(--main-color);
+}
+
+.list-group-item-action {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.page-link {
+    color: var(--main-color) !important;
+}
+
+.page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }

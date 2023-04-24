@@ -4,8 +4,8 @@ export const routes = {
     '#/home': renderHome,
     '#/home/page': renderHome,
     '#/about': renderAbout,
-    '#/video': renderVideos,
-    '#/meme': renderMemes,
+    '#/videos': renderVideos,
+    '#/memes': renderMemes,
     '#/gallery/depression': renderGallery,
     '#/media/depression': renderMedia,
 };
