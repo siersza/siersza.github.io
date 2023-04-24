@@ -149,7 +149,9 @@ export function renderAbout() {
             </div>
         </div>
         <div class="list-group" style="overflow-wrap: break-word;">
-            <p>${info.about}</p>
+            <div class="callout">
+                ${info.about}
+            </div>
             ${items}
             <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px"></iframe>
             <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>
