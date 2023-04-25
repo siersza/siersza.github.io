@@ -16,8 +16,8 @@ export const depressions = [
         media: [],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "6"
     },
     {
         id: "28",
@@ -28,11 +28,16 @@ export const depressions = [
         images: [
             "./../../images/dzialki-gaj-13/dzialki-3-1.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.polsatnews.pl/wiadomosc/2023-04-12/malopolskie-kolejne-zapadlisko-w-trzebini-ponad-480-zagrozonych-miejsc/"
+            }
+        ],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "5",
+        depth: "6"
     },
     {
         id: "27",
@@ -67,11 +72,20 @@ export const depressions = [
             "./../../images/osiedle-gaj-3/gaj-3-7.jpg",
             "./../../images/osiedle-gaj-3/gaj-3-8.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-dziura-powstala-przy-ulicy-kopalnianej-6893227"
+            },
+                        {
+                title: "",
+                href: "https://tvn24.pl/krakow/trzebinia-nowe-zapadlisko-na-osiedlu-gaj-kilka-metrow-od-bloku-do-dziury-wpadl-silos-6891037"
+            }
+        ],
         latitude: "50.1994706351815",
         longitude: "19.44004220713269",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "10",
+        depth: "8"
     },
     {
         id: "25",
@@ -84,11 +98,16 @@ export const depressions = [
             "./../../images/jana-pawla-1/jana-pawla-1-1.jpg",
             "./../../images/jana-pawla-1/jana-pawla-1-3.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-trzebinia-ziemia-znow-sie-zapadla-choc-zapadlisko-juz-zasypy,nId,6682726#crp_state=1"
+            }
+        ],
         latitude: "50.19569163953249",
         longitude: "19.432938698828142",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "5"
     },
     {
         id: "24",
