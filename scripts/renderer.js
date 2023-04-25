@@ -239,7 +239,7 @@ export function renderMedia(depression) {
     clearActivePages();
 
     let items = depression.media.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     if (items === '') {
