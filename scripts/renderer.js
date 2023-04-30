@@ -99,7 +99,7 @@ export function renderHome(from, to) {
 
     const items = depressions.filter(d => d.id <= from && d.id > to).map((depression) => `
         <div class="col-md-4">
-            <div class="card mb-4 box-shadow border-primary">
+            <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="${depression.imgSrc}"/>
                 <div class="card-body">
                     <p class="card-text"><strong>${depression.name}</strong>. ${depression.description}</p>
@@ -111,9 +111,9 @@ export function renderHome(from, to) {
                     </ul>
                     <div style="margin-top: 16px">
                         <div class="btn-group" style="width: 100%">
-                            <a class="btn btn-sm btn-outline-primary" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                            <a class="btn btn-sm btn-outline-success" data-id="${depression.id}" href="#/gallery/depression?id=${depression.id}">Więcej zdjęć <strong>(${depression.images.length})</strong></a>
-                            <a class="btn btn-sm btn-outline-danger" href="#/media/depression?id=${depression.id}">Media <strong>(${depression.media.length})</strong></a>
+                            <a class="btn btn-sm btn-outline-danger" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
+                            <a class="btn btn-sm btn-outline-primary" data-id="${depression.id}" href="#/gallery/depression?id=${depression.id}">Więcej zdjęć <strong>(${depression.images.length})</strong></a>
+                            <a class="btn btn-sm btn-outline-info" href="#/media/depression?id=${depression.id}">Media <strong>(${depression.media.length})</strong></a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ export function renderAbout() {
     setDocumentTitle('Siersza | O Zapadliskach');
 
     const items = info.urls.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
@@ -149,10 +149,12 @@ export function renderAbout() {
             </div>
         </div>
         <div class="list-group" style="overflow-wrap: break-word;">
-            <p>${info.about}</p>
+            <div class="callout">
+                ${info.about}
+            </div>
             ${items}
-            <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px"></iframe>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>
+            <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
         </div>
     `;
 }
@@ -161,7 +163,7 @@ export function renderVideos() {
     setDocumentTitle('Siersza | Materiały Wideo');
 
     const items = videos.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action" style="word-wrap: break-word">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     return `
@@ -237,7 +239,7 @@ export function renderMedia(depression) {
     clearActivePages();
 
     let items = depression.media.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     if (items === '') {
