@@ -253,9 +253,7 @@ export function renderMedia(depression) {
                 <p id="description" class="lead mb-4"></p>
             </div>
         </div>
-        <div class="row">
-            ${items}
-        </div>
+        ${items}
     `;
 }
 
