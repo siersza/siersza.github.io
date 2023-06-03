@@ -1,5 +1,36 @@
 export const depressions = [
     {
+        id: "31",
+        name: "Odkrywkowa I",
+        description: "Zapadlisko pojawiło się przy ulicy Odkrywkowej.",
+        date: "03.06.2023",
+        imgSrc: "./images/odkrywkowa-1/odkrywkowa-1.jpg",
+        images: [
+            "./../../images/odkrywkowa-1/odkrywkowa-1.jpg"
+        ],
+        media: [],
+        latitude: "50.1987045455324",
+        longitude: "19.435702721521505",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "30",
+        name: "Korty Tenisowe I (okolice kościoła)",
+        description: "Zapadlisko pojawiło się przy kortach tenisowych niedaleko kościoła.",
+        date: "03.06.2023",
+        imgSrc: "./images/korty-1/korty-1.jpg",
+        images: [
+            "./../../images/korty-1/korty-1.jpg",
+            "./../../images/korty-1/korty-2.jpg"
+        ],
+        media: [],
+        latitude: "50.19610321592283",
+        longitude: "19.428786086271412",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "29",
         name: "Las II (okolice osiedla Gaj)",
         description: "Zapadlisko pojawiło się między jednym z bloków osiedla Gaj a tzw. salką dla młodzieży.",
