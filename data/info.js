@@ -20,6 +20,10 @@ export const info = {
         {
             title: "Mapa zagrożeń",
             href: "https://zapadliska.gig.eu/pl/content/mapa"
+        },
+        {
+            title: "Aktualna mapa zapadlisk",
+            href: "https://geologia.pgi.gov.pl/zapadliska/"
         }
     ]
 };
