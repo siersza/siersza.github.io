@@ -7,6 +7,8 @@ export const depressions = [
         imgSrc: "./images/odkrywkowa-1/odkrywkowa-1.jpg",
         images: [
             "./../../images/odkrywkowa-1/odkrywkowa-1.jpg"
+            "./../../images/odkrywkowa-1/odkrywkowa-2.jpg"
+            "./../../images/odkrywkowa-1/odkrywkowa-3.jpg"
         ],
         media: [],
         latitude: "50.1987045455324",
@@ -23,6 +25,10 @@ export const depressions = [
         images: [
             "./../../images/korty-1/korty-1.jpg",
             "./../../images/korty-1/korty-2.jpg"
+            "./../../images/korty-1/korty-3.jpg"
+            "./../../images/korty-1/korty-4.jpg"
+            "./../../images/korty-1/korty-5.jpg"
+            "./../../images/korty-1/korty-6.jpg"
         ],
         media: [],
         latitude: "50.19610321592283",
