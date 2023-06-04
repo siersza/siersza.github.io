@@ -153,6 +153,7 @@ export function renderAbout() {
                 ${info.about}
             </div>
             ${items}
+            <img style="margin-top: 30px;" src="../../images/kwk-siersza.jpg" alt="KWK Siersza">
             <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
             <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
         </div>
