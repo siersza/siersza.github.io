@@ -1,5 +1,22 @@
 export const depressions = [
     {
+        id: "32",
+        name: "Działki Gaj XIV",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "04.07.2023",
+        imgSrc: "./images/dzialki-10/dzialki-10-1.jpg",
+        images: [
+            "./../../images/dzialki-10/dzialki-10-1.jpg",
+            "./../../images/dzialki-10/dzialki-10-2.jpg",
+            "./../../images/dzialki-10/dzialki-10-3.jpg"
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "31",
         name: "Odkrywkowa I",
         description: "Zapadlisko pojawiło się przy ulicy Odkrywkowej.",
