@@ -8,13 +8,15 @@ export const depressions = [
         images: [
             "./../../images/dzialki-10/dzialki-10-1.jpg",
             "./../../images/dzialki-10/dzialki-10-2.jpg",
-            "./../../images/dzialki-10/dzialki-10-3.jpg"
+            "./../../images/dzialki-10/dzialki-10-3.jpg",
+            "./../../images/dzialki-10/dzialki-10-4.jpg",
+            "./../../images/dzialki-10/dzialki-10-5.jpg"
         ],
         media: [],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "9",
+        depth: "8"
     },
     {
         id: "31",
