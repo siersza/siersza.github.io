@@ -12,8 +12,6 @@ export function renderContent() {
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
     const routeHandler = routes[currentRoute];
     
-    window.location.href = 'https://wykop.pl';
-
     if (routeHandler === undefined) {
         redirectToIndex();
         return;
