@@ -149,10 +149,13 @@ export function renderAbout() {
             </div>
         </div>
         <div class="list-group" style="overflow-wrap: break-word;">
-            <p>${info.about}</p>
+            <div class="callout">
+                ${info.about}
+            </div>
             ${items}
-            <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px"></iframe>
-            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px"></iframe>
+            <img style="margin-top: 30px;" src="../../images/kwk-siersza.jpg" alt="KWK Siersza">
+            <iframe src="https://geologia.pgi.gov.pl/zapadliska/" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1bbmXIbYZiiDqiAi9_VR9d22BVzNGTi4&ehbc=2E312F" height="700" style="margin-top: 30px; border: 1px solid #32a71e"></iframe>
         </div>
     `;
 }
@@ -237,7 +240,7 @@ export function renderMedia(depression) {
     clearActivePages();
 
     let items = depression.media.map((element) => `
-        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">${element.title !== '' ? element.title : element.href}</a>`
+        <a href="${element.href}" target="_blank" class="list-group-item list-group-item-action">${element.title !== '' ? element.title : element.href}</a>`
     ).join('');
 
     if (items === '') {
@@ -251,9 +254,7 @@ export function renderMedia(depression) {
                 <p id="description" class="lead mb-4"></p>
             </div>
         </div>
-        <div class="row">
-            ${items}
-        </div>
+        ${items}
     `;
 }
 

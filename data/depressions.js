@@ -1,5 +1,61 @@
 export const depressions = [
     {
+        id: "32",
+        name: "Działki Gaj XIV",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "04.07.2023",
+        imgSrc: "./images/dzialki-10/dzialki-10-1.jpg",
+        images: [
+            "./../../images/dzialki-10/dzialki-10-1.jpg",
+            "./../../images/dzialki-10/dzialki-10-2.jpg",
+            "./../../images/dzialki-10/dzialki-10-3.jpg",
+            "./../../images/dzialki-10/dzialki-10-4.jpg",
+            "./../../images/dzialki-10/dzialki-10-5.jpg"
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "9",
+        depth: "8"
+    },
+    {
+        id: "31",
+        name: "Odkrywkowa I",
+        description: "Zapadlisko pojawiło się przy ulicy Odkrywkowej.",
+        date: "03.06.2023",
+        imgSrc: "./images/odkrywkowa-1/odkrywkowa-1.jpg",
+        images: [
+            "./../../images/odkrywkowa-1/odkrywkowa-1.jpg",
+            "./../../images/odkrywkowa-1/odkrywkowa-2.jpg",
+            "./../../images/odkrywkowa-1/odkrywkowa-3.jpg"
+        ],
+        media: [],
+        latitude: "50.1987045455324",
+        longitude: "19.435702721521505",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
+        id: "30",
+        name: "Korty Tenisowe I (okolice kościoła)",
+        description: "Zapadlisko pojawiło się przy kortach tenisowych niedaleko kościoła.",
+        date: "03.06.2023",
+        imgSrc: "./images/korty-1/korty-1.jpg",
+        images: [
+            "./../../images/korty-1/korty-1.jpg",
+            "./../../images/korty-1/korty-2.jpg",
+            "./../../images/korty-1/korty-3.jpg",
+            "./../../images/korty-1/korty-4.jpg",
+            "./../../images/korty-1/korty-5.jpg",
+            "./../../images/korty-1/korty-6.jpg"
+        ],
+        media: [],
+        latitude: "50.19610321592283",
+        longitude: "19.428786086271412",
+        diameter: "b.d.",
+        depth: "b.d."
+    },
+    {
         id: "29",
         name: "Las II (okolice osiedla Gaj)",
         description: "Zapadlisko pojawiło się między jednym z bloków osiedla Gaj a tzw. salką dla młodzieży.",
@@ -16,8 +72,8 @@ export const depressions = [
         media: [],
         latitude: "50.19821899033548",
         longitude: "19.44042191115233",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "6"
     },
     {
         id: "28",
@@ -28,11 +84,16 @@ export const depressions = [
         images: [
             "./../../images/dzialki-gaj-13/dzialki-3-1.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.polsatnews.pl/wiadomosc/2023-04-12/malopolskie-kolejne-zapadlisko-w-trzebini-ponad-480-zagrozonych-miejsc/"
+            }
+        ],
         latitude: "50.19683394549026",
         longitude: "19.43750656613749",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "5",
+        depth: "6"
     },
     {
         id: "27",
@@ -67,11 +128,20 @@ export const depressions = [
             "./../../images/osiedle-gaj-3/gaj-3-7.jpg",
             "./../../images/osiedle-gaj-3/gaj-3-8.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://tvn24.pl/polska/trzebinia-kolejne-zapadlisko-dziura-powstala-przy-ulicy-kopalnianej-6893227"
+            },
+                        {
+                title: "",
+                href: "https://tvn24.pl/krakow/trzebinia-nowe-zapadlisko-na-osiedlu-gaj-kilka-metrow-od-bloku-do-dziury-wpadl-silos-6891037"
+            }
+        ],
         latitude: "50.1994706351815",
         longitude: "19.44004220713269",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "10",
+        depth: "8"
     },
     {
         id: "25",
@@ -84,11 +154,16 @@ export const depressions = [
             "./../../images/jana-pawla-1/jana-pawla-1-1.jpg",
             "./../../images/jana-pawla-1/jana-pawla-1-3.jpg"
         ],
-        media: [],
+        media: [
+            {
+                title: "",
+                href: "https://www.rmf24.pl/regiony/krakow/news-trzebinia-ziemia-znow-sie-zapadla-choc-zapadlisko-juz-zasypy,nId,6682726#crp_state=1"
+            }
+        ],
         latitude: "50.19569163953249",
         longitude: "19.432938698828142",
-        diameter: "b.d.",
-        depth: "b.d."
+        diameter: "6",
+        depth: "5"
     },
     {
         id: "24",
