@@ -103,17 +103,17 @@ export function renderHome(from, to) {
                 <img class="card-img-top" src="${depression.imgSrc}"/>
                 <div class="card-body">
                     <p class="card-text"><strong>${depression.name}</strong>. ${depression.description}</p>
-                    <ul class="list-group">
-                        <li class="list-group-item">Id: <strong>${depression.id}</strong></li>
-                        <li class="list-group-item">Data wystąpienia: <strong>${depression.date}</strong></li>
-                        <li class="list-group-item">Głębokość: <strong>${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
-                        <li class="list-group-item">Średnica: <strong>${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item no-url">Id: <strong>${depression.id}</strong></li>
+                        <li class="list-group-item no-url">Data wystąpienia: <strong>${depression.date}</strong></li>
+                        <li class="list-group-item no-url">Głębokość: <strong>${depression.depth} ${depression.depth === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
+                        <li class="list-group-item no-url">Średnica: <strong>${depression.diameter} ${depression.diameter === 'b.d.' ? '' : 'metry/ów.'}</strong></li>
                     </ul>
                     <div style="margin-top: 16px">
                         <div class="btn-group" style="width: 100%">
-                            <a class="btn btn-sm btn-outline-danger" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
-                            <a class="btn btn-sm btn-outline-primary" data-id="${depression.id}" href="#/gallery/depression?id=${depression.id}">Więcej zdjęć <strong>(${depression.images.length})</strong></a>
-                            <a class="btn btn-sm btn-outline-info" href="#/media/depression?id=${depression.id}">Media <strong>(${depression.media.length})</strong></a>
+                            <a class="btn btn-sm btn-danger" target='_blank' href="https://www.google.com/maps/search/${depression.latitude},+${depression.longitude}">Zobacz mapę</a>
+                            <a class="btn btn-sm btn-warning" data-id="${depression.id}" href="#/gallery/depression?id=${depression.id}">Więcej zdjęć <strong>(${depression.images.length})</strong></a>
+                            <a class="btn btn-sm btn-primary" href="#/media/depression?id=${depression.id}">Media <strong>(${depression.media.length})</strong></a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@ export function renderMemes() {
     const items = memes.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
-                <a href="${element.href}" target="_blank"><img class="card-img-top" src="${element.href}"></a>
+                <a href="${element.href}" target="_blank"><img class="card-img gallery-img" src="${element.href}"></a>
             </div>
         </div>`
     ).join('');
@@ -213,7 +213,7 @@ export function renderGallery(depression) {
     let items = depression.images.map((element) => `
         <div class="col-md-4">
             <div class="mb-4 box-shadow">
-                <a href="${element}" target="_blank"><img class="card-img-top gallery-img" src="${element}"></a>
+                <a href="${element}" target="_blank"><img class="card-img gallery-img" src="${element}"></a>
             </div>
         </div>`
     ).join('');
