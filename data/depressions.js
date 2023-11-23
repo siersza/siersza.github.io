@@ -1,12 +1,33 @@
 export const depressions = [
     {
+        id: "32",
+        name: "Działki Gaj XIV",
+        description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
+        date: "04.07.2023",
+        imgSrc: "./images/dzialki-10/dzialki-10-1.jpg",
+        images: [
+            "./../../images/dzialki-10/dzialki-10-1.jpg",
+            "./../../images/dzialki-10/dzialki-10-2.jpg",
+            "./../../images/dzialki-10/dzialki-10-3.jpg",
+            "./../../images/dzialki-10/dzialki-10-4.jpg",
+            "./../../images/dzialki-10/dzialki-10-5.jpg"
+        ],
+        media: [],
+        latitude: "50.19683394549026",
+        longitude: "19.43750656613749",
+        diameter: "9",
+        depth: "8"
+    },
+    {
         id: "31",
         name: "Odkrywkowa I",
         description: "Zapadlisko pojawiło się przy ulicy Odkrywkowej.",
         date: "03.06.2023",
         imgSrc: "./images/odkrywkowa-1/odkrywkowa-1.jpg",
         images: [
-            "./../../images/odkrywkowa-1/odkrywkowa-1.jpg"
+            "./../../images/odkrywkowa-1/odkrywkowa-1.jpg",
+            "./../../images/odkrywkowa-1/odkrywkowa-2.jpg",
+            "./../../images/odkrywkowa-1/odkrywkowa-3.jpg"
         ],
         media: [],
         latitude: "50.1987045455324",
@@ -22,7 +43,11 @@ export const depressions = [
         imgSrc: "./images/korty-1/korty-1.jpg",
         images: [
             "./../../images/korty-1/korty-1.jpg",
-            "./../../images/korty-1/korty-2.jpg"
+            "./../../images/korty-1/korty-2.jpg",
+            "./../../images/korty-1/korty-3.jpg",
+            "./../../images/korty-1/korty-4.jpg",
+            "./../../images/korty-1/korty-5.jpg",
+            "./../../images/korty-1/korty-6.jpg"
         ],
         media: [],
         latitude: "50.19610321592283",
