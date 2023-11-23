@@ -1,5 +1,25 @@
 export const depressions = [
     {
+        id: "33",
+        name: "Prywatna Działka",
+        description: "Zapadlisko pojawiło się na prywatnej działce około 12 metrów od budynku mieszkalnego (niedaleko kościoła).",
+        date: "23.11.2023",
+        imgSrc: "./images/prywatna-dzialka-1/prywatna-dzialka-1-4.jpg",
+        images: [
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-1.jpg",
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-2.jpg",
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-3.jpg",
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-4.jpg",
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-5.jpg",
+            "./../../images/prywatna-dzialka-1/prywatna-dzialka-1-6.jpg"
+        ],
+        media: [],
+        latitude: "50.19628505637164",
+        longitude: "19.429151625393654",
+        diameter: "2",
+        depth: "2,5"
+    },
+    {
         id: "32",
         name: "Działki Gaj XIV",
         description: "Zapadlisko pojawiło się na działkach znajdujących się przy Osieldu Gaj.",
