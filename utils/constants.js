@@ -11,4 +11,5 @@ export const ABOUT_PAGE_TITLE = 'O zapadliskach';
 export const ABOUT_PAGE_DESCRIPTION = 'Podstawowe informacje na temat zapadlisk i okolicy, w której występują.';
 export const MEMES_PAGE_TITLE = 'Memy dotyczące zapadlisk';
 export const MEMES_PAGE_DESCRIPTION = 'Tak, w zapadliskach będących w stanie zagrozić ludzkiemu życiu i nie tylko, nie ma nic zabawnego i jako mieszkaniec jednej z najbardziej zagrożonych części Sierszy doskonale zdaję sobie z tego sprawę. Jednak memy to memy - one rządzą się swoimi prawami.';
+export const FOOTER_CONTENT = '&copy; 2025 Siersza';
 export const COMMITS = 'https://api.github.com/repos/siersza/siersza.github.io/commits';
