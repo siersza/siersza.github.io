@@ -7,10 +7,14 @@ import { memes } from "../data/memes.js";
 import * as CONSTANT from "../utils/constants.js";
 
 const scrollToTopButton = document.getElementById('scroll-to-top-btn');
+let githubCommits;
 
-export function renderContent() {
+export async function renderContent() {
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
     const routeHandler = routes[currentRoute];
+    githubCommits = await fetchData(CONSTANT.COMMITS);
+    console.log(githubCommits);
+    console.log(githubCommits[0].sha);
     
     if (routeHandler === undefined) {
         redirectToIndex();
@@ -87,6 +91,12 @@ export function renderContent() {
     setActivePage(currentRoute.split('/')[1]);
 
     contentDiv.innerHTML = routeHandler();
+
+    const testBody = document.getElementsByTagName('body')[0];
+    const footer = document.createElement('footer');
+    footer.innerHTML = renderFooter(githubCommits);
+
+    testBody.appendChild(footer);
 }
 
 export function renderHome(from, to) {
@@ -274,6 +284,16 @@ function renderPaginationItem(index) {
     `;
 }
 
+function renderFooter(commits) {
+    return `
+        <footer class="py-3 my-4">
+            <div class="container">
+                <p class="text-center text-muted">${`&copy; 2025 Siersza | Last edited at ${commits[0].commit.committer.date.replace('T', ' ').replace('Z', '')} UTC | <a href="${commits[0].html_url}" target="_blank" class="nav-link">${commits[0].sha}</a></p>`}
+            </div>
+        </footer>
+    `;
+}
+
 function renderPagination() {
     let items = '';
 
@@ -292,3 +312,7 @@ function scrollToTop() {
     document.body.scrollTop = 0; // Safari.
     document.documentElement.scrollTop = 0; // Chrome, FF, IE & Opera.
 } 
+
+async function fetchData(url) {
+    return await fetch(url).then(response => response.json());
+}
