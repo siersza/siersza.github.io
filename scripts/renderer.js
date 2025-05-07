@@ -7,14 +7,13 @@ import { memes } from "../data/memes.js";
 import * as CONSTANT from "../utils/constants.js";
 
 const scrollToTopButton = document.getElementById('scroll-to-top-btn');
-const body = document.getElementsByTagName('body')[0];
 let githubCommits;
 
 export async function renderContent() {
     githubCommits = await fetchData(CONSTANT.COMMITS);
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
     const routeHandler = routes[currentRoute];
-    const footer = document.createElement('footer');
+    const footer = document.getElementsByTagName('footer')[0];
     
     if (routeHandler === undefined) {
         redirectToIndex();
@@ -93,7 +92,6 @@ export async function renderContent() {
     contentDiv.innerHTML = routeHandler();
 
     footer.innerHTML = renderFooter(githubCommits);
-    body.appendChild(footer);
 }
 
 export function renderHome(from, to) {
