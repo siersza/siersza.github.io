@@ -7,14 +7,14 @@ import { memes } from "../data/memes.js";
 import * as CONSTANT from "../utils/constants.js";
 
 const scrollToTopButton = document.getElementById('scroll-to-top-btn');
+const body = document.getElementsByTagName('body')[0];
 let githubCommits;
 
 export async function renderContent() {
+    githubCommits = await fetchData(CONSTANT.COMMITS);
     const currentRoute = window.location.hash.includes('?') ? window.location.hash.split('?')[0] : window.location.hash;
     const routeHandler = routes[currentRoute];
-    githubCommits = await fetchData(CONSTANT.COMMITS);
-    console.log(githubCommits);
-    console.log(githubCommits[0].sha);
+    const footer = document.createElement('footer');
     
     if (routeHandler === undefined) {
         redirectToIndex();
@@ -92,11 +92,8 @@ export async function renderContent() {
 
     contentDiv.innerHTML = routeHandler();
 
-    const testBody = document.getElementsByTagName('body')[0];
-    const footer = document.createElement('footer');
     footer.innerHTML = renderFooter(githubCommits);
-
-    testBody.appendChild(footer);
+    body.appendChild(footer);
 }
 
 export function renderHome(from, to) {
@@ -288,7 +285,7 @@ function renderFooter(commits) {
     return `
         <footer class="py-3 my-4">
             <div class="container">
-                <p class="text-center text-muted">${`&copy; 2025 Siersza | Last edited at ${commits[0].commit.committer.date.replace('T', ' ').replace('Z', '')} UTC | <a href="${commits[0].html_url}" target="_blank" class="nav-link">${commits[0].sha}</a></p>`}
+                <p class="text-center text-muted">${`&copy; 2025 Siersza | Last edited at ${commits[0].commit.committer.date.replace('T', ' ').replace('Z', '')} UTC | SHA: <a href="${commits[0].html_url}" target="_blank" class="nav-link">${commits[0].sha}</a></p>`}
             </div>
         </footer>
     `;
